@@ -59,6 +59,14 @@
 	width: 35%;
 }
 }
+#Sync {
+	margin-top: 15px;
+}
+@media (max-width: 991px){
+#Sync {
+	margin-top: 0px;
+}
+}
 </style>
 <nav class="navbar navbar-default">
 	<div class="container">
@@ -72,6 +80,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a id="heightfix" href="index.html">Home</a></li>
 				<li><a id="heightfix" href="settings.html">Settings</a></li>
+				<li><a id="Sync" href="#">Sync</a></li>
 				<li>
 				<a id="heightfix" href="http://localhost:5984/_utils/#/_all_dbs">
 				Admin</a></li>
@@ -85,8 +94,9 @@
 			Round:<input id="round" name="round" type="text"><br><br>First name:
 			<input id="fname" name="fname" type="text"><br>Last name:
 			<input id="lname" name="lname" type="text"><br><br>
-			<input id="Submit" type="button" value="Submit">
-			<input id="Sync" type="button" value="Sync"> </div>
+			<button id="Submit" class="btn btn-success" style="margin-right:15px" type="button">Submit
+			</button> </div>
+			
 	</div>
 </div>
 

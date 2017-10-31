@@ -10,13 +10,9 @@
   "First": first,
   "Last": last,
 };
-
-
 db.put(doc);
-
-
-  db.info().then(function (info) {
-  console.log(info);
+db.info().then(function (info) {
+console.log(info);
 })
  }); 
 });
@@ -27,8 +23,6 @@ $(document).ready(function(){
  $('#Sync').on('click', function(e) {
   	var dbname = localStorage.getItem('dbname');
  	var serverip = localStorage.getItem('serverip');
-PouchDB.sync('kittens', 'http://'+serverip+':5984/'+dbname);
+	PouchDB.sync(dbname, 'http://'+serverip+':5984/'+dbname);
  }); 
 });
-
-
