@@ -1,10 +1,10 @@
 ﻿$(document).ready(function(){
  $('#Submit').on('click', function(e) {
-
+ var dbname = localStorage.getItem('dbname');
  var first = $('#fname').val(); 
  var last = $('#lname').val();
  var round = $('#round').val();
- var db = new PouchDB('kittens');
+ var db = new PouchDB(dbname);
  var doc = {
   "_id": round,
   "First": first,
@@ -25,6 +25,10 @@ db.put(doc);
 
 $(document).ready(function(){
  $('#Sync').on('click', function(e) {
-PouchDB.sync('kittens', 'http://localhost:5984/kittens');
+  	var dbname = localStorage.getItem('dbname');
+ 	var serverip = localStorage.getItem('serverip');
+PouchDB.sync('kittens', 'http://'+serverip+':5984/'+dbname);
  }); 
 });
+
+
