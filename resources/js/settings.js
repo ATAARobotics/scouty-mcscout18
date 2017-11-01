@@ -7,19 +7,36 @@
 });
 
 $(document).ready(function(){
- $('#Save').on('click', function(e) {
+ $('#Save').on('click', function(e) { 
   var dbname = $('#dbname').val();
   var serverip = $('#serverip').val();
 
 	localStorage.setItem('dbname', dbname);
 	localStorage.setItem('serverip', serverip);
-	localStorage.setItem('test', '1');
-	var test = localStorage.getItem('test');
-	if (test == 1){
-	window.alert("Settings Saved!");
-	} else {
-	window.alert("Error!");
-	}
+	
+	 $.ajax({url: "http://"+serverip+":5984/"+dbname,
+        type: "HEAD",
+        timeout:1000,
+        statusCode: {
+            200: function (response) {
+                window.alert("Settings Saved!");
+                localStorage.setItem('settingscheck', '1');
+            },
+            404: function (response) {
+                window.alert("Server ip or database name is incorrect! Check internet connection, server ip and database name! ");
+          		localStorage.setItem('serverip', 'incorrect');
+                localStorage.setItem('dbname', 'incorrect');
+                localStorage.setItem('settingscheck', '0');
+            },
+            0: function (response) {
+                window.alert("Server ip or database name is incorrect! Check internet connection, server ip and database name! ");
+                localStorage.setItem('serverip', 'incorrect');
+                localStorage.setItem('dbname', 'incorrect');
+                localStorage.setItem('settingscheck', '0');
+            }              
+        }
+ });
+
  }); 
 });
 

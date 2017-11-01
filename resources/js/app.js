@@ -17,8 +17,6 @@ console.log(info);
  }); 
 });
 
-
-
 $(document).ready(function(){
  $('#Sync').on('click', function(e) {
   	var dbname = localStorage.getItem('dbname');
