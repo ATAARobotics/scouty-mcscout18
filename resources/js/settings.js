@@ -23,7 +23,7 @@ $(document).ready(function(){
                 localStorage.setItem('settingscheck', '1');
             },
             404: function (response) {
-                window.alert("Server ip or database name is incorrect! Check internet connection, server ip and database name! ");
+                window.alert("Server ip or database name is incorrect! Check server ip and database name! ");
           		localStorage.setItem('serverip', 'incorrect');
                 localStorage.setItem('dbname', 'incorrect');
                 localStorage.setItem('settingscheck', '0');
