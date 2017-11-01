@@ -91,12 +91,23 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12" style="background-color: #f0f0f0; padding-top: 20px; padding-bottom: 20px">
-			Round:<input id="round" name="round" type="text"><br><br>First name:
-			<input id="fname" name="fname" type="text"><br>Last name:
+			Round:<input id="roundNumber" name="round" type="text"><br><br>Team Number:
+			<input id="teamNumber" name="fname" type="text"><br>Last name:
 			<input id="lname" name="lname" type="text"><br><br>
-			<button id="Submit" class="btn btn-success" style="margin-right:15px" type="button">Submit
-			</button> </div>
-			
+			Round Type:<select id="roundType">
+			<option value="q">Qualification</option>
+			<option value="qf">Quarter Final</option>
+			<option value="sf">Semi Final</option>
+			<option value="f">Final</option>
+			</select>
+			<br>Number of Things:
+			<br><input type="radio" name="numberThings" value="1" /> 1 <br />
+			<input type="radio" name="numberThings" value="2" /> 2 <br />
+			<input type="radio" name="numberThings" value="3" /> 3 <br />
+			<div class="row">
+			<div class="col-sm-12" style="background-color: #f0f0f0; padding-top: 20px;">
+			<button id="Submit" class="btn btn-success" style="margin-right: 15px" type="button">
+			Submit</button></div></div></div>
 	</div>
 </div>
 

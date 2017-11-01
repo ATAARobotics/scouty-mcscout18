@@ -1,14 +1,17 @@
 ﻿$(document).ready(function(){
  $('#Submit').on('click', function(e) {
  var dbname = localStorage.getItem('dbname');
- var first = $('#fname').val(); 
+ var teamNumber = $('#teamNumber').val(); 
  var last = $('#lname').val();
- var round = $('#round').val();
+ var roundNumber = $('#roundNumber').val();
+ var roundType = $('#roundType').val();
+ var numberThings = $('input[name=numberThings]:checked').val();
+ var id = roundType+roundNumber+"_"+teamNumber
  var db = new PouchDB(dbname);
  var doc = {
-  "_id": round,
-  "First": first,
+  "_id": id,
   "Last": last,
+  "Number": numberThings,
 };
 	if (localStorage.getItem('settingscheck') == 1) {
 
