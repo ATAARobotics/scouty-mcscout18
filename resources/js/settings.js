@@ -21,6 +21,7 @@ $(document).ready(function(){
             200: function (response) {
                 window.alert("Settings Saved!");
                 localStorage.setItem('settingscheck', '1');
+                window.location.href = 'index.html';
             },
             404: function (response) {
                 window.alert("Server ip or database name is incorrect! Check server ip and database name! ");
