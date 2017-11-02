@@ -7,14 +7,13 @@
  var roundType = $('#roundType').val();
  var numberThings = $('input[name=numberThings]:checked').val();
  var id = roundType+roundNumber+"_"+teamNumber
- var db = new PouchDB(dbname);
  var doc = {
   "_id": id,
   "Last": last,
   "Number": numberThings,
 };
 	if (localStorage.getItem('settingscheck') == 1) {
-
+		 var db = new PouchDB(dbname);
 	    db.put(doc).then(function() {
 	        // success
 	        window.alert("Submitted!");
