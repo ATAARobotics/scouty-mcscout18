@@ -34,7 +34,7 @@
 	});
 	
 $(document).ready(function(){
- $('#Sync').on('click', function(e) {
+ $('#sync').on('click', function(e) {
   	var dbname = localStorage.getItem('dbname');
  	var serverip = localStorage.getItem('serverip');
 	if (localStorage.getItem('settingscheck') == 1){

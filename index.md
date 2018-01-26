@@ -9,6 +9,7 @@ title: Match
 			<input type="tel" id="teamNumber" name="fname"><br>Last name:
 			<input id="lname" name="lname" type="text"><br><br>
 			Round Type:<select id="roundType">
+			<option value="p">Practice</option>
 			<option value="q">Qualification</option>
 			<option value="qf">Quarter Final</option>
 			<option value="sf">Semi Final</option>
