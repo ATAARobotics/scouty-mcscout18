@@ -55,8 +55,10 @@
                 </li>
                 <li class="nav-item"><a class="nav-link {% if page.title == "Settings" %}active{% endif %}" href="/settings">Settings</a>
 				</li>
+				{% if page.title != "Settings" %}
                 <li class="nav-item"><a id="sync" class="nav-link" href="#">Sync</a>
-                </li>
+				</li>
+				{% endif %}
 			</ul>
 		</div>
 	</nav>
