@@ -2,26 +2,275 @@
 layout: default
 title: Match
 ---
-<div class="container">
-	<div class="row">
-		<div class="col-sm-12" style="background-color: #f0f0f0; padding-top: 20px; padding-bottom: 20px">
-			Round:<input type="tel" id="roundNumber" name="round"><br><br>Team Number:
-			<input type="tel" id="teamNumber" name="fname"><br>Last name:
-			<input id="lname" name="lname" type="text"><br><br>
-			Round Type:<select id="roundType">
-			<option value="p">Practice</option>
-			<option value="q">Qualification</option>
-			<option value="qf">Quarter Final</option>
-			<option value="sf">Semi Final</option>
-			<option value="f">Final</option>
-			</select>
-			<br>Number of Things:
-			<br><input type="radio" name="numberThings" value="1" /> 1 <br />
-			<input type="radio" name="numberThings" value="2" /> 2 <br />
-			<input type="radio" name="numberThings" value="3" /> 3 <br />
-			<div class="row">
-			<div class="col-sm-12" style="background-color: #f0f0f0; padding-top: 20px;">
-			<button id="Submit" class="btn btn-success" style="margin-right: 15px" type="button">
-			Submit</button></div></div></div>
-	</div>
+<div class="container" style="background-color: #f0f0f0; margin-bottom: 15px">
+	<form>
+		<div class="row">
+			<div class="col-md">
+				<h2>General</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md">
+				<label class="mr-sm-2" for="matchType">Match Type</label>
+				<select class="custom-select mr-sm-2" id="matchType">
+					<option selected>Choose...</option>
+					<option value="p">Practice</option>
+					<option value="q">Qualification</option>
+				</select>
+			</div>
+			<div class="col-md">
+				<label class="mr-sm-2" for="matchNumber">Match Number</label>
+				<input id="matchNumber" type="tel" class="form-control" placeholder="Match Number">
+			</div>
+			<div class="col-md">
+				<label class="mr-sm-2" for="teamNumber">Team Number</label>
+				<input id="teamNumber" type="tel" class="form-control" placeholder="Team Number">
+			</div>
+		</div>
+		<hr/>
+		<div class="row">
+			<div class="col-md">
+				<h2>Auto</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<label class="mr-sm-2" style="display: block" for="crossedBaseline">Crossed Baseline</label>
+				<div id="crossedBaseline" class="btn-group btn-group-toggle" data-toggle="buttons">
+					<label class="btn btn-secondary">
+						<input type="radio" name="crossedBaseline" id="baselineNo" autocomplete="off"> No
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="crossedBaseline" id="baselineYes" autocomplete="off"> Yes
+					</label>
+				</div>
+			</div>
+			<div class="col">
+				<label class="mr-sm-2" style="display: block" for="autoSwitch">Cube in Switch</label>
+				<div id="autoSwitch" class="btn-group btn-group-toggle" data-toggle="buttons">
+					<label class="btn btn-secondary">
+						<input type="radio" name="autoSwitch" id="autoSwitchNo" autocomplete="off"> No
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="autoSwitch" id="autoSwitchYes" autocomplete="off"> Yes
+					</label>
+				</div>
+			</div>
+			<div class="col">
+				<label class="mr-sm-2" style="display: block" for="autoScale">Cube in Scale</label>
+				<div id="autoSwitch" class="btn-group btn-group-toggle" data-toggle="buttons">
+					<label class="btn btn-secondary">
+						<input type="radio" name="autoScale" id="autoScaleNo" autocomplete="off"> No
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="autoScale" id="autoScaleYes" autocomplete="off"> Yes
+					</label>
+				</div>
+			</div>
+		</div>
+		<hr/>
+		<div class="row">
+			<div class="col-md">
+				<h2>Teleop</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md">
+				<label style="margin-bottom: 0px" for="scaleCubes">Cubes on Scale</label>
+			</div>
+		</div>
+		<div class="row" style="margin-top:15px">
+			<div class="col-md input-group">
+				<a onclick="modifyScale_qty(-1)" class="btn btn-danger btn-lg" style="width: 50px; height: 50px; margin-right: 15px;" role="button">-</a>
+				<input id="scaleCubes" type="tel" class="form-control" value="0">
+				<a onclick="modifyScale_qty(1)" class="btn btn-success btn-lg" style="width: 50px; height: 50px; margin-left: 15px;" role="button">+</a>
+			</div>
+		</div>
+		<div class="row" style="margin-top:15px">
+			<div class="col-md">
+				<label style="margin-bottom: 0px" for="scaleCubes">Cubes on Switch</label>
+			</div>
+		</div>
+		<div class="row" style="margin-top:15px">
+			<div class="col-md input-group">
+				<a onclick="modifySwitch_qty(-1)" class="btn btn-danger btn-lg" style="width: 50px; height: 50px; margin-right: 15px;" role="button">-</a>
+				<input id="switchCubes" type="tel" class="form-control" value="0">
+				<a onclick="modifySwitch_qty(1)" class="btn btn-success btn-lg" style="width: 50px; height: 50px; margin-left: 15px;" role="button">+</a>
+			</div>
+		</div>
+		<div class="row" style="margin-top:15px">
+			<div class="col-md">
+				<label style="margin-bottom: 0px" for="scaleCubes">Cubes in Exchange</label>
+			</div>
+		</div>
+		<div class="row" style="margin-top:15px">
+			<div class="col-md input-group">
+				<a onclick="modifyExchange_qty(-1)" class="btn btn-danger btn-lg" style="width: 50px; height: 50px; margin-right: 15px;"
+				 role="button">-</a>
+				<input id="exchangeCubes" type="tel" class="form-control" value="0">
+				<a onclick="modifyExchange_qty(1)" class="btn btn-success btn-lg" style="width: 50px; height: 50px; margin-left: 15px;" role="button">+</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md">
+				<label class="mr-sm-2" for="climbingType">Climbing</label>
+				<select class="custom-select mr-sm-2" id="climbingType">
+					<option selected>Choose...</option>
+					<option value="p">Did Not Climb or Park</option>
+					<option value="q">Failed to Climb</option>
+					<option value="f">Parked</option>
+					<option value="qf">Climbed on Rung</option>
+					<option value="sf">Used Another Robot's Ramp</option>
+					<option value="f">Deployed Ramp</option>
+					<option value="f">Levitated</option>
+					<option value="f">Climbed on Another Robot Off Rung</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<label class="mr-sm-2" style="display: block" for="speedRating">Speed</label>
+				<div id="speedRating" class="btn-group btn-group-toggle" data-toggle="buttons">
+					<label class="btn btn-secondary">
+						<input type="radio" name="speedRating" id="speed1" autocomplete="off"> 1
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="speedRating" id="speed2" autocomplete="off"> 2
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="speedRating" id="speed3" autocomplete="off"> 3
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="speedRating" id="speed4" autocomplete="off"> 4
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="speedRating" id="speed5" autocomplete="off"> 5
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="speedRating" id="speed6" autocomplete="off"> 6
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="speedRating" id="speed7" autocomplete="off"> 7
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="speedRating" id="speed8" autocomplete="off"> 8
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="speedRating" id="speed9" autocomplete="off"> 9
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="speedRating" id="speed10" autocomplete="off"> 10
+					</label>
+				</div>
+			</div>
+			<div class="col">
+				<label class="mr-sm-2" style="display: block" for="stabilityRating">Stability</label>
+				<div id="stabilityRating" class="btn-group btn-group-toggle" data-toggle="buttons">
+					<label class="btn btn-secondary">
+						<input type="radio" name="stabilityRating" id="stability1" autocomplete="off"> 1
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="stabilityRating" id="stability2" autocomplete="off"> 2
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="stabilityRating" id="stability3" autocomplete="off"> 3
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="stabilityRating" id="stability4" autocomplete="off"> 4
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="stabilityRating" id="stability5" autocomplete="off"> 5
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="stabilityRating" id="stability6" autocomplete="off"> 6
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="stabilityRating" id="stability7" autocomplete="off"> 7
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="stabilityRating" id="stability8" autocomplete="off"> 8
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="stabilityRating" id="stability9" autocomplete="off"> 9
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="stabilityRating" id="stability10" autocomplete="off"> 10
+					</label>
+				</div>
+			</div>
+			<div class="col">
+				<label class="mr-sm-2" style="display: block" for="skillRating">Driver Skill</label>
+				<div id="skillRating" class="btn-group btn-group-toggle" data-toggle="buttons">
+					<label class="btn btn-secondary">
+						<input type="radio" name="skillRating" id="skill1" autocomplete="off"> 1
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="skillRating" id="skill2" autocomplete="off"> 2
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="skillRating" id="skill3" autocomplete="off"> 3
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="skillRating" id="skill4" autocomplete="off"> 4
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="skillRating" id="skill5" autocomplete="off"> 5
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="skillRating" id="skill6" autocomplete="off"> 6
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="skillRating" id="skill7" autocomplete="off"> 7
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="skillRating" id="skill8" autocomplete="off"> 8
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="skillRating" id="skill9" autocomplete="off"> 9
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="skillRating" id="skill10" autocomplete="off"> 10
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+				<div class="col">
+				<label class="mr-sm-2" style="display: block" for="defenceRating">Defence</label>
+				<div id="defenceRating" class="btn-group btn-group-toggle" data-toggle="buttons">
+					<label class="btn btn-secondary">
+						<input type="radio" name="defenceRating" id="defence1" autocomplete="off"> 1
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="defenceRating" id="defence2" autocomplete="off"> 2
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="defenceRating" id="defence3" autocomplete="off"> 3
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="defenceRating" id="defence4" autocomplete="off"> 4
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="defenceRating" id="defence5" autocomplete="off"> 5
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="defenceRating" id="defence6" autocomplete="off"> 6
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="defenceRating" id="defence7" autocomplete="off"> 7
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="defenceRating" id="defence8" autocomplete="off"> 8
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="defenceRating" id="defence9" autocomplete="off"> 9
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" name="defenceRating" id="defence10" autocomplete="off"> 10
+					</label>
+				</div>
+			</div>
+		</div>
+		<button id="Submit" class="btn btn-success" type="button" style="margin-top: 15px; margin-bottom: 15px">Submit</button>
+	</form>
 </div>

@@ -32,3 +32,37 @@
 	}
 	});
 	});
+
+	function modifyScale_qty(val) {
+		var qty = document.getElementById('scaleCubes').value;
+		var new_qty = parseInt(qty,10) + parseInt(val,10);
+		
+		if (new_qty < 0) {
+			new_qty = 0;
+		}
+		
+		document.getElementById('scaleCubes').value = new_qty;
+		return new_qty;
+	}
+	function modifySwitch_qty(val) {
+		var qty = document.getElementById('switchCubes').value;
+		var new_qty = parseInt(qty,10) + parseInt(val,10);
+		
+		if (new_qty < 0) {
+			new_qty = 0;
+		}
+		
+		document.getElementById('switchCubes').value = new_qty;
+		return new_qty;
+	}
+	function modifyExchange_qty(val) {
+		var qty = document.getElementById('exchangeCubes').value;
+		var new_qty = parseInt(qty,10) + parseInt(val,10);
+		
+		if (new_qty < 0) {
+			new_qty = 0;
+		}
+		
+		document.getElementById('exchangeCubes').value = new_qty;
+		return new_qty;
+	}

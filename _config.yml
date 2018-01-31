@@ -4,3 +4,4 @@ description: "Scouting App for Team 4334"
 permalink: pretty
 
 paginator: 10
+host: 0.0.0.0
