@@ -15,6 +15,7 @@
  var autoCrossedBaseline = $('input[name=autoCrossedBaseline]:checked').val();
  var autoSwitch = $('input[name=autoSwitch]:checked').val();
  var autoScale = $('input[name=autoScale]:checked').val();
+ var commentSection = $('#commentSection').val();
 
  var id = matchType+matchNumber+"_"+teamNumber
  var doc = {
@@ -30,6 +31,7 @@
   "Stability Rating": stabilityRating,
   "Skill Rating": skillRating,
   "Defence Rating": defenceRating,
+  "Notes and Comments": commentSection,
 };
 	if (localStorage.getItem('settingsCheck') == 1) {
 		 var db = new PouchDB(databaseName);
