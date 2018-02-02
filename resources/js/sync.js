@@ -1,14 +1,14 @@
 $(document).ready(function(){
     $('#sync').on('click', function(e) {
-         var dbname = localStorage.getItem('dbname');
-        var serverip = localStorage.getItem('serverip');
-       if (localStorage.getItem('settingscheck') == 1){
-       $.ajax({url: "http://"+serverip+":5984/"+dbname,
+        var databaseName = localStorage.getItem('databaseName');
+        var serverIp = localStorage.getItem('serverIp');
+       if (localStorage.getItem('settingsCheck') == 1){
+       $.ajax({url: "http://"+serverIp+":5984/"+databaseName,
            type: "HEAD",
            timeout:1000,
            statusCode: {
                200: function (response) {
-                   PouchDB.sync(dbname, 'http://'+serverip+':5984/'+dbname);
+                   PouchDB.sync(databaseName, 'http://'+serverIp+':5984/'+databaseName);
                    window.alert("Synced successfully!");
                },
                404: function (response) {

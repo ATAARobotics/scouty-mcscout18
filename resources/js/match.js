@@ -1,6 +1,7 @@
 ﻿$(document).ready(function(){
  $('#Submit').on('click', function(e) {
- var dbname = localStorage.getItem('dbname');
+ var databaseName = localStorage.getItem('databaseName');
+ var scoutName = localStorage.getItem('scoutName');
  var teamNumber = $('#teamNumber').val(); 
  var matchNumber = $('#matchNumber').val();
  var matchType = $('#matchType').val();
@@ -18,6 +19,7 @@
  var id = matchType+matchNumber+"_"+teamNumber
  var doc = {
   "_id": id,
+  "Scout Name": scoutName,
   "Auto Crossed Baseline": autoCrossedBaseline,
   "Auto Cube On Switch": autoSwitch,
   "Auto Cube On Scale": autoScale,
@@ -29,8 +31,8 @@
   "Skill Rating": skillRating,
   "Defence Rating": defenceRating,
 };
-	if (localStorage.getItem('settingscheck') == 1) {
-		 var db = new PouchDB(dbname);
+	if (localStorage.getItem('settingsCheck') == 1) {
+		 var db = new PouchDB(databaseName);
 	    db.put(doc).then(function() {
 	        // success
 	        window.alert("Submitted!");
