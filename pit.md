@@ -6,6 +6,12 @@ title: Pit
 	<form>
         <div class="row">
             <div class="col-md">
+				<label class="mr-sm-2" for="teamNumber">Team Number</label>
+				<input id="teamNumber" type="tel" class="form-control" placeholder="Team Number">
+			</div>
+        </div>
+        <div class="row">
+            <div class="col-md">
                 <label class="mr-sm-2" style="display: block" for="manipulatorType">Cube Manipulator Type:</label>
 				<div id="manipulatorType" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
@@ -143,7 +149,7 @@ title: Pit
 		<div class="row">
             <div class="col-md">
                 <label class="mr-sm-2" style="display: block" for="robotPhoto">Take Robot Photo</label>
-                <input style="margin-bottom: 15px" type="file" capture="camera" accept="image/*" id="cameraInput" name="robotPhoto">
+                <input style="margin-bottom: 15px" type="file" capture="camera" accept="image/*" id="robotPhoto" name="robotPhoto">
             </div>
         </div>
         <div class="row">
@@ -152,5 +158,6 @@ title: Pit
 				<textarea rows="4" cols="50" id="commentSection"></textarea>
 			</div>
 		</div>
+        <button id="Submit" class="btn btn-success" type="button" style="margin-top: 15px; margin-bottom: 15px">Submit</button>
     </form>
 </div>
