@@ -1,9 +1,23 @@
 $(document).ready(function(){
     $('#Submit').on('click', function(e) {
+        function getPlaceCubes(){
+            var chkArray = [];
+            $("#placeCubes input:checked").each(function() {
+            chkArray.push($(this).val());
+            });
+            var selected = chkArray.join(',') ;
+            return selected
+        }
     var databaseName = localStorage.getItem('databaseName');
     var scoutName = localStorage.getItem('scoutName');
     var teamNumber = $('#teamNumber').val(); 
     var commentSection = $('#commentSection').val();
+    var manipulatorType = $('#manipulatorType').val();
+    var robotSize = $('#robotSize').val();
+    var robotAppearance = $('robotAppearance').val();
+    var pitSkill = $('pitSkill').val();
+    var robotClimber = $('robotClimber').val();
+    var placeCubes = getPlaceCubes();
     var id = "pit_"+teamNumber
    
     var doc = {
@@ -15,6 +29,12 @@ $(document).ready(function(){
         }
       },
      "Scout Name": scoutName,
+     "Cube Manipulator Type": manipulatorType,
+     "Can Place Cubes In": placeCubes,
+     "Robot Size": robotSize,
+     "Robot Appearance": robotAppearance,
+     "Pit Crew Skill": pitSkill,
+     "Climber Type": robotClimber,
      "Notes and Comments": commentSection,
    };
        if (localStorage.getItem('settingsCheck') == 1) {

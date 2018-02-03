@@ -32,13 +32,13 @@ title: Pit
                 <label class="mr-sm-2" style="display: block" for="placeCubes">Can Place Cubes In:</label>
 				<div id="placeCubes" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
-						<input type="checkbox" value="arm" name="placeCubes" id="cubeSwitch" autocomplete="off"> Switch
+						<input type="checkbox" value="switch" name="placeCubes" id="cubeSwitch" autocomplete="off"> Switch
 					</label>
 					<label class="btn btn-secondary">
-						<input type="checkbox" value="elevator" name="placeCubes" id="cubeScale" autocomplete="off"> Scale
+						<input type="checkbox" value="scale" name="placeCubes" id="cubeScale" autocomplete="off"> Scale
 					</label>
 					<label class="btn btn-secondary">
-						<input type="checkbox" value="pusher" name="placeCubes" id="cubeExchange" autocomplete="off"> Exchange
+						<input type="checkbox" value="exchange" name="placeCubes" id="cubeExchange" autocomplete="off"> Exchange
 					</label>
 				</div>
             </div>
@@ -130,7 +130,7 @@ title: Pit
                 </div>
                 <div class="col">
                 <label class="mr-sm-2" style="display: block" for="robotClimber">Climber:</label>
-				<div id="robotSize" class="btn-group btn-group-toggle" data-toggle="buttons">
+				<div id="robotClimber" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
 						<input type="radio" value="rung" name="robotClimber" id="climberRung" autocomplete="off"> Rung Climber
 					</label>
