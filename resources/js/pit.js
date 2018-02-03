@@ -12,11 +12,11 @@ $(document).ready(function(){
     var scoutName = localStorage.getItem('scoutName');
     var teamNumber = $('#teamNumber').val(); 
     var commentSection = $('#commentSection').val();
-    var manipulatorType = $('#manipulatorType').val();
-    var robotSize = $('#robotSize').val();
-    var robotAppearance = $('robotAppearance').val();
-    var pitSkill = $('pitSkill').val();
-    var robotClimber = $('robotClimber').val();
+    var manipulatorType = $('input[name=manipulatorType]:checked').val();
+    var robotSize = $('input[name=robotSize]:checked').val();
+    var robotAppearance = $('input[name=robotAppearance]:checked').val();
+    var pitSkill = $('input[name=pitSkill]:checked').val();
+    var robotClimber = $('input[name=robotClimber]:checked').val();
     var placeCubes = getPlaceCubes();
     var id = "pit_"+teamNumber
    
@@ -42,7 +42,7 @@ $(document).ready(function(){
            db.put(doc).then(function() {
                // success
                window.alert("Submitted!");
-               window.location.href = '/pit.html';
+               window.location.href = '/pit';
            }).catch(function(err) {
                if (err.name === 'conflict') {
                    // conflict!
