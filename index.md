@@ -116,14 +116,16 @@ title: Match
 				<label class="mr-sm-2" for="climbingType">Climbing</label>
 				<select class="custom-select mr-sm-2" id="climbingType">
 					<option selected>Choose...</option>
-					<option value="p">Did Not Climb or Park</option>
-					<option value="q">Failed to Climb</option>
-					<option value="f">Parked</option>
-					<option value="qf">Climbed on Rung</option>
-					<option value="sf">Used Another Robot's Ramp</option>
-					<option value="f">Deployed Ramp</option>
-					<option value="f">Levitated</option>
-					<option value="f">Climbed on Another Robot Off Rung</option>
+					<option value="did not climb or park">Did Not Climb or Park</option>
+					<option value="failed to climb">Failed to Climb</option>
+					<option value="parked">Parked</option>
+					<option value="climbed on rung">Climbed on Rung</option>
+					<option value="climbed on another robot off rung">Climbed on Another Robot Off Rung</option>
+					<option value="deployed ramp">Deployed Ramp</option>
+					<option value="deployed ramp and levitated">Deployed Ramp and Levitated</option>
+					<option value="used another robots ramp">Used Another Robot's Ramp</option>
+					<option value="levitated">Levitated</option>
+					<option value="other">Other Describe in Notes</option>
 				</select>
 			</div>
 		</div>

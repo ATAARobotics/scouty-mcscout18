@@ -8,6 +8,7 @@
  var teleopScaleCubes = $('#teleopScaleCubes').val();
  var teleopSwitchCubes = $('#teleopSwitchCubes').val();
  var teleopExchangeCubes = $('#teleopExchangeCubes').val();
+ var climbingType = $('#climbingType').val();
  var speedRating = $('input[name=speedRating]:checked').val();
  var stabilityRating = $('input[name=stabilityRating]:checked').val();
  var skillRating = $('input[name=skillRating]:checked').val();
@@ -27,6 +28,7 @@
   "Teleop Cubes In Scale": teleopScaleCubes,
   "Teleop Cubes In Switch": teleopExchangeCubes,
   "Teleop Cubes In Exchange": teleopExchangeCubes,
+  "Climbing": climbingType,
   "Speed Rating": speedRating,
   "Stability Rating": stabilityRating,
   "Skill Rating": skillRating,
