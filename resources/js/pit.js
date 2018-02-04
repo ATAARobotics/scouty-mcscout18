@@ -42,7 +42,7 @@ $(document).ready(function(){
            db.put(doc).then(function() {
                // success
                window.alert("Submitted!");
-               window.location.href = '/pit';
+               window.location.href = '../pit/index.html';
            }).catch(function(err) {
                if (err.name === 'conflict') {
                    // conflict!

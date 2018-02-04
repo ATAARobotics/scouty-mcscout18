@@ -40,7 +40,7 @@
 	    db.put(doc).then(function() {
 	        // success
 	        window.alert("Submitted!");
-	        window.location.href = 'index.html';
+	        window.location.href = './index.html';
 	    }).catch(function(err) {
 	        if (err.name === 'conflict') {
 	            // conflict!

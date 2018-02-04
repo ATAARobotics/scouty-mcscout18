@@ -33,7 +33,7 @@ $(document).ready(function(){
                 localStorage.setItem('serverUsername', serverUsername);
                 localStorage.setItem('serverPassword', serverPassword);
                 window.alert("Settings Saved!");
-                window.location.href = '/index.html';
+                window.location.href = '../index.html';
             },
             404: function (response) {
                 if (confirm("Server ip or database name is incorrect! Check server ip and database name! Are you sure these settings are correct?")) {
@@ -44,7 +44,7 @@ $(document).ready(function(){
                     localStorage.setItem('serverUsername', serverUsername);
                     localStorage.setItem('serverPassword', serverPassword);
                     window.alert("Settings Saved!");
-                    window.location.href = '/index.html';                
+                    window.location.href = '../index.html';                
                 } else {
                     localStorage.setItem('serverIp', 'incorrect');
                     localStorage.setItem('databaseName', 'incorrect');
@@ -66,7 +66,7 @@ $(document).ready(function(){
                     localStorage.setItem('serverUsername', serverUsername);
                  localStorage.setItem('serverPassword', serverPassword);
                     window.alert("Settings Saved!");
-                    window.location.href = '/index.html';                
+                    window.location.href = '../index.html';                
                 } else {
                     localStorage.setItem('serverIp', 'incorrect');
                     localStorage.setItem('databaseName', 'incorrect');
