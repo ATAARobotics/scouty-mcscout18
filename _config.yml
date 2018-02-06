@@ -5,3 +5,9 @@ permalink: pretty
 
 paginator: 10
 host: 0.0.0.0
+
+destination: ./app/www/
+exclude:
+  - app
+  - Gemfile
+  - Gemfile.lock
