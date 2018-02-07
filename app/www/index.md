@@ -235,8 +235,6 @@ title: Match
 					</label>
 				</div>
 			</div>
-		</div>
-		<div class="row">
 				<div class="col">
 				<label class="mr-sm-2" style="display: block" for="defenceRating">Defence</label>
 				<div id="defenceRating" class="btn-group btn-group-toggle" data-toggle="buttons">
