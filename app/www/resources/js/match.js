@@ -5,6 +5,8 @@
  var teamNumber = $('#teamNumber').val(); 
  var matchNumber = $('#matchNumber').val();
  var matchType = $('#matchType').val();
+ var allianceColor = $('input[name=allianceColor]:checked').val();
+ var startingPosition = $('input[name=startingPosition]:checked').val();
  var teleopScaleCubes = $('#teleopScaleCubes').val();
  var teleopSwitchCubes = $('#teleopSwitchCubes').val();
  var teleopExchangeCubes = $('#teleopExchangeCubes').val();
@@ -22,6 +24,8 @@
  var doc = {
   "_id": id,
   "Scout Name": scoutName,
+  "Alliance Color": allianceColor,
+  "Starting Position": startingPosition,
   "Auto Crossed Baseline": autoCrossedBaseline,
   "Auto Cube On Switch": autoSwitch,
   "Auto Cube On Scale": autoScale,
