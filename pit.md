@@ -24,7 +24,7 @@ title: Pit
 						<input type="radio" value="pusher" name="manipulatorType" id="maipulatorPusher" autocomplete="off"> Pusher
 					</label>
 					<label class="btn btn-secondary">
-						<input type="radio" value="other" name="manipulatorType" id="manipulatorOther" autocomplete="off"> Other, Describe in Notes
+						<input type="radio" value="other" name="manipulatorType" id="manipulatorOther" autocomplete="off"> Other
 					</label>
 				</div>
             </div>
@@ -141,7 +141,7 @@ title: Pit
 						<input type="radio" value="none" name="robotClimber" id="climberNone" autocomplete="off"> None
 					</label>
                     <label class="btn btn-secondary">
-						<input type="radio" value="other" name="robotClimber" id="climberOther" autocomplete="off"> Other, Describe in Notes
+						<input type="radio" value="other" name="robotClimber" id="climberOther" autocomplete="off"> Other
 					</label>
 				</div>
             </div>
