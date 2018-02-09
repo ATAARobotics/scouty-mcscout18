@@ -11,7 +11,7 @@ title: Pit
 			</div>
         </div>
         <div class="row">
-            <div class="col-md">
+            <div class="col-lg-4 col-md-6">
                 <label class="mr-sm-2" style="display: block" for="manipulatorType">Cube Manipulator Type:</label>
 				<div id="manipulatorType" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
@@ -28,7 +28,7 @@ title: Pit
 					</label>
 				</div>
             </div>
-            <div class="col-md">
+            <div class="col-lg-4 col-md-6">
                 <label class="mr-sm-2" style="display: block" for="placeCubes">Can Place Cubes In:</label>
 				<div id="placeCubes" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
@@ -42,7 +42,7 @@ title: Pit
 					</label>
 				</div>
             </div>
-            <div class="col-md">
+            <div class="col-md-4">
                 <label class="mr-sm-2" style="display: block" for="robotSize">Size:</label>
 				<div id="robotSize" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
@@ -58,7 +58,7 @@ title: Pit
             </div>
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col-xl-4 col-md-6">
                 <label class="mr-sm-2" style="display: block" for="robotAppearance">Overall Appearance:</label>
 				<div id="robotAppearance" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
@@ -93,7 +93,7 @@ title: Pit
 					</label>
 				</div>
             </div>
-            <div class="col">
+            <div class="col-xl-4 col-md-6">
             <label class="mr-sm-2" style="display: block" for="pitSkill">Pit Crew Skill:</label>
 				<div id="pitSkill" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
@@ -128,7 +128,7 @@ title: Pit
 					</label>
 				</div>
                 </div>
-                <div class="col">
+                <div class="col-xl-4 col-md-4">
                 <label class="mr-sm-2" style="display: block" for="robotClimber">Climber:</label>
 				<div id="robotClimber" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
