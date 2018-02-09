@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     $('#robotPhoto').on('change', function (e) {
         var reader = new FileReader();
-        reader.onload = (e) => (robotPhoto = e.target.result) && console.log(robotPhoto);
+        reader.onload = (e) => (robotPhoto = e.target.result);
         reader.readAsDataURL(e.target.files[0]);
     });
 
