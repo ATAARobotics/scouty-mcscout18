@@ -148,8 +148,7 @@ title: Pit
         </div>
 		<div class="row">
             <div class="col-md">
-                <label class="mr-sm-2" style="display: block" for="robotPhoto">Take Robot Photo</label>
-                <input style="margin-bottom: 15px" type="file" capture="camera" accept="image/*" id="robotPhoto" name="robotPhoto">
+                <button id="robotPhoto" type="button" class="btn btn-primary">Take Robot Photo</button>
             </div>
         </div>
         <div class="row">

@@ -12,6 +12,9 @@
     },
     "cordova-plugin-wkwebview-engine": {
       "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
     }
   },
   "dependent_plugins": {}
