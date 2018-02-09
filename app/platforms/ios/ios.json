@@ -15,13 +15,33 @@
             {
               "xml": "<preference name=\"CordovaWebViewEngine\" value=\"CDVWKWebViewEngine\" />",
               "count": 1
-            },
+            }
+          ]
+        }
+      },
+      "*-Info.plist": {
+        "parents": {
+          "NSCameraUsageDescription": [
             {
-              "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
+              "xml": "<string>This app needs camera access</string>",
               "count": 1
-            },
+            }
+          ],
+          "NSMicrophoneUsageDescription": [
             {
-              "xml": "<preference name=\"CameraUsesGeolocation\" value=\"false\" />",
+              "xml": "<string>This app needs microphone access</string>",
+              "count": 1
+            }
+          ],
+          "NSPhotoLibraryAddUsageDescription": [
+            {
+              "xml": "<string>This app needs write-access to photo library</string>",
+              "count": 1
+            }
+          ],
+          "NSPhotoLibraryUsageDescription": [
+            {
+              "xml": "<string>This app needs read/write-access photo library access</string>",
               "count": 1
             }
           ]
@@ -36,7 +56,11 @@
     "cordova-plugin-wkwebview-engine": {
       "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
     },
-    "cordova-plugin-camera": {
+    "cordova-plugin-ios-camera-permissions": {
+      "CAMERA_USAGE_DESCRIPTION": "This app needs camera access",
+      "MICROPHONE_USAGE_DESCRIPTION": "This app needs microphone access",
+      "PHOTOLIBRARY_ADD_USAGE_DESCRIPTION": "This app needs write-access to photo library",
+      "PHOTOLIBRARY_USAGE_DESCRIPTION": "This app needs read/write-access photo library access",
       "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
     }
   },
@@ -57,43 +81,11 @@
       "clobbers": [
         "window.WkWebView"
       ]
-    },
-    {
-      "id": "cordova-plugin-camera.Camera",
-      "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
-      "pluginId": "cordova-plugin-camera",
-      "clobbers": [
-        "Camera"
-      ]
-    },
-    {
-      "id": "cordova-plugin-camera.CameraPopoverOptions",
-      "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
-      "pluginId": "cordova-plugin-camera",
-      "clobbers": [
-        "CameraPopoverOptions"
-      ]
-    },
-    {
-      "id": "cordova-plugin-camera.camera",
-      "file": "plugins/cordova-plugin-camera/www/Camera.js",
-      "pluginId": "cordova-plugin-camera",
-      "clobbers": [
-        "navigator.camera"
-      ]
-    },
-    {
-      "id": "cordova-plugin-camera.CameraPopoverHandle",
-      "file": "plugins/cordova-plugin-camera/www/ios/CameraPopoverHandle.js",
-      "pluginId": "cordova-plugin-camera",
-      "clobbers": [
-        "CameraPopoverHandle"
-      ]
     }
   ],
   "plugin_metadata": {
     "cordova-plugin-whitelist": "1.3.3",
     "cordova-plugin-wkwebview-engine": "1.1.4",
-    "cordova-plugin-camera": "4.0.2"
+    "cordova-plugin-ios-camera-permissions": "1.2.0"
   }
 }

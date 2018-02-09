@@ -15,10 +15,10 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-camera": {
+  "cordova-plugin-ios-camera-permissions": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-camera@4.0.2"
+      "id": "cordova-plugin-ios-camera-permissions"
     },
     "is_top_level": true,
     "variables": {}

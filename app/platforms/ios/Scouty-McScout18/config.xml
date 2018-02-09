@@ -71,8 +71,4 @@
     <preference name="PaginationMode" value="unpaginated" />
     <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
     <preference name="Orientation" value="landscape" />
-    <feature name="Camera">
-        <param name="ios-package" value="CDVCamera" />
-    </feature>
-    <preference name="CameraUsesGeolocation" value="false" />
 </widget>
