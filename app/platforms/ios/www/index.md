@@ -2,7 +2,7 @@
 layout: default
 title: Match
 ---
-<div class="container" style="background-color: #f0f0f0; margin-bottom: 15px">
+<div class="container-fluid" style="background-color: #f0f0f0; margin-bottom: 15px">
 	<form>
 		<div class="row">
 			<div class="col-md">
