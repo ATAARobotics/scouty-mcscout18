@@ -9,12 +9,6 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
-    },
-    "cordova-plugin-wkwebview-engine": {
-      "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
-    },
-    "cordova-plugin-ios-camera-permissions": {
-      "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
     }
   },
   "dependent_plugins": {}
