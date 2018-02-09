@@ -157,7 +157,7 @@ title: Match
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-6 col-md-12">
+					<div class="col">
 						<label class="mr-sm-2" style="display: block" for="speedRating">Speed</label>
 						<div id="speedRating" class="btn-group btn-group-toggle" data-toggle="buttons">
 							<label class="btn btn-secondary">
@@ -192,7 +192,7 @@ title: Match
 							</label>
 						</div>
 					</div>
-					<div class="col-lg-6 col-md-12">
+					<div class="col">
 						<label class="mr-sm-2" style="display: block" for="stabilityRating">Stability</label>
 						<div id="stabilityRating" class="btn-group btn-group-toggle" data-toggle="buttons">
 							<label class="btn btn-secondary">
@@ -227,7 +227,7 @@ title: Match
 							</label>
 						</div>
 					</div>
-					<div class="col-lg-6 col-md-12">
+					<div class="col">
 						<label class="mr-sm-2" style="display: block" for="skillRating">Driver Skill</label>
 						<div id="skillRating" class="btn-group btn-group-toggle" data-toggle="buttons">
 							<label class="btn btn-secondary">
@@ -262,7 +262,7 @@ title: Match
 							</label>
 						</div>
 					</div>
-					<div class="col-lg-6 col-md-12">
+					<div class="col">
 						<label class="mr-sm-2" style="display: block" for="defenceRating">Defence</label>
 						<div id="defenceRating" class="btn-group btn-group-toggle" data-toggle="buttons">
 							<label class="btn btn-secondary">
