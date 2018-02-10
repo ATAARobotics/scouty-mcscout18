@@ -31,7 +31,7 @@ title: Pit
 					</label>
 				</div>
             </div>
-            <div class="col-lg-4 col-6">
+            <div class="col-lg-4 col-sm-6">
                 <label class="mr-sm-2" style="display: block" for="placeCubes">Can Place Cubes In:</label>
 				<div id="placeCubes" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
@@ -45,7 +45,7 @@ title: Pit
 					</label>
 				</div>
             </div>
-            <div class="col-md-4 col-6">
+            <div class="col-md-4 col-sm-6">
                 <label class="mr-sm-2" style="display: block" for="robotSize">Size:</label>
 				<div id="robotSize" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
