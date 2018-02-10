@@ -176,7 +176,7 @@ title: Pit
 		<div class="row">
             <div class="col-md">
 				<label class="mr-sm-2" style="display: block" for="robotPhoto">Take Robot Photo</label>
-                <input style="margin-bottom: 15px" type="file" capture="camera" accept="image/*" id="robotPhoto" name="robotPhoto">
+                <input style="margin-bottom: 15px" type="file" accept="image/*" capture="camera" id="robotPhoto" name="robotPhoto">
 			</div>
         </div>
         <div class="row">
