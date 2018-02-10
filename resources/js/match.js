@@ -48,7 +48,7 @@
 	    }).catch(function(err) {
 	        if (err.name === 'conflict') {
 	            // conflict!
-	            window.alert("Round already submitted!");
+	            window.alert("Match already submitted! Check Round Type and Number.");
 	        } else {
 	            // some other error
 	            window.alert("Error!");
