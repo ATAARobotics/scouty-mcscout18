@@ -33,7 +33,7 @@ $(document).ready(function () {
             _attachments: {
                 'robot.jpg': {
                     content_type: 'image/jpeg',
-                    data: robotPhoto
+                    data: robotPhoto.slice(23),
                 }
             },
             "Scout Name": scoutName,
