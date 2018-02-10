@@ -28,7 +28,7 @@ title: Pit
 					</label>
 				</div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-6">
                 <label class="mr-sm-2" style="display: block" for="placeCubes">Can Place Cubes In:</label>
 				<div id="placeCubes" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
@@ -42,7 +42,7 @@ title: Pit
 					</label>
 				</div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-6">
                 <label class="mr-sm-2" style="display: block" for="robotSize">Size:</label>
 				<div id="robotSize" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
@@ -146,6 +146,30 @@ title: Pit
 				</div>
             </div>
         </div>
+		<div class="row">
+			<div class="col-lg-4 col-6">
+				<label class="mr-sm-2" style="display: block" for="robotDone">Robot Done</label>
+				<div id="robotDone" class="btn-group btn-group-toggle" data-toggle="buttons">
+					<label class="btn btn-secondary">
+						<input type="radio" value="0" name="robotDone" id="robotDoneNo" autocomplete="off"> No
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" value="1" name="robotDone" id="robotDoneYes" autocomplete="off"> Yes
+					</label>
+				</div>
+			</div>
+			<div class="col-lg-4 col-6">
+				<label class="mr-sm-2" style="display: block" for="robotBroken">Anything Broken?</label>
+				<div id="robotBroken" class="btn-group btn-group-toggle" data-toggle="buttons">
+					<label class="btn btn-secondary">
+						<input type="radio" value="0" name="robotBroken" id="robotBrokenNo" autocomplete="off"> No
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" value="1" name="robotBroken" id="robotBrokenYes" autocomplete="off"> Yes
+					</label>
+				</div>
+			</div>
+		</div>
 		<div class="row">
             <div class="col-md">
 				<label class="mr-sm-2" style="display: block" for="robotPhoto">Take Robot Photo</label>
