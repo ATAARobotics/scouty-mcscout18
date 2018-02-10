@@ -7,7 +7,7 @@
 <head>
 <title>Team 4334 Scouting - Pit</title>
 <meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 <link href="../resources/css/bootstrap.min.css" rel="stylesheet">
 <script src="../resources/js/jquery.min.js"></script>
 <script src="../resources/js/bootstrap.min.js"></script>
@@ -47,7 +47,7 @@ hr {
 	height: 1px;
 }
 </style>
-<div class="container">
+<div class="container-fluid">
 	<nav class="navbar navbar-expand-lg navbar-light">
 		<a class="navbar-brand" style="width: 60%" href="../index.html">
 		<img class="img-fluid" src="../resources/img/atalogo.png"></a>
@@ -70,7 +70,7 @@ hr {
 	</nav>
 </div>
 
-<div class="container" style="background-color: #f0f0f0; margin-bottom: 15px">
+<div class="container-fluid" style="background-color: #f0f0f0; margin-bottom: 15px">
 	<form>
         <div class="row">
             <div class="col-md">
@@ -79,7 +79,7 @@ hr {
 			</div>
         </div>
         <div class="row">
-            <div class="col-md">
+            <div class="col-lg-4 col-md-6">
                 <label class="mr-sm-2" style="display: block" for="manipulatorType">Cube Manipulator Type:</label>
 				<div id="manipulatorType" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
@@ -92,11 +92,11 @@ hr {
 						<input type="radio" value="pusher" name="manipulatorType" id="maipulatorPusher" autocomplete="off" /> Pusher
 					</label>
 					<label class="btn btn-secondary">
-						<input type="radio" value="other" name="manipulatorType" id="manipulatorOther" autocomplete="off" /> Other, Describe in Notes
+						<input type="radio" value="other" name="manipulatorType" id="manipulatorOther" autocomplete="off" /> Other
 					</label>
 				</div>
             </div>
-            <div class="col-md">
+            <div class="col-lg-4 col-md-6">
                 <label class="mr-sm-2" style="display: block" for="placeCubes">Can Place Cubes In:</label>
 				<div id="placeCubes" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
@@ -110,7 +110,7 @@ hr {
 					</label>
 				</div>
             </div>
-            <div class="col-md">
+            <div class="col-md-4">
                 <label class="mr-sm-2" style="display: block" for="robotSize">Size:</label>
 				<div id="robotSize" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
@@ -126,7 +126,7 @@ hr {
             </div>
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col-xl-4 col-md-6">
                 <label class="mr-sm-2" style="display: block" for="robotAppearance">Overall Appearance:</label>
 				<div id="robotAppearance" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
@@ -161,7 +161,7 @@ hr {
 					</label>
 				</div>
             </div>
-            <div class="col">
+            <div class="col-xl-4 col-md-6">
             <label class="mr-sm-2" style="display: block" for="pitSkill">Pit Crew Skill:</label>
 				<div id="pitSkill" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
@@ -196,7 +196,7 @@ hr {
 					</label>
 				</div>
                 </div>
-                <div class="col">
+                <div class="col-xl-4 col-md-4">
                 <label class="mr-sm-2" style="display: block" for="robotClimber">Climber:</label>
 				<div id="robotClimber" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
@@ -209,16 +209,16 @@ hr {
 						<input type="radio" value="none" name="robotClimber" id="climberNone" autocomplete="off" /> None
 					</label>
                     <label class="btn btn-secondary">
-						<input type="radio" value="other" name="robotClimber" id="climberOther" autocomplete="off" /> Other, Describe in Notes
+						<input type="radio" value="other" name="robotClimber" id="climberOther" autocomplete="off" /> Other
 					</label>
 				</div>
             </div>
         </div>
 		<div class="row">
             <div class="col-md">
-                <label class="mr-sm-2" style="display: block" for="robotPhoto">Take Robot Photo</label>
-                <input style="margin-bottom: 15px" type="file" capture="camera" accept="image/*" id="robotPhoto" name="robotPhoto" />
-            </div>
+				<label class="mr-sm-2" style="display: block" for="robotPhoto">Take Robot Photo</label>
+                <input style="margin-bottom: 15px" type="file" capture="" accept="image/*" id="robotPhoto" name="robotPhoto" />
+			</div>
         </div>
         <div class="row">
 			<div class="col">
