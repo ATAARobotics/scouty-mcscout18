@@ -193,6 +193,17 @@ title: Match
 						</div>
 					</div>
 					<div class="col-xl-4 col-lg-6 col-md-12">
+						<p style="margin-bottom: 5px">Cube Cycle Time, Pickup to Dropoff to Pickup</p>
+						<div style="display: inline-block">
+						<p style="margin-bottom: 0px"><span style="font-size: 24px;" id="cubeCycleSeconds">00</span><span style="font-size: 24px;">:</span><span style="font-size: 24px;" id="cubeCycleTenths">00</span></p>
+						</div>
+						<div style="display: inline-block">
+						<a style="color:#fff" class="btn btn-secondary" id="cubeTimerStart">Start</a>
+						<a style="color:#fff" class="btn btn-secondary" id="cubeTimerStop">Stop</a>
+						<a style="color:#fff" class="btn btn-secondary" id="cubeTimerReset">Reset</a>
+						</div>
+					</div>
+					<div class="col-xl-4 col-lg-6 col-md-12">
 						<label class="mr-sm-2" style="display: block" for="stabilityRating">Stability</label>
 						<div id="stabilityRating" class="btn-group btn-group-toggle" data-toggle="buttons">
 							<label class="btn btn-secondary">
