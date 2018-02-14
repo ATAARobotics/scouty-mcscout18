@@ -25,6 +25,8 @@ $(document).ready(function () {
         var robotAppearance = $('input[name=robotAppearance]:checked').val();
         var pitSkill = $('input[name=pitSkill]:checked').val();
         var robotClimber = $('input[name=robotClimber]:checked').val();
+        var robotDone = $('input[name=robotDone]:checked').val();
+        var robotBroken = $('input[name=robotBroken]:checked').val();
         var placeCubes = getPlaceCubes();
         var id = "pit_" + teamNumber
 
@@ -43,6 +45,8 @@ $(document).ready(function () {
             "Robot Appearance": robotAppearance,
             "Pit Crew Skill": pitSkill,
             "Climber Type": robotClimber,
+            "Robot Done": robotDone,
+            "Robot Broken": robotBroken,
             "Notes and Comments": commentSection,
         };
         if (localStorage.getItem('settingsCheck') == 1) {
@@ -54,7 +58,7 @@ $(document).ready(function () {
             }).catch(function (err) {
                 if (err.name === 'conflict') {
                     // conflict!
-                    window.alert("Pit data already submitted!");
+                    window.alert("Pit data already submitted! Use the edit button.");
                 } else {
                     // some other error
                     window.alert("Error!");

@@ -17,8 +17,16 @@ $(document).ready(function(){
            timeout:1000,
            statusCode: {
                200: function (response) {
-                   PouchDB.sync(databaseName, 'http://'+serverUsername+':'+serverPassword+'@'+serverIp+':5984/'+databaseName);
-                   window.alert("Synced successfully!");
+                   PouchDB.sync(databaseName, 'http://'+serverUsername+':'+serverPassword+'@'+serverIp+':5984/'+databaseName, {
+                    live: false,
+                    retry: true
+                  }).on('denied', function (err) {
+                    window.alert("Access Denied? This shouldn't happen.");
+                  }).on('complete', function (info) {
+                    window.alert("Synced successfully!");
+                  }).on('error', function (err) {
+                    window.alert("Sync Error! Try Again!");
+                  });
                },
                404: function (response) {
                    window.alert("Server ip or database name is incorrect! Check server ip and database name!");
@@ -32,7 +40,7 @@ $(document).ready(function(){
            }
     });	
        } else {
-       window.alert("Sync failed! Check settings!");
+       window.alert("Check settings!");
        }
     }); 
    });
