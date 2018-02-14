@@ -23,7 +23,7 @@ $(document).ready(function(){
     },
     url: "http://"+serverIp+":5984/"+databaseName,
         type: "HEAD",
-        timeout:1000,
+        timeout:5000,
         statusCode: {
             200: function (response) {
                 localStorage.setItem('databaseName', databaseName);
