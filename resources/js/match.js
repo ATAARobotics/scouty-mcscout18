@@ -97,6 +97,17 @@ function modifyExchange_qty(val) {
 	document.getElementById('teleopExchangeCubes').value = new_qty;
 	return new_qty;
 }
+function modifyOppSwitch_qty(val) {
+	var qty = document.getElementById('teleopOppSwitchCubes').value;
+	var new_qty = parseInt(qty, 10) + parseInt(val, 10);
+
+	if (new_qty < 0) {
+		new_qty = 0;
+	}
+
+	document.getElementById('teleopOppSwitchCubes').value = new_qty;
+	return new_qty;
+}
 
 
 

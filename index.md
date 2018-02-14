@@ -1,6 +1,8 @@
 ﻿---
 layout: default
 title: Match
+files: |
+ <script src="./resources/js/match.js"></script>
 ---
 <div class="container-fluid" style="background-color: #f0f0f0; margin-bottom: 15px">
 	<form>
@@ -134,7 +136,7 @@ title: Match
 			<div class="col-md input-group">
 				<a onclick="modifyOppSwitch_qty(-1)" class="btn btn-danger btn-lg" style="width: 50px; height: 50px; margin-right: 15px;"
 				 role="button">-</a>
-				<input id="teleopOppSwithcCubes" type="tel" class="form-control" value="0">
+				<input id="teleopOppSwitchCubes" type="tel" class="form-control" value="0">
 				<a onclick="modifyOppSwitch_qty(1)" class="btn btn-success btn-lg" style="width: 50px; height: 50px; margin-left: 15px;"
 				 role="button">+</a>
 			</div>
