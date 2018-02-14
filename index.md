@@ -194,7 +194,7 @@ title: Match
 					</div>
 					<div class="col-xl-4 col-lg-6 col-md-12">
 						<p style="margin-bottom: 5px">Cube Cycle Time, Pickup to Dropoff to Pickup</p>
-						<div style="display: inline-block">
+						<div style="display: inline-block; width:65px">
 						<p style="margin-bottom: 0px"><span style="font-size: 24px;" id="cubeCycleSeconds">00</span><span style="font-size: 24px;">:</span><span style="font-size: 24px;" id="cubeCycleTenths">00</span></p>
 						</div>
 						<div style="display: inline-block">
