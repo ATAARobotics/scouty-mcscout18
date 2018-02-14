@@ -4,15 +4,15 @@ title: Pit
 ---
 <div class="container-fluid" style="background-color: #f0f0f0; margin-bottom: 15px">
 	<form>
-        <div class="row">
-            <div class="col">
+		<div class="row">
+			<div class="col">
 				<label class="mr-sm-2" for="teamNumber">Team Number</label>
 				<input id="teamNumber" type="tel" class="form-control" placeholder="Team Number">
 			</div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <label class="mr-sm-2" style="display: block" for="manipulatorType">Cube Manipulator Type:</label>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-6">
+				<label class="mr-sm-2" style="display: block" for="manipulatorType">Cube Manipulator Type:</label>
 				<div id="manipulatorType" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
 						<input type="radio" value="arm" name="manipulatorType" id="manipulatorArm" autocomplete="off"> Arm
@@ -27,9 +27,9 @@ title: Pit
 						<input type="radio" value="other" name="manipulatorType" id="manipulatorOther" autocomplete="off"> Other
 					</label>
 				</div>
-            </div>
-            <div class="col-lg-4 col">
-                <label class="mr-sm-2" style="display: block" for="placeCubes">Can Place Cubes In:</label>
+			</div>
+			<div class="col-lg-4 col">
+				<label class="mr-sm-2" style="display: block" for="placeCubes">Can Place Cubes In:</label>
 				<div id="placeCubes" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
 						<input type="checkbox" value="switch" name="placeCubes" id="cubeSwitch" autocomplete="off"> Switch
@@ -41,9 +41,9 @@ title: Pit
 						<input type="checkbox" value="exchange" name="placeCubes" id="cubeExchange" autocomplete="off"> Exchange
 					</label>
 				</div>
-            </div>
-            <div class="col-md-4 col">
-                <label class="mr-sm-2" style="display: block" for="robotSize">Size:</label>
+			</div>
+			<div class="col-md-4 col">
+				<label class="mr-sm-2" style="display: block" for="robotSize">Size:</label>
 				<div id="robotSize" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
 						<input type="radio" value="small" name="robotSize" id="sizeSmall" autocomplete="off"> Small
@@ -55,11 +55,11 @@ title: Pit
 						<input type="radio" value="large" name="robotSize" id="sizeLarge" autocomplete="off"> Large
 					</label>
 				</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xl-4 col-md-6">
-                <label class="mr-sm-2" style="display: block" for="robotAppearance">Overall Appearance:</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-4 col-md-6">
+				<label class="mr-sm-2" style="display: block" for="robotAppearance">Overall Appearance:</label>
 				<div id="robotAppearance" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
 						<input type="radio" value="1" name="robotAppearance" id="appearance1" autocomplete="off"> 1
@@ -92,9 +92,9 @@ title: Pit
 						<input type="radio" value="10" name="robotAppearance" id="appearance10" autocomplete="off"> 10
 					</label>
 				</div>
-            </div>
-            <div class="col-xl-4 col-md-6">
-            <label class="mr-sm-2" style="display: block" for="pitSkill">Pit Crew Skill:</label>
+			</div>
+			<div class="col-xl-4 col-md-6">
+				<label class="mr-sm-2" style="display: block" for="pitSkill">Pit Crew Skill:</label>
 				<div id="pitSkill" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
 						<input type="radio" value="1" name="pitSkill" id="pit1" autocomplete="off"> 1
@@ -127,9 +127,9 @@ title: Pit
 						<input type="radio" value="10" name="pitSkill" id="pit10" autocomplete="off"> 10
 					</label>
 				</div>
-                </div>
-                <div class="col-xl-4 col-md-4">
-                <label class="mr-sm-2" style="display: block" for="robotClimber">Climber:</label>
+			</div>
+			<div class="col-xl-4 col-md-4">
+				<label class="mr-sm-2" style="display: block" for="robotClimber">Climber:</label>
 				<div id="robotClimber" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
 						<input type="radio" value="rung" name="robotClimber" id="climberRung" autocomplete="off"> Rung Climber
@@ -140,12 +140,12 @@ title: Pit
 					<label class="btn btn-secondary">
 						<input type="radio" value="none" name="robotClimber" id="climberNone" autocomplete="off"> None
 					</label>
-                    <label class="btn btn-secondary">
+					<label class="btn btn-secondary">
 						<input type="radio" value="other" name="robotClimber" id="climberOther" autocomplete="off"> Other
 					</label>
 				</div>
-            </div>
-        </div>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-lg-4 col-6">
 				<label class="mr-sm-2" style="display: block" for="robotDone">Robot Done</label>
@@ -171,17 +171,17 @@ title: Pit
 			</div>
 		</div>
 		<div class="row">
-            <div class="col-md">
+			<div class="col-md">
 				<label class="mr-sm-2" style="display: block" for="robotPhoto">Take Robot Photo</label>
-                <input style="margin-bottom: 15px" type="file" accept="image/*" capture="camera" id="robotPhoto" name="robotPhoto">
+				<input style="margin-bottom: 15px" type="file" accept="image/*" capture="camera" id="robotPhoto" name="robotPhoto">
 			</div>
-        </div>
-        <div class="row">
+		</div>
+		<div class="row">
 			<div class="col">
-			<label class="mr-sm-2" style="display: block" for="commentSection">Notes and Comments</label>
+				<label class="mr-sm-2" style="display: block" for="commentSection">Notes and Comments</label>
 				<textarea style="width: 100%; height:100px" id="commentSection"></textarea>
 			</div>
 		</div>
-        <button id="Submit" class="btn btn-success" type="button" style="margin-top: 15px; margin-bottom: 15px">Submit</button>
-    </form>
+		<button id="Submit" class="btn btn-success" type="button" style="margin-top: 15px; margin-bottom: 15px">Submit</button>
+	</form>
 </div>
