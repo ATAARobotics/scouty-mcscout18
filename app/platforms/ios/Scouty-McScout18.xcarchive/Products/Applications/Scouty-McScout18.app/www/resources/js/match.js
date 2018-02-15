@@ -10,6 +10,7 @@
 		var teleopScaleCubes = $('#teleopScaleCubes').val();
 		var teleopSwitchCubes = $('#teleopSwitchCubes').val();
 		var teleopExchangeCubes = $('#teleopExchangeCubes').val();
+		var teleopOppSwitchCubes = $('#teleopOppSwitchCubes').val();
 		var climbingType = $('#climbingType').val();
 		var speedRating = $('input[name=speedRating]:checked').val();
 		var cubeCycleTime = cubeCycleSeconds.innerHTML + '.' + cubeCycleTenths.innerHTML
@@ -32,6 +33,7 @@
 			"Auto Cube On Scale": autoScale,
 			"Teleop Cubes In Scale": teleopScaleCubes,
 			"Teleop Cubes In Switch": teleopExchangeCubes,
+			"Teleop Cubes In Opponent Switch": teleopOppSwitchCubes,
 			"Teleop Cubes In Exchange": teleopExchangeCubes,
 			"Climbing": climbingType,
 			"Speed Rating": speedRating,
@@ -93,6 +95,17 @@ function modifyExchange_qty(val) {
 	}
 
 	document.getElementById('teleopExchangeCubes').value = new_qty;
+	return new_qty;
+}
+function modifyOppSwitch_qty(val) {
+	var qty = document.getElementById('teleopOppSwitchCubes').value;
+	var new_qty = parseInt(qty, 10) + parseInt(val, 10);
+
+	if (new_qty < 0) {
+		new_qty = 0;
+	}
+
+	document.getElementById('teleopOppSwitchCubes').value = new_qty;
 	return new_qty;
 }
 

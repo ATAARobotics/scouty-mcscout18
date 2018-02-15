@@ -1,9 +1,41 @@
 $(document).ready(function () {
-    var robotPhoto = '';
+    var robotPhotoFront = '';
 
-    $('#robotPhoto').on('change', function (e) {
+    $('#robotPhotoFront').on('change', function (e) {
         var reader = new FileReader();
-        reader.onload = (e) => (robotPhoto = e.target.result);
+        reader.onload = (e) => (robotPhotoFront = e.target.result);
+        reader.readAsDataURL(e.target.files[0]);
+    });
+
+    var robotPhotoBack = '';
+
+    $('#robotPhotoBack').on('change', function (e) {
+        var reader = new FileReader();
+        reader.onload = (e) => (robotPhotoBack = e.target.result);
+        reader.readAsDataURL(e.target.files[0]);
+    });
+
+    var robotPhotoLeft = '';
+
+    $('#robotPhotoLeft').on('change', function (e) {
+        var reader = new FileReader();
+        reader.onload = (e) => (robotPhotoLeft = e.target.result);
+        reader.readAsDataURL(e.target.files[0]);
+    });
+
+    var robotPhotoRight = '';
+
+    $('#robotPhotoRight').on('change', function (e) {
+        var reader = new FileReader();
+        reader.onload = (e) => (robotPhotoRight = e.target.result);
+        reader.readAsDataURL(e.target.files[0]);
+    });
+
+    var robotPhotoTop = '';
+
+    $('#robotPhotoTop').on('change', function (e) {
+        var reader = new FileReader();
+        reader.onload = (e) => (robotPhotoTop = e.target.result);
         reader.readAsDataURL(e.target.files[0]);
     });
 
@@ -33,9 +65,25 @@ $(document).ready(function () {
         var doc = {
             "_id": id,
             _attachments: {
-                'robot.jpg': {
+                'robotFront.jpg': {
                     content_type: 'image/jpeg',
-                    data: robotPhoto.slice(23),
+                    data: robotPhotoFront.slice(23),
+                },
+                'robotBack.jpg': {
+                    content_type: 'image/jpeg',
+                    data: robotPhotoBack.slice(23),
+                },
+                'robotLeft.jpg': {
+                    content_type: 'image/jpeg',
+                    data: robotPhotoLeft.slice(23),
+                },
+                'robotRight.jpg': {
+                    content_type: 'image/jpeg',
+                    data: robotPhotoRight.slice(23),
+                },
+                'robotTop.jpg': {
+                    content_type: 'image/jpeg',
+                    data: robotPhotoTop.slice(23),
                 }
             },
             "Scout Name": scoutName,
