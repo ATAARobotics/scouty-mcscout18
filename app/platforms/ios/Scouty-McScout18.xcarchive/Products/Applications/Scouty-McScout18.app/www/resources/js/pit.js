@@ -98,20 +98,24 @@ $(document).ready(function () {
             "Notes and Comments": commentSection,
         };
         if (localStorage.getItem('settingsCheck') == 1) {
-            var db = new PouchDB(databaseName);
-            db.put(doc).then(function () {
-                // success
-                window.alert("Submitted!");
-                window.location.href = '../pit/index.html';
-            }).catch(function (err) {
-                if (err.name === 'conflict') {
-                    // conflict!
-                    window.alert("Pit data already submitted! Use the edit button.");
-                } else {
-                    // some other error
-                    window.alert("Error!");
-                }
-            });
+            if (teamNumber == '') {
+                window.alert("Input a team number!");
+            } else {
+                var db = new PouchDB(databaseName);
+                db.put(doc).then(function () {
+                    // success
+                    window.alert("Submitted!");
+                    window.location.href = '../pit/index.html';
+                }).catch(function (err) {
+                    if (err.name === 'conflict') {
+                        // conflict!
+                        window.alert("Pit data already submitted! Use the edit button.");
+                    } else {
+                        // some other error
+                        window.alert("Error!");
+                    }
+                });
+            }
         } else {
             window.alert("Database name incorrect! Check settings!");
         }

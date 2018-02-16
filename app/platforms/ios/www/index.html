@@ -11,39 +11,40 @@
 <link href="./resources/css/bootstrap.min.css" rel="stylesheet">
 <script src="./resources/js/jquery.min.js"></script>
 <script src="./resources/js/bootstrap.min.js"></script>
-<script src="./resources/js/pouchdb-6.3.4.min.js"></script>
+<script src="./resources/js/pouchdb-6.4.3.min.js"></script>
 <script src="./resources/js/sync.js"></script>
 <script src="./resources/js/match.js"></script>
 
 <meta name="description" content="Scouting App for Team 4334">
 <link href="./favicon.ico" rel="icon" type="image/png">
+
+<style>
+	.navbar {
+		font-size: 18px;
+	}
+	.navbar-nav li a:hover {
+		color: #afafaf !important;
+	}
+	.navbar-nav li a.active {
+		color: #afafaf !important;
+	}
+	.dropdown-item.active, .dropdown-item:active {
+		background-color: #d3d3d3;
+	}
+	.navbar li a, .navbar .navbar-brand {
+		color: #000000 !important;
+	}
+	.dropdown-toggle::after {
+		margin-left: 0;
+	}
+	hr {
+		height: 1px;
+	}
+	</style>
+	
 </head>
 
 <body>
-
-<style>
-.navbar {
-	font-size: 18px;
-}
-.navbar-nav li a:hover {
-	color: #afafaf !important;
-}
-.navbar-nav li a.active {
-	color: #afafaf !important;
-}
-.dropdown-item.active, .dropdown-item:active {
-    background-color: #d3d3d3;
-}
-.navbar li a, .navbar .navbar-brand {
-	color: #000000 !important;
-}
-.dropdown-toggle::after {
-    margin-left: 0;
-}
-hr {
-	height: 1px;
-}
-</style>
 <div class="container-fluid">
 	<nav class="navbar navbar-expand-lg navbar-light">
 		<a class="navbar-brand" style="width: 60%" href="./index.html">
@@ -233,7 +234,7 @@ hr {
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xl-4 col-lg-6 col-md-12">
+			<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
 				<p style="margin-bottom: 5px">Cube Cycle Time, Pickup to Dropoff to Pickup</p>
 				<div style="display: inline-block; width:65px">
 					<p style="margin-bottom: 0px"><span style="font-size: 24px;" id="cubeCycleSeconds">00</span><span style="font-size: 24px;">:</span><span style="font-size: 24px;" id="cubeCycleTenths">00</span></p>
@@ -244,7 +245,7 @@ hr {
 					<a style="color:#fff" class="btn btn-secondary" id="cubeTimerReset">Reset</a>
 				</div>
 			</div>
-			<div class="col-xl-4 col-lg-6 col-md-12">
+			<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
 				<label class="mr-sm-2" style="display: block" for="speedRating">Speed</label>
 				<div id="speedRating" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
@@ -279,7 +280,7 @@ hr {
 					</label>
 				</div>
 			</div>
-			<div class="col-xl-4 col-lg-6 col-md-12">
+			<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
 				<label class="mr-sm-2" style="display: block" for="stabilityRating">Stability</label>
 				<div id="stabilityRating" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
@@ -314,7 +315,7 @@ hr {
 					</label>
 				</div>
 			</div>
-			<div class="col-xl-4 col-lg-6 col-md-12">
+			<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
 				<label class="mr-sm-2" style="display: block" for="skillRating">Driver Skill</label>
 				<div id="skillRating" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
@@ -349,7 +350,7 @@ hr {
 					</label>
 				</div>
 			</div>
-			<div class="col-xl-4 col-lg-6 col-md-12">
+			<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
 				<label class="mr-sm-2" style="display: block" for="defenceRating">Defence</label>
 				<div id="defenceRating" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
@@ -381,6 +382,17 @@ hr {
 					</label>
 					<label class="btn btn-secondary">
 						<input type="radio" value="10" name="defenceRating" id="defence10" autocomplete="off" /> 10
+					</label>
+				</div>
+			</div>
+			<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+			<label class="mr-sm-2" style="display: block" for="anythingBreak">Did Anything Break?</label>
+				<div id="anythingBreak" class="btn-group btn-group-toggle" data-toggle="buttons">
+					<label class="btn btn-secondary">
+						<input type="radio" value="0" name="anythingBreak" id="anythingBreakNo" autocomplete="off" /> No
+					</label>
+					<label class="btn btn-secondary">
+						<input type="radio" value="1" name="anythingBreak" id="anythingBreakYes" autocomplete="off" /> Yes
 					</label>
 				</div>
 			</div>

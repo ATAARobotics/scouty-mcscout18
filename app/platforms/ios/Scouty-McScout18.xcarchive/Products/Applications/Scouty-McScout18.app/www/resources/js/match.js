@@ -20,6 +20,7 @@
 		var autoCrossedBaseline = $('input[name=autoCrossedBaseline]:checked').val();
 		var autoSwitch = $('input[name=autoSwitch]:checked').val();
 		var autoScale = $('input[name=autoScale]:checked').val();
+		var anythingBreak = $('input[name=anythingBreak]:checked').val();
 		var commentSection = $('#commentSection').val();
 
 		var id = matchType + matchNumber + "_" + teamNumber
@@ -41,23 +42,28 @@
 			"Stability Rating": stabilityRating,
 			"Skill Rating": skillRating,
 			"Defence Rating": defenceRating,
+			"Anything Break": anythingBreak,
 			"Notes and Comments": commentSection,
 		};
 		if (localStorage.getItem('settingsCheck') == 1) {
-			var db = new PouchDB(databaseName);
-			db.put(doc).then(function () {
-				// success
-				window.alert("Submitted!");
-				window.location.href = './index.html';
-			}).catch(function (err) {
-				if (err.name === 'conflict') {
-					// conflict!
-					window.alert("Match already submitted! Check Round Type and Number.");
-				} else {
-					// some other error
-					window.alert("Error!");
-				}
-			});
+			if (matchType == 'Choose...' | matchNumber == '' | teamNumber == '') {
+				window.alert("Fill in the general section!");
+			} else {
+				var db = new PouchDB(databaseName);
+				db.put(doc).then(function () {
+					// success
+					window.alert("Submitted!");
+					window.location.href = './index.html';
+				}).catch(function (err) {
+					if (err.name === 'conflict') {
+						// conflict!
+						window.alert("Match already submitted! Check Round Type and Number.");
+					} else {
+						// some other error
+						window.alert("Error!");
+					}
+				});
+			}
 		} else {
 			window.alert("Database name incorrect! Check settings!");
 		}

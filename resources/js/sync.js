@@ -35,7 +35,7 @@ $(document).ready(function () {
                         window.alert("Incorrect username or password!");
                     },
                     0: function (response) {
-                        window.alert("Connect to the internet!");
+                        window.alert("Couldn't reach server. Are you connected to the internet?");
                     }
                 }
             });
