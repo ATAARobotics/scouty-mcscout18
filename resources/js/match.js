@@ -46,20 +46,24 @@
 			"Notes and Comments": commentSection,
 		};
 		if (localStorage.getItem('settingsCheck') == 1) {
-			var db = new PouchDB(databaseName);
-			db.put(doc).then(function () {
-				// success
-				window.alert("Submitted!");
-				window.location.href = './index.html';
-			}).catch(function (err) {
-				if (err.name === 'conflict') {
-					// conflict!
-					window.alert("Match already submitted! Check Round Type and Number.");
-				} else {
-					// some other error
-					window.alert("Error!");
-				}
-			});
+			if (matchType == 'Choose...' | matchNumber == '' | teamNumber == '') {
+				window.alert("Fill in the general section!");
+			} else {
+				var db = new PouchDB(databaseName);
+				db.put(doc).then(function () {
+					// success
+					window.alert("Submitted!");
+					window.location.href = './index.html';
+				}).catch(function (err) {
+					if (err.name === 'conflict') {
+						// conflict!
+						window.alert("Match already submitted! Check Round Type and Number.");
+					} else {
+						// some other error
+						window.alert("Error!");
+					}
+				});
+			}
 		} else {
 			window.alert("Database name incorrect! Check settings!");
 		}

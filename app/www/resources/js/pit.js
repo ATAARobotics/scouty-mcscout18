@@ -98,7 +98,7 @@ $(document).ready(function () {
             "Notes and Comments": commentSection,
         };
         if (localStorage.getItem('settingsCheck') == 1) {
-            if ($('#teamNumber').val() == '') {
+            if (teamNumber == '') {
                 window.alert("Input a team number!");
             } else {
                 var db = new PouchDB(databaseName);
