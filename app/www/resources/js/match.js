@@ -20,6 +20,7 @@
 		var autoCrossedBaseline = $('input[name=autoCrossedBaseline]:checked').val();
 		var autoSwitch = $('input[name=autoSwitch]:checked').val();
 		var autoScale = $('input[name=autoScale]:checked').val();
+		var anythingBreak = $('input[name=anythingBreak]:checked').val();
 		var commentSection = $('#commentSection').val();
 
 		var id = matchType + matchNumber + "_" + teamNumber
@@ -41,6 +42,7 @@
 			"Stability Rating": stabilityRating,
 			"Skill Rating": skillRating,
 			"Defence Rating": defenceRating,
+			"Anything Break": anythingBreak,
 			"Notes and Comments": commentSection,
 		};
 		if (localStorage.getItem('settingsCheck') == 1) {
