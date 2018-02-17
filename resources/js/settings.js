@@ -1,8 +1,9 @@
 ﻿$(document).ready(function () {
     $('#Delete').on('click', function (e) {
         var databaseName = localStorage.getItem('databaseName');
-        var localdbname = "_pouch_" + databaseName
-        indexedDB.deleteDatabase(localdbname);
+        var localdb =  new PouchDB(databaseName);
+        localdb.destroy();
+        window.alert("Local database deleted!");
     });
 });
 
