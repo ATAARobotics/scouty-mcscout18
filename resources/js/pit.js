@@ -117,7 +117,7 @@ $(document).ready(function () {
                 });
             }
         } else {
-            window.alert("Database name incorrect! Check settings!");
+            window.alert("Settings are incorrect!");
         }
     });
 });
