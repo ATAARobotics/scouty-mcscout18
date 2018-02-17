@@ -20,6 +20,14 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
+    <splash density="land-hdpi" src="res/screen/android/screen-hdpi-landscape.png" />
+    <splash density="land-ldpi" src="res/screen/android/screen-ldpi-landscape.png" />
+    <splash density="land-mdpi" src="res/screen/android/screen-mdpi-landscape.png" />
+    <splash density="land-xhdpi" src="res/screen/android/screen-xhdpi-landscape.png" />
+    <splash density="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
+    <splash density="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
+    <splash density="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
+    <splash density="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
     <icon density="ldpi" src="res/icon/android/ldpi.png" />
     <icon density="mdpi" src="res/icon/android/mdpi.png" />
     <icon density="hdpi" src="res/icon/android/hdpi.png" />
@@ -27,5 +35,6 @@
     <icon density="xxhdpi" src="res/icon/android/xxhdpi.png" />
     <icon density="xxxhdpi" src="res/icon/android/xxxhdpi.png" />
     <preference name="loglevel" value="DEBUG" />
+    <preference name="SplashScreenDelay" value="3000" />
     <preference name="Orientation" value="landscape" />
 </widget>
