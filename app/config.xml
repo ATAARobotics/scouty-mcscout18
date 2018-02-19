@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="ca.fourthreethreefour.scoutymcscout18" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="ca.fourthreethreefour.scoutymcscout18" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Scouty-McScout18</name>
     <description>
         Scouting app for team 4334
@@ -34,6 +34,25 @@
         <icon density="xhdpi" src="res/icon/android/xhdpi.png" />
         <icon density="xxhdpi" src="res/icon/android/xxhdpi.png" />
         <icon density="xxxhdpi" src="res/icon/android/xxxhdpi.png" />
+        <config-file mode="merge" parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-feature android:name="android.hardware.camera" />
+            <uses-feature android:name="android.hardware.camera.autofocus" />
+        </config-file>
+        <plugin name="cordova-plugin-crosswalk-webview" spec="^2.4.0">
+            <variable name="XWALK_VERSION" value="23+" />
+            <variable name="XWALK_LITEVERSION" value="xwalk_core_library_canary:17+" />
+            <variable name="XWALK_COMMANDLINE" value="--disable-pull-to-refresh-effect" />
+            <variable name="XWALK_MODE" value="embedded" />
+            <variable name="XWALK_MULTIPLEAPK" value="true" />
+        </plugin>
+        <plugin name="cordova-plugin-camera" spec="^4.0.2" />
+        <plugin name="cordova-plugin-media-capture" spec="^3.0.1" />
+        <plugin name="cordova-plugin-device" spec="^2.0.1" />
+        <plugin name="cordova-plugin-file" spec="^6.0.1" />
+        <plugin name="cordova-plugin-media" spec="^5.0.2">
+            <variable name="KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE" value="NO" />
+        </plugin>
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />

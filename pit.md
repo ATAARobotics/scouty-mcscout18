@@ -175,23 +175,23 @@ files: |
 		<div class="row">
 			<div class="col-lg-3 col-md-4 col-6">
 				<label class="mr-sm-2" style="display: block" for="robotPhoto">Robot Photo Front</label>
-				<input style="margin-bottom: 15px; width:100%" type="file" accept="image/*" capture="camera" id="robotPhotoFront" name="robotPhotoFront">
+				<input style="margin-bottom: 15px; width:100%" type="file" accept="image/*" id="robotPhotoFront" name="robotPhotoFront">
 			</div>
 			<div class="col-lg-3 col-md-4 col-6">
 				<label class="mr-sm-2" style="display: block" for="robotPhoto">Robot Photo Back</label>
-				<input style="margin-bottom: 15px; width:100%" type="file" accept="image/*" capture="camera" id="robotPhotoBack" name="robotPhotoBack">
+				<input style="margin-bottom: 15px; width:100%" type="file" accept="image/*" id="robotPhotoBack" name="robotPhotoBack">
 			</div>
 			<div class="col-lg-3 col-md-4 col-6">
 				<label class="mr-sm-2" style="display: block" for="robotPhoto">Robot Photo Left</label>
-				<input style="margin-bottom: 15px; width:100%" type="file" accept="image/*" capture="camera" id="robotPhotoLeft" name="robotPhotoLeft">
+				<input style="margin-bottom: 15px; width:100%" type="file" accept="image/*" id="robotPhotoLeft" name="robotPhotoLeft">
 			</div>
 			<div class="col-lg-3 col-md-4 col-6">
 				<label class="mr-sm-2" style="display: block" for="robotPhoto">Robot Photo Right</label>
-				<input style="margin-bottom: 15px; width:100%" type="file" accept="image/*" capture="camera" id="robotPhotoRight" name="robotPhotoRight">
+				<input style="margin-bottom: 15px; width:100%" type="file" accept="image/*" id="robotPhotoRight" name="robotPhotoRight">
 			</div>
 			<div class="col-lg-3 col-md-4 col-6">
 				<label class="mr-sm-2" style="display: block" for="robotPhoto">Robot Photo Top</label>
-				<input style="margin-bottom: 15px; width:100%" type="file" accept="image/*" capture="camera" id="robotPhotoTop" name="robotPhotoTop">
+				<input style="margin-bottom: 15px; width:100%" type="file" accept="image/*" id="robotPhotoTop" name="robotPhotoTop">
 			</div>
 		</div>
 		<div class="row">

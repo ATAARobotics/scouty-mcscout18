@@ -9,6 +9,29 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
+    },
+    "cordova-plugin-crosswalk-webview": {
+      "XWALK_VERSION": "23+",
+      "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
+      "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
+      "XWALK_MODE": "embedded",
+      "XWALK_MULTIPLEAPK": "true",
+      "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
+    },
+    "cordova-plugin-media": {
+      "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
     }
   },
   "dependent_plugins": {}
