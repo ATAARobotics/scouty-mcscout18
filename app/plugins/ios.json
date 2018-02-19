@@ -19,6 +19,25 @@
       "PHOTOLIBRARY_ADD_USAGE_DESCRIPTION": "This app needs write-access to photo library",
       "PHOTOLIBRARY_USAGE_DESCRIPTION": "This app needs read/write-access photo library access",
       "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
+    },
+    "cordova-plugin-crosswalk-webview": {
+      "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
+    },
+    "cordova-plugin-media": {
+      "KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE": "NO",
+      "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
     }
   },
   "dependent_plugins": {}
