@@ -86,16 +86,16 @@ $(document).ready(function () {
                     data: robotPhotoTop.slice(23),
                 }
             },
-            "Scout Name": scoutName,
-            "Cube Manipulator Type": manipulatorType,
-            "Can Place Cubes In": placeCubes,
-            "Robot Size": robotSize,
-            "Robot Appearance": robotAppearance,
-            "Pit Crew Skill": pitSkill,
-            "Climber Type": robotClimber,
-            "Robot Done": robotDone,
-            "Robot Broken": robotBroken,
-            "Notes and Comments": commentSection,
+            "scoutName": scoutName,
+            "manipulatorType": manipulatorType,
+            "placeCubes": placeCubes,
+            "robotSize": robotSize,
+            "robotAppearance": robotAppearance,
+            "pitSkill": pitSkill,
+            "climberType": robotClimber,
+            "robotDone": robotDone,
+            "robotBroken": robotBroken,
+            "notesAndComments": commentSection,
         };
         if (localStorage.getItem('settingsCheck') == 1) {
             if (teamNumber == '') {
