@@ -16,16 +16,16 @@ files: |
 			<div class="col-lg-4 col-md-6">
 				<label class="mr-sm-2" style="display: block" for="manipulatorType">Cube Manipulator Type:</label>
 				<div id="manipulatorType" class="btn-group btn-group-toggle" data-toggle="buttons">
-					<label class="btn btn-secondary">
+					<label id="manipulatorArm" class="btn btn-secondary">
 						<input type="radio" value="arm" name="manipulatorType" id="manipulatorArm" autocomplete="off"> Arm
 					</label>
-					<label class="btn btn-secondary">
+					<label id="manipulatorElevator" class="btn btn-secondary">
 						<input type="radio" value="elevator" name="manipulatorType" id="manipulatorElevator" autocomplete="off"> Elevator
 					</label>
-					<label class="btn btn-secondary">
+					<label id="maipulatorPusher" class="btn btn-secondary">
 						<input type="radio" value="pusher" name="manipulatorType" id="maipulatorPusher" autocomplete="off"> Pusher
 					</label>
-					<label class="btn btn-secondary">
+					<label id="manipulatorOther" class="btn btn-secondary">
 						<input type="radio" value="other" name="manipulatorType" id="manipulatorOther" autocomplete="off"> Other
 					</label>
 				</div>
@@ -33,13 +33,13 @@ files: |
 			<div class="col-lg-4 col">
 				<label class="mr-sm-2" style="display: block" for="placeCubes">Can Place Cubes In:</label>
 				<div id="placeCubes" class="btn-group btn-group-toggle" data-toggle="buttons">
-					<label class="btn btn-secondary">
+					<label id="cubeSwitch" class="btn btn-secondary">
 						<input type="checkbox" value="switch" name="placeCubes" id="cubeSwitch" autocomplete="off"> Switch
 					</label>
-					<label class="btn btn-secondary">
+					<label id="cubeScale" class="btn btn-secondary">
 						<input type="checkbox" value="scale" name="placeCubes" id="cubeScale" autocomplete="off"> Scale
 					</label>
-					<label class="btn btn-secondary">
+					<label id="cubeExchange" class="btn btn-secondary">
 						<input type="checkbox" value="exchange" name="placeCubes" id="cubeExchange" autocomplete="off"> Exchange
 					</label>
 				</div>
@@ -47,13 +47,13 @@ files: |
 			<div class="col-md-4 col">
 				<label class="mr-sm-2" style="display: block" for="robotSize">Size:</label>
 				<div id="robotSize" class="btn-group btn-group-toggle" data-toggle="buttons">
-					<label class="btn btn-secondary">
+					<label id="sizeSmall" class="btn btn-secondary">
 						<input type="radio" value="small" name="robotSize" id="sizeSmall" autocomplete="off"> Small
 					</label>
-					<label class="btn btn-secondary">
+					<label id="sizeMedium" class="btn btn-secondary">
 						<input type="radio" value="medium" name="robotSize" id="sizeMedium" autocomplete="off"> Medium
 					</label>
-					<label class="btn btn-secondary">
+					<label id="sizeLarge" class="btn btn-secondary">
 						<input type="radio" value="large" name="robotSize" id="sizeLarge" autocomplete="off"> Large
 					</label>
 				</div>
@@ -63,34 +63,34 @@ files: |
 			<div class="col-xl-4 col-md-6">
 				<label class="mr-sm-2" style="display: block" for="robotAppearance">Overall Appearance:</label>
 				<div id="robotAppearance" class="btn-group btn-group-toggle" data-toggle="buttons">
-					<label class="btn btn-secondary">
+					<label id="appearance1" class="btn btn-secondary">
 						<input type="radio" value="1" name="robotAppearance" id="appearance1" autocomplete="off"> 1
 					</label>
-					<label class="btn btn-secondary">
+					<label id="appearance2" class="btn btn-secondary">
 						<input type="radio" value="2" name="robotAppearance" id="appearance2" autocomplete="off"> 2
 					</label>
-					<label class="btn btn-secondary">
+					<label id="appearance3" class="btn btn-secondary">
 						<input type="radio" value="3" name="robotAppearance" id="appearance3" autocomplete="off"> 3
 					</label>
-					<label class="btn btn-secondary">
+					<label id="appearance4" class="btn btn-secondary">
 						<input type="radio" value="4" name="robotAppearance" id="appearance4" autocomplete="off"> 4
 					</label>
-					<label class="btn btn-secondary">
+					<label id="appearance5" class="btn btn-secondary">
 						<input type="radio" value="5" name="robotAppearance" id="appearance5" autocomplete="off"> 5
 					</label>
-					<label class="btn btn-secondary">
+					<label id="appearance6" class="btn btn-secondary">
 						<input type="radio" value="6" name="robotAppearance" id="appearance6" autocomplete="off"> 6
 					</label>
-					<label class="btn btn-secondary">
+					<label id="appearance7" class="btn btn-secondary">
 						<input type="radio" value="7" name="robotAppearance" id="appearance7" autocomplete="off"> 7
 					</label>
-					<label class="btn btn-secondary">
+					<label id="appearance8" class="btn btn-secondary">
 						<input type="radio" value="8" name="robotAppearance" id="appearance8" autocomplete="off"> 8
 					</label>
-					<label class="btn btn-secondary">
+					<label id="appearance9" class="btn btn-secondary">
 						<input type="radio" value="9" name="robotAppearance" id="appearance9" autocomplete="off"> 9
 					</label>
-					<label class="btn btn-secondary">
+					<label id="appearance10" class="btn btn-secondary">
 						<input type="radio" value="10" name="robotAppearance" id="appearance10" autocomplete="off"> 10
 					</label>
 				</div>
@@ -98,34 +98,34 @@ files: |
 			<div class="col-xl-4 col-md-6">
 				<label class="mr-sm-2" style="display: block" for="pitSkill">Pit Crew Skill:</label>
 				<div id="pitSkill" class="btn-group btn-group-toggle" data-toggle="buttons">
-					<label class="btn btn-secondary">
+					<label id="pit1" class="btn btn-secondary">
 						<input type="radio" value="1" name="pitSkill" id="pit1" autocomplete="off"> 1
 					</label>
-					<label class="btn btn-secondary">
+					<label id="pit2" class="btn btn-secondary">
 						<input type="radio" value="2" name="pitSkill" id="pit2" autocomplete="off"> 2
 					</label>
-					<label class="btn btn-secondary">
+					<label id="pit3" class="btn btn-secondary">
 						<input type="radio" value="3" name="pitSkill" id="pit3" autocomplete="off"> 3
 					</label>
-					<label class="btn btn-secondary">
+					<label id="pit4" class="btn btn-secondary">
 						<input type="radio" value="4" name="pitSkill" id="pit4" autocomplete="off"> 4
 					</label>
-					<label class="btn btn-secondary">
+					<label id="pit5" class="btn btn-secondary">
 						<input type="radio" value="5" name="pitSkill" id="pit5" autocomplete="off"> 5
 					</label>
-					<label class="btn btn-secondary">
+					<label id="pit6" class="btn btn-secondary">
 						<input type="radio" value="6" name="pitSkill" id="pit6" autocomplete="off"> 6
 					</label>
-					<label class="btn btn-secondary">
+					<label id="pit7" class="btn btn-secondary">
 						<input type="radio" value="7" name="pitSkill" id="pit7" autocomplete="off"> 7
 					</label>
-					<label class="btn btn-secondary">
+					<label id="pit8" class="btn btn-secondary">
 						<input type="radio" value="8" name="pitSkill" id="pit8" autocomplete="off"> 8
 					</label>
-					<label class="btn btn-secondary">
+					<label id="pit9" class="btn btn-secondary">
 						<input type="radio" value="9" name="pitSkill" id="pit9" autocomplete="off"> 9
 					</label>
-					<label class="btn btn-secondary">
+					<label id="pit10" class="btn btn-secondary">
 						<input type="radio" value="10" name="pitSkill" id="pit10" autocomplete="off"> 10
 					</label>
 				</div>
@@ -133,16 +133,16 @@ files: |
 			<div class="col-xl-4 col-md-4">
 				<label class="mr-sm-2" style="display: block" for="robotClimber">Climber:</label>
 				<div id="robotClimber" class="btn-group btn-group-toggle" data-toggle="buttons">
-					<label class="btn btn-secondary">
+					<label id="climberRung" class="btn btn-secondary">
 						<input type="radio" value="rung" name="robotClimber" id="climberRung" autocomplete="off"> Rung Climber
 					</label>
-					<label class="btn btn-secondary">
+					<label id="climberRamp" class="btn btn-secondary">
 						<input type="radio" value="ramp" name="robotClimber" id="climberRamp" autocomplete="off"> Ramp
 					</label>
-					<label class="btn btn-secondary">
+					<label id="climberNone" class="btn btn-secondary">
 						<input type="radio" value="none" name="robotClimber" id="climberNone" autocomplete="off"> None
 					</label>
-					<label class="btn btn-secondary">
+					<label id="climberOther" class="btn btn-secondary">
 						<input type="radio" value="other" name="robotClimber" id="climberOther" autocomplete="off"> Other
 					</label>
 				</div>
@@ -152,10 +152,10 @@ files: |
 			<div class="col-lg-4 col-6">
 				<label class="mr-sm-2" style="display: block" for="robotDone">Robot Done</label>
 				<div id="robotDone" class="btn-group btn-group-toggle" data-toggle="buttons">
-					<label class="btn btn-secondary">
+					<label id="robotDoneNo" class="btn btn-secondary">
 						<input type="radio" value="0" name="robotDone" id="robotDoneNo" autocomplete="off"> No
 					</label>
-					<label class="btn btn-secondary">
+					<label id="robotDoneYes" class="btn btn-secondary">
 						<input type="radio" value="1" name="robotDone" id="robotDoneYes" autocomplete="off"> Yes
 					</label>
 				</div>
@@ -163,10 +163,10 @@ files: |
 			<div class="col-lg-4 col-6">
 				<label class="mr-sm-2" style="display: block" for="robotBroken">Anything Broken?</label>
 				<div id="robotBroken" class="btn-group btn-group-toggle" data-toggle="buttons">
-					<label class="btn btn-secondary">
+					<label id="robotBrokenNo" class="btn btn-secondary">
 						<input type="radio" value="0" name="robotBroken" id="robotBrokenNo" autocomplete="off"> No
 					</label>
-					<label class="btn btn-secondary">
+					<label id="robotBrokenYes" class="btn btn-secondary">
 						<input type="radio" value="1" name="robotBroken" id="robotBrokenYes" autocomplete="off"> Yes
 					</label>
 				</div>
