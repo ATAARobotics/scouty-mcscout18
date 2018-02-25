@@ -4,7 +4,8 @@ title: Pit
 files: |
  <script src="../resources/js/pit.js"></script>
 ---
-<div class="container-fluid" style="background-color: #f0f0f0; margin-bottom: 15px">
+<div id='spinner'></div>
+<div id='page' class="container-fluid" style="background-color: #f0f0f0; margin-bottom: 15px">
 	<form>
 		<div class="row">
 			<div class="col">
