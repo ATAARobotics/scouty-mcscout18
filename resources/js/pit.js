@@ -9,8 +9,6 @@ $(document).ready(function () {
         reader.readAsDataURL(e.target.files[0]);
     });
 
-    var robotPhotoFront = robotPhotoFront.slice(23);
-
     var robotPhotoBack = '';
 
     $('#robotPhotoBack').on('change', function (e) {
@@ -18,8 +16,6 @@ $(document).ready(function () {
         reader.onload = (e) => (robotPhotoBack = e.target.result);
         reader.readAsDataURL(e.target.files[0]);
     });
-
-    var robotPhotoBack = robotPhotoBack.slice(23);
 
     var robotPhotoLeft = '';
 
@@ -29,8 +25,6 @@ $(document).ready(function () {
         reader.readAsDataURL(e.target.files[0]);
     });
 
-    var robotPhotoLeft = robotPhotoLeft.slice(23);
-
     var robotPhotoRight = '';
 
     $('#robotPhotoRight').on('change', function (e) {
@@ -39,8 +33,6 @@ $(document).ready(function () {
         reader.readAsDataURL(e.target.files[0]);
     });
 
-    var robotPhotoRight = robotPhotoRight.slice(23);
-
     var robotPhotoTop = '';
 
     $('#robotPhotoTop').on('change', function (e) {
@@ -48,8 +40,6 @@ $(document).ready(function () {
         reader.onload = (e) => (robotPhotoTop = e.target.result);
         reader.readAsDataURL(e.target.files[0]);
     });
-
-    var robotPhotoTop = robotPhotoTop.slice(23);
 
     $('#teamNumber').on('change paste keyup', function (e) {
         var teamNumber = $('#teamNumber').val();
@@ -219,18 +209,28 @@ $(document).ready(function () {
                 db.get(id, {attachments: true}).then(function(doc) {
                     if (robotPhotoFront == ''){
                         robotPhotoFront = doc._attachments['robotFront.jpg'].data;
+                    } else {
+                        robotPhotoFront = robotPhotoFront.slice(23);
                     }
                     if (robotPhotoBack = ''){
                         robotPhotoBack = doc._attachments['robotBack.jpg'].data;
+                    } else {
+                        robotPhotoBack = robotPhotoBack.slice(23);
                     }
                     if (robotPhotoLeft = ''){
                         robotPhotoLeft = doc._attachments['robotLeft.jpg'].data;
+                    } else {
+                        robotPhotoLeft = robotPhotoLeft.slice(23);
                     }
                     if (robotPhotoRight = ''){
                         robotPhotoRight = doc._attachments['robotRight.jpg'].data;
+                    } else {
+                        robotPhotoRight = robotPhotoRight.slice(23);
                     }
                     if (robotPhotoTop = ''){
                         robotPhotoTop = doc._attachments['robotTop.jpg'].data;
+                    } else {
+                        robotPhotoTop = robotPhotoTop.slice(23);
                     }
                   return db.put({
                     _id: id,
