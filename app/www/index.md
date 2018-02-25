@@ -88,7 +88,7 @@ files: |
 			</div>
 			<div class="col">
 				<label class="mr-sm-2" style="display: block" for="autoScale">Cube in Scale</label>
-				<div id="autoSwitch" class="btn-group btn-group-toggle" data-toggle="buttons">
+				<div id="autoScale" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label class="btn btn-secondary">
 						<input type="radio" value="0" name="autoScale" id="autoScaleNo" autocomplete="off"> No
 					</label>
