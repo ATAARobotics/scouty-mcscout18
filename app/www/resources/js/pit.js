@@ -9,6 +9,8 @@ $(document).ready(function () {
         reader.readAsDataURL(e.target.files[0]);
     });
 
+    var robotPhotoFront = robotPhotoFront.slice(23);
+
     var robotPhotoBack = '';
 
     $('#robotPhotoBack').on('change', function (e) {
@@ -16,6 +18,8 @@ $(document).ready(function () {
         reader.onload = (e) => (robotPhotoBack = e.target.result);
         reader.readAsDataURL(e.target.files[0]);
     });
+
+    var robotPhotoBack = robotPhotoBack.slice(23);
 
     var robotPhotoLeft = '';
 
@@ -25,6 +29,8 @@ $(document).ready(function () {
         reader.readAsDataURL(e.target.files[0]);
     });
 
+    var robotPhotoLeft = robotPhotoLeft.slice(23);
+
     var robotPhotoRight = '';
 
     $('#robotPhotoRight').on('change', function (e) {
@@ -33,6 +39,8 @@ $(document).ready(function () {
         reader.readAsDataURL(e.target.files[0]);
     });
 
+    var robotPhotoRight = robotPhotoRight.slice(23);
+
     var robotPhotoTop = '';
 
     $('#robotPhotoTop').on('change', function (e) {
@@ -40,6 +48,8 @@ $(document).ready(function () {
         reader.onload = (e) => (robotPhotoTop = e.target.result);
         reader.readAsDataURL(e.target.files[0]);
     });
+
+    var robotPhotoTop = robotPhotoTop.slice(23);
 
     $('#teamNumber').on('change paste keyup', function (e) {
         var teamNumber = $('#teamNumber').val();
@@ -126,23 +136,23 @@ $(document).ready(function () {
             _attachments: {
                 'robotFront.jpg': {
                     content_type: 'image/jpeg',
-                    data: robotPhotoFront.slice(23),
+                    data: robotPhotoFront,
                 },
                 'robotBack.jpg': {
                     content_type: 'image/jpeg',
-                    data: robotPhotoBack.slice(23),
+                    data: robotPhotoBack,
                 },
                 'robotLeft.jpg': {
                     content_type: 'image/jpeg',
-                    data: robotPhotoLeft.slice(23),
+                    data: robotPhotoLeft,
                 },
                 'robotRight.jpg': {
                     content_type: 'image/jpeg',
-                    data: robotPhotoRight.slice(23),
+                    data: robotPhotoRight,
                 },
                 'robotTop.jpg': {
                     content_type: 'image/jpeg',
-                    data: robotPhotoTop.slice(23),
+                    data: robotPhotoTop,
                 }
             },
             "scoutName": scoutName,
@@ -174,6 +184,101 @@ $(document).ready(function () {
                         window.alert("Error!");
                     }
                 });
+            }
+        } else {
+            window.alert("Settings are incorrect!");
+        }
+    });
+    $('#Edit').on('click', function (e) {
+        function getPlaceCubes() {
+            var chkArray = [];
+            $("#placeCubes input:checked").each(function () {
+                chkArray.push($(this).val());
+            });
+            var selected = chkArray.join(',');
+            return selected
+        }
+        var databaseName = localStorage.getItem('databaseName');
+        var scoutName = localStorage.getItem('scoutName');
+        var teamNumber = $('#teamNumber').val();
+        var commentSection = $('#commentSection').val();
+        var manipulatorType = $('input[name=manipulatorType]:checked').val();
+        var robotSize = $('input[name=robotSize]:checked').val();
+        var robotAppearance = $('input[name=robotAppearance]:checked').val();
+        var pitSkill = $('input[name=pitSkill]:checked').val();
+        var robotClimber = $('input[name=robotClimber]:checked').val();
+        var robotDone = $('input[name=robotDone]:checked').val();
+        var robotBroken = $('input[name=robotBroken]:checked').val();
+        var placeCubes = getPlaceCubes();
+        var id = "pit_" + teamNumber
+
+        if (localStorage.getItem('settingsCheck') == 1) {
+            if (teamNumber == '') {
+                window.alert("Input a team number!");
+            } else {
+                db.get(id, {attachments: true}).then(function(doc) {
+                    if (robotPhotoFront == ''){
+                        robotPhotoFront = doc._attachments['robotFront.jpg'].data;
+                    }
+                    if (robotPhotoBack = ''){
+                        robotPhotoBack = doc._attachments['robotBack.jpg'].data;
+                    }
+                    if (robotPhotoLeft = ''){
+                        robotPhotoLeft = doc._attachments['robotLeft.jpg'].data;
+                    }
+                    if (robotPhotoRight = ''){
+                        robotPhotoRight = doc._attachments['robotRight.jpg'].data;
+                    }
+                    if (robotPhotoTop = ''){
+                        robotPhotoTop = doc._attachments['robotTop.jpg'].data;
+                    }
+                  return db.put({
+                    _id: id,
+                    _rev: doc._rev,
+                    _attachments: {
+                        'robotFront.jpg': {
+                            content_type: 'image/jpeg',
+                            data: robotPhotoFront,
+                        },
+                        'robotBack.jpg': {
+                            content_type: 'image/jpeg',
+                            data: robotPhotoBack,
+                        },
+                        'robotLeft.jpg': {
+                            content_type: 'image/jpeg',
+                            data: robotPhotoLeft,
+                        },
+                        'robotRight.jpg': {
+                            content_type: 'image/jpeg',
+                            data: robotPhotoRight,
+                        },
+                        'robotTop.jpg': {
+                            content_type: 'image/jpeg',
+                            data: robotPhotoTop,
+                        }
+                    },
+                    "scoutName": scoutName,
+                    "manipulatorType": manipulatorType,
+                    "placeCubes": placeCubes,
+                    "robotSize": robotSize,
+                    "robotAppearance": robotAppearance,
+                    "pitSkill": pitSkill,
+                    "climberType": robotClimber,
+                    "robotDone": robotDone,
+                    "robotBroken": robotBroken,
+                    "notesAndComments": commentSection,
+                  });
+                }).then(function() {
+                    window.alert("Edited!");
+                    window.location.href = '../pit/index.html';
+                }).catch(function (err) {
+                    if (err.name == 'not_found'){
+                        window.alert("Pit data not submitted yet, nothing to edit. Use the submit button.")
+                    } else {
+                        console.log(err);
+                        window.alert("Error!");
+                    }
+                });        
             }
         } else {
             window.alert("Settings are incorrect!");
