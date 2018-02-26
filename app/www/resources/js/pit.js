@@ -41,7 +41,7 @@ $(document).ready(function () {
         reader.readAsDataURL(e.target.files[0]);
     });
 
-    $('#teamNumber').on('change paste keyup', function (e) {
+    $('#teamNumber').on('paste keyup', function (e) {
         var teamNumber = $('#teamNumber').val();
         var id = "pit_" + teamNumber;
         db.get(id).then(function (doc) {
