@@ -1,7 +1,23 @@
 $(document).ready(function () {
-    var databaseName = localStorage.getItem('databaseName');
-    var db = new PouchDB(databaseName);
+    if (localStorage.getItem('settingsCheck') == 1){
+        var databaseName = localStorage.getItem('databaseName');
+        var scoutName = localStorage.getItem('scoutName');
+        var db = new PouchDB(databaseName);
+    } else {
+        window.alert("Check Settings!")
+    }
+
     var robotPhotoFront = '';
+
+    function getPlaceCubes() {
+        var chkArray = [];
+        $("#placeCubes input:checked").each(function () {
+            chkArray.push($(this).val());
+        });
+        var selected = chkArray.join(',');
+        return selected
+    }
+
 
     $('#robotPhotoFront').on('change', function (e) {
         var reader = new FileReader();
@@ -99,17 +115,8 @@ $(document).ready(function () {
     });
     
     $('#Submit').on('click', function (e) {
-        function getPlaceCubes() {
-            var chkArray = [];
-            $("#placeCubes input:checked").each(function () {
-                chkArray.push($(this).val());
-            });
-            var selected = chkArray.join(',');
-            return selected
-        }
-        var databaseName = localStorage.getItem('databaseName');
-        var scoutName = localStorage.getItem('scoutName');
         var teamNumber = $('#teamNumber').val();
+        var id = "pit_" + teamNumber    
         var commentSection = $('#commentSection').val();
         var manipulatorType = $('input[name=manipulatorType]:checked').val();
         var robotSize = $('input[name=robotSize]:checked').val();
@@ -119,30 +126,29 @@ $(document).ready(function () {
         var robotDone = $('input[name=robotDone]:checked').val();
         var robotBroken = $('input[name=robotBroken]:checked').val();
         var placeCubes = getPlaceCubes();
-        var id = "pit_" + teamNumber
 
         var doc = {
             "_id": id,
             _attachments: {
                 'robotFront.jpg': {
                     content_type: 'image/jpeg',
-                    data: robotPhotoFront,
+                    data: robotPhotoFront.slice(23),
                 },
                 'robotBack.jpg': {
                     content_type: 'image/jpeg',
-                    data: robotPhotoBack,
+                    data: robotPhotoBack.slice(23),
                 },
                 'robotLeft.jpg': {
                     content_type: 'image/jpeg',
-                    data: robotPhotoLeft,
+                    data: robotPhotoLeft.slice(23),
                 },
                 'robotRight.jpg': {
                     content_type: 'image/jpeg',
-                    data: robotPhotoRight,
+                    data: robotPhotoRight.slice(23),
                 },
                 'robotTop.jpg': {
                     content_type: 'image/jpeg',
-                    data: robotPhotoTop,
+                    data: robotPhotoTop.slice(23),
                 }
             },
             "scoutName": scoutName,
@@ -160,7 +166,6 @@ $(document).ready(function () {
             if (teamNumber == '') {
                 window.alert("Input a team number!");
             } else {
-                var db = new PouchDB(databaseName);
                 db.put(doc).then(function () {
                     // success
                     window.alert("Submitted!");
@@ -180,17 +185,8 @@ $(document).ready(function () {
         }
     });
     $('#Edit').on('click', function (e) {
-        function getPlaceCubes() {
-            var chkArray = [];
-            $("#placeCubes input:checked").each(function () {
-                chkArray.push($(this).val());
-            });
-            var selected = chkArray.join(',');
-            return selected
-        }
-        var databaseName = localStorage.getItem('databaseName');
-        var scoutName = localStorage.getItem('scoutName');
         var teamNumber = $('#teamNumber').val();
+        var id = "pit_" + teamNumber    
         var commentSection = $('#commentSection').val();
         var manipulatorType = $('input[name=manipulatorType]:checked').val();
         var robotSize = $('input[name=robotSize]:checked').val();
@@ -200,7 +196,6 @@ $(document).ready(function () {
         var robotDone = $('input[name=robotDone]:checked').val();
         var robotBroken = $('input[name=robotBroken]:checked').val();
         var placeCubes = getPlaceCubes();
-        var id = "pit_" + teamNumber
 
         if (localStorage.getItem('settingsCheck') == 1) {
             if (teamNumber == '') {
