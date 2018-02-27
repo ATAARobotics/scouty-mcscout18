@@ -23,11 +23,11 @@ files: |
 			</div>
 			<div class="col-md">
 				<label class="mr-sm-2" for="matchNumber">Match Number</label>
-				<input id="matchNumber" autocomplete="off" type="tel" class="form-control" placeholder="Match Number">
+				<input id="matchNumber" maxlength="3" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off" type="tel" class="form-control" placeholder="Match Number">
 			</div>
 			<div class="col-md">
 				<label class="mr-sm-2" for="teamNumber">Team Number</label>
-				<input id="teamNumber" autocomplete="off" type="tel" class="form-control" placeholder="Team Number">
+				<input id="teamNumber" maxlength="4" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off" type="tel" class="form-control" placeholder="Team Number">
 			</div>
 		</div>
 		<div class="row">
@@ -112,7 +112,7 @@ files: |
 		<div class="row" style="margin-top:15px">
 			<div class="col-md input-group">
 				<a onclick="modifyScale_qty(-1)" class="btn btn-danger btn-lg" style="width: 50px; height: 50px; margin-right: 15px;" role="button">-</a>
-				<input id="teleopScaleCubes" autocomplete="off" type="tel" class="form-control" value="0">
+				<input id="teleopScaleCubes" maxlength="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off" type="tel" class="form-control" value="0">
 				<a onclick="modifyScale_qty(1)" class="btn btn-success btn-lg" style="width: 50px; height: 50px; margin-left: 15px;" role="button">+</a>
 			</div>
 		</div>
@@ -124,7 +124,7 @@ files: |
 		<div class="row" style="margin-top:15px">
 			<div class="col-md input-group">
 				<a onclick="modifySwitch_qty(-1)" class="btn btn-danger btn-lg" style="width: 50px; height: 50px; margin-right: 15px;" role="button">-</a>
-				<input id="teleopSwitchCubes" autocomplete="off" type="tel" class="form-control" value="0">
+				<input id="teleopSwitchCubes" maxlength="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off" type="tel" class="form-control" value="0">
 				<a onclick="modifySwitch_qty(1)" class="btn btn-success btn-lg" style="width: 50px; height: 50px; margin-left: 15px;" role="button">+</a>
 			</div>
 		</div>
@@ -137,7 +137,7 @@ files: |
 			<div class="col-md input-group">
 				<a onclick="modifyOppSwitch_qty(-1)" class="btn btn-danger btn-lg" style="width: 50px; height: 50px; margin-right: 15px;"
 				 role="button">-</a>
-				<input id="teleopOppSwitchCubes" autocomplete="off" type="tel" class="form-control" value="0">
+				<input id="teleopOppSwitchCubes" maxlength="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off" type="tel" class="form-control" value="0">
 				<a onclick="modifyOppSwitch_qty(1)" class="btn btn-success btn-lg" style="width: 50px; height: 50px; margin-left: 15px;"
 				 role="button">+</a>
 			</div>
@@ -151,7 +151,7 @@ files: |
 			<div class="col-md input-group">
 				<a onclick="modifyExchange_qty(-1)" class="btn btn-danger btn-lg" style="width: 50px; height: 50px; margin-right: 15px;"
 				 role="button">-</a>
-				<input id="teleopExchangeCubes" autocomplete="off" type="tel" class="form-control" value="0">
+				<input id="teleopExchangeCubes" maxlength="4" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off" type="tel" class="form-control" value="0">
 				<a onclick="modifyExchange_qty(1)" class="btn btn-success btn-lg" style="width: 50px; height: 50px; margin-left: 15px;" role="button">+</a>
 			</div>
 		</div>

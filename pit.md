@@ -10,7 +10,7 @@ files: |
 		<div class="row">
 			<div class="col">
 				<label class="mr-sm-2" for="teamNumber">Team Number</label>
-				<input id="teamNumber" autocomplete="off" type="tel" class="form-control" placeholder="Team Number">
+				<input id="teamNumber" maxlength="4" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off" type="tel" class="form-control" placeholder="Team Number">
 			</div>
 		</div>
 		<div class="row">
