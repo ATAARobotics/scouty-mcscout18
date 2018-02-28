@@ -202,6 +202,6 @@ files: |
 			</div>
 		</div>
 		<button id="Submit" class="btn btn-success" type="button" style="margin-top: 15px; margin-bottom: 15px">Submit</button>
-		<button id="Edit" class="btn btn-success" type="button" style="margin-top: 15px; margin-bottom: 15px">Edit</button>
+		<button id="Edit" class="btn btn-primary" type="button" style="margin-top: 15px; margin-bottom: 15px">Edit</button>
 	</form>
 </div>

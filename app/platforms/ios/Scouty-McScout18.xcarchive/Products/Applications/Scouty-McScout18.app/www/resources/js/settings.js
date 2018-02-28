@@ -1,8 +1,9 @@
 ﻿$(document).ready(function () {
     $('#Delete').on('click', function (e) {
         var databaseName = localStorage.getItem('databaseName');
-        var localdbname = "_pouch_" + databaseName
-        indexedDB.deleteDatabase(localdbname);
+        var localdb =  new PouchDB(databaseName);
+        localdb.destroy();
+        window.alert("Local database deleted!");
     });
 });
 
@@ -36,7 +37,7 @@ $(document).ready(function () {
                     window.location.href = '../index.html';
                 },
                 404: function (response) {
-                    if (confirm("Server ip or database name is incorrect! Check server ip and database name! Are you sure these settings are correct?")) {
+                    if (confirm("Server ip or database name is incorrect! Check server ip and database name! Press OK to save these settings anyway. Make sure they are correct!")) {
                         localStorage.setItem('databaseName', databaseName);
                         localStorage.setItem('serverIp', serverIp);
                         localStorage.setItem('settingsCheck', '1');
@@ -58,7 +59,7 @@ $(document).ready(function () {
                     window.alert("Incorrect username or password!");
                 },
                 0: function (response) {
-                    if (confirm("Server ip or database name is incorrect! Check internet connection, server ip and database name! Are you sure these settings are correct?")) {
+                    if (confirm("Server ip or database name is incorrect! Check internet connection, server ip and database name! Press OK to save these settings anyway. Make sure they are correct!")) {
                         localStorage.setItem('databaseName', databaseName);
                         localStorage.setItem('serverIp', serverIp);
                         localStorage.setItem('settingsCheck', '1');

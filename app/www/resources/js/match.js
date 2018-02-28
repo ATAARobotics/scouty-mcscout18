@@ -1,7 +1,12 @@
 ﻿$(document).ready(function () {
-	var databaseName = localStorage.getItem('databaseName');
-	var db = new PouchDB(databaseName);
-	$('#teamNumber, #matchNumber, #matchType').on('change paste keyup', function (e) {
+	if (localStorage.getItem('settingsCheck') == 1){
+		var databaseName = localStorage.getItem('databaseName');
+		var db = new PouchDB(databaseName);
+		var scoutName = localStorage.getItem('scoutName');
+		} else {
+        window.alert("Check Settings!")
+    }
+	function update(){
 		var teamNumber = $('#teamNumber').val();
 		var matchNumber = $('#matchNumber').val();
 		var matchType = $('#matchType').val();
@@ -80,9 +85,14 @@
                 console.log(err);
             }
         });
+	}
+	$('#teamNumber, #matchNumber').on('paste keyup', function (e) {
+		update();
+	});
+	$('#matchType').on('change', function (e) {
+		update();
     });
 	$('#Submit').on('click', function (e) {
-		var scoutName = localStorage.getItem('scoutName');
 		var teamNumber = $('#teamNumber').val();
 		var matchNumber = $('#matchNumber').val();
 		var matchType = $('#matchType').val();
@@ -137,7 +147,7 @@
 				}).catch(function (err) {
 					if (err.name === 'conflict') {
 						// conflict!
-						window.alert("Match already submitted! Check Round Type and Number.");
+						window.alert("Match already submitted! Use the edit button.");
 					} else {
 						// some other error
 						window.alert("Error!");
@@ -148,6 +158,74 @@
 			window.alert("Settings are incorrect!");
 		}
 	});
+	$('#Edit').on('click', function (e) {
+		var teamNumber = $('#teamNumber').val();
+		var matchNumber = $('#matchNumber').val();
+		var matchType = $('#matchType').val();
+		var allianceColor = $('input[name=allianceColor]:checked').val();
+		var startingPosition = $('input[name=startingPosition]:checked').val();
+		var teleopScaleCubes = $('#teleopScaleCubes').val();
+		var teleopSwitchCubes = $('#teleopSwitchCubes').val();
+		var teleopExchangeCubes = $('#teleopExchangeCubes').val();
+		var teleopOppSwitchCubes = $('#teleopOppSwitchCubes').val();
+		var climbingType = $('#climbingType').val();
+		var speedRating = $('input[name=speedRating]:checked').val();
+		var cubeCycleTime = cubeCycleSeconds.innerHTML + '.' + cubeCycleTenths.innerHTML
+		var stabilityRating = $('input[name=stabilityRating]:checked').val();
+		var skillRating = $('input[name=skillRating]:checked').val();
+		var defenceRating = $('input[name=defenceRating]:checked').val();
+		var autoCrossedBaseline = $('input[name=autoCrossedBaseline]:checked').val();
+		var autoSwitch = $('input[name=autoSwitch]:checked').val();
+		var autoScale = $('input[name=autoScale]:checked').val();
+		var anythingBreak = $('input[name=anythingBreak]:checked').val();
+		var commentSection = $('#commentSection').val();
+	
+		var id = matchType + matchNumber + "_" + teamNumber
+	
+		if (localStorage.getItem('settingsCheck') == 1) {
+			if (teamNumber == '') {
+				window.alert("Input a team number!");
+			} else {
+				db.get(id).then(function(doc) {
+				  return db.put({
+					_id: id,
+					_rev: doc._rev,
+					"scoutName": scoutName,
+					"scoutName": scoutName,
+					"allianceColor": allianceColor,
+					"startingPosition": startingPosition,
+					"autoCrossedBaseline": autoCrossedBaseline,
+					"autoSwitchCube": autoSwitch,
+					"autoScaleCube": autoScale,
+					"teleopScaleCubes": teleopScaleCubes,
+					"teleopSwitchCubes": teleopSwitchCubes,
+					"teleopOpponentSwitchCubes": teleopOppSwitchCubes,
+					"teleopExchangeCubes": teleopExchangeCubes,
+					"climbingType": climbingType,
+					"speedRating": speedRating,
+					"cubeCycleTime": cubeCycleTime,
+					"stabilityRating": stabilityRating,
+					"skillRating": skillRating,
+					"defenceRating": defenceRating,
+					"anythingBreak": anythingBreak,
+					"notesAndComments": commentSection,
+					});
+				}).then(function() {
+					window.alert("Edited!");
+					window.location.href = './index.html';
+				}).catch(function (err) {
+					if (err.name == 'not_found'){
+						window.alert("Match data not submitted yet, nothing to edit. Use the submit button.");
+					} else {
+						console.log(err);
+						window.alert("Error!");
+					}
+				});        
+			}
+		} else {
+			window.alert("Settings are incorrect!");
+		}
+	});	
 });
 
 function modifyScale_qty(val) {

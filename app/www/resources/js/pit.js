@@ -268,7 +268,7 @@ $(document).ready(function () {
                     window.location.href = '../pit/index.html';
                 }).catch(function (err) {
                     if (err.name == 'not_found'){
-                        window.alert("Pit data not submitted yet, nothing to edit. Use the submit button.")
+                        window.alert("Pit data not submitted yet, nothing to edit. Use the submit button.");
                     } else {
                         console.log(err);
                         window.alert("Error!");
