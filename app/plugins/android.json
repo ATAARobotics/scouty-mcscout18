@@ -32,6 +32,9 @@
     },
     "cordova-plugin-media": {
       "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
     }
   },
   "dependent_plugins": {}

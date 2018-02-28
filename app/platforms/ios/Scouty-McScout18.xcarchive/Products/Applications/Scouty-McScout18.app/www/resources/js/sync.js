@@ -30,6 +30,7 @@ $(document).ready(function () {
                             window.alert("Access Denied? This shouldn't happen.");
                             window.location.reload();
                         }).on('complete', function (info) {
+                            console.log('done');
                             document.getElementById("spinner").style.display = "none";
                             document.getElementById("header").style.display = "block";
                             document.getElementById("page").style.display = "block";                  
