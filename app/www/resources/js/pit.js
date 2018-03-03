@@ -7,8 +7,6 @@ $(document).ready(function () {
         window.alert("Check Settings!")
     }
 
-    var robotPhotoFront = '';
-
     function getPlaceCubes() {
         var chkArray = [];
         $("#placeCubes input:checked").each(function () {
@@ -18,43 +16,34 @@ $(document).ready(function () {
         return selected
     }
 
+    var robotPhotoFront = '';
 
     $('#robotPhotoFront').on('change', function (e) {
-        var reader = new FileReader();
-        reader.onload = (e) => (robotPhotoFront = e.target.result);
-        reader.readAsDataURL(e.target.files[0]);
+        robotPhotoFront = this.files[0];
     });
 
     var robotPhotoBack = '';
 
     $('#robotPhotoBack').on('change', function (e) {
-        var reader = new FileReader();
-        reader.onload = (e) => (robotPhotoBack = e.target.result);
-        reader.readAsDataURL(e.target.files[0]);
+        robotPhotoBack = this.files[0];
     });
 
     var robotPhotoLeft = '';
 
     $('#robotPhotoLeft').on('change', function (e) {
-        var reader = new FileReader();
-        reader.onload = (e) => (robotPhotoLeft = e.target.result);
-        reader.readAsDataURL(e.target.files[0]);
+        robotPhotoLeft = this.files[0];
     });
 
     var robotPhotoRight = '';
 
     $('#robotPhotoRight').on('change', function (e) {
-        var reader = new FileReader();
-        reader.onload = (e) => (robotPhotoRight = e.target.result);
-        reader.readAsDataURL(e.target.files[0]);
+        robotPhotoRight = this.files[0];
     });
 
     var robotPhotoTop = '';
 
     $('#robotPhotoTop').on('change', function (e) {
-        var reader = new FileReader();
-        reader.onload = (e) => (robotPhotoTop = e.target.result);
-        reader.readAsDataURL(e.target.files[0]);
+        robotPhotoTop = this.files[0];
     });
 
     $('#teamNumber').on('paste keyup', function (e) {
@@ -161,29 +150,28 @@ $(document).ready(function () {
         var robotDone = $('input[name=robotDone]:checked').val();
         var robotBroken = $('input[name=robotBroken]:checked').val();
         var placeCubes = getPlaceCubes();
-
         var doc = {
             "_id": id,
             _attachments: {
                 'robotFront.jpg': {
-                    content_type: 'image/jpeg',
-                    data: robotPhotoFront.slice(23),
+                    content_type: robotPhotoFront.type,
+                    data: robotPhotoFront,
                 },
                 'robotBack.jpg': {
-                    content_type: 'image/jpeg',
-                    data: robotPhotoBack.slice(23),
+                    content_type: robotPhotoBack.type,
+                    data: robotPhotoBack,
                 },
                 'robotLeft.jpg': {
-                    content_type: 'image/jpeg',
-                    data: robotPhotoLeft.slice(23),
+                    content_type: robotPhotoLeft.type,
+                    data: robotPhotoLeft,
                 },
                 'robotRight.jpg': {
-                    content_type: 'image/jpeg',
-                    data: robotPhotoRight.slice(23),
+                    content_type: robotPhotoRight.type,
+                    data: robotPhotoRight,
                 },
                 'robotTop.jpg': {
-                    content_type: 'image/jpeg',
-                    data: robotPhotoTop.slice(23),
+                    content_type: robotPhotoTop.type,
+                    data: robotPhotoTop,
                 }
             },
             "scoutName": scoutName,
@@ -236,31 +224,21 @@ $(document).ready(function () {
             if (teamNumber == '') {
                 window.alert("Input a team number!");
             } else {
-                db.get(id, {attachments: true}).then(function(doc) {
+                db.get(id, {attachments: true, binary: true}).then(function(doc) {
                     if (robotPhotoFront == ''){
                         robotPhotoFront = doc._attachments['robotFront.jpg'].data;
-                    } else {
-                        robotPhotoFront = robotPhotoFront.slice(23);
                     }
-                    if (robotPhotoBack = ''){
+                    if (robotPhotoBack == ''){
                         robotPhotoBack = doc._attachments['robotBack.jpg'].data;
-                    } else {
-                        robotPhotoBack = robotPhotoBack.slice(23);
                     }
-                    if (robotPhotoLeft = ''){
+                    if (robotPhotoLeft == ''){
                         robotPhotoLeft = doc._attachments['robotLeft.jpg'].data;
-                    } else {
-                        robotPhotoLeft = robotPhotoLeft.slice(23);
                     }
-                    if (robotPhotoRight = ''){
+                    if (robotPhotoRight == ''){
                         robotPhotoRight = doc._attachments['robotRight.jpg'].data;
-                    } else {
-                        robotPhotoRight = robotPhotoRight.slice(23);
                     }
-                    if (robotPhotoTop = ''){
+                    if (robotPhotoTop == ''){
                         robotPhotoTop = doc._attachments['robotTop.jpg'].data;
-                    } else {
-                        robotPhotoTop = robotPhotoTop.slice(23);
                     }
                   return db.put({
                     _id: id,
