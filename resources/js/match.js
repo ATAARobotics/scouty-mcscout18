@@ -28,7 +28,8 @@
         	var autoCrossedBaseline = doc.autoCrossedBaseline;
         	var autoSwitch = doc.autoSwitchCube;
         	var autoScale = doc.autoScaleCube;
-        	var anythingBreak = doc.anythingBreak;
+			var anythingBreak = doc.anythingBreak;
+			var robotDead = doc.robotDead;
         	var commentSection = doc.notesAndComments + " \n---EDIT---\n ";
         	$('#commentSection').val(commentSection);
         	$('#climbingType').val(climbingType);
@@ -57,7 +58,9 @@
         	$("input[name=defenceRating][value=" + defenceRating + "]").prop('checked', true);
         	$('#' + $('input[name=defenceRating]:checked').attr("id")).addClass('active');
         	$("input[name=anythingBreak][value=" + anythingBreak + "]").prop('checked', true);
-        	$('#' + $('input[name=anythingBreak]:checked').attr("id")).addClass('active');
+			$('#' + $('input[name=anythingBreak]:checked').attr("id")).addClass('active');
+			$("input[name=robotDead][value=" + robotDead + "]").prop('checked', true);
+        	$('#' + $('input[name=robotDead]:checked').attr("id")).addClass('active');
         }).catch(function (err) {
             if (err.name === 'not_found') {
                 console.log("not found");
@@ -78,7 +81,8 @@
                 $('#' + $('input[name=stabilityRating]:checked').attr("id")).removeClass('active');
                 $('#' + $('input[name=skillRating]:checked').attr("id")).removeClass('active');
                 $('#' + $('input[name=defenceRating]:checked').attr("id")).removeClass('active');
-                $('#' + $('input[name=anythingBreak]:checked').attr("id")).removeClass('active'); 
+				$('#' + $('input[name=anythingBreak]:checked').attr("id")).removeClass('active');
+				$('#' + $('input[name=robotDead]:checked').attr("id")).removeClass('active');  
                 $('input[type=checkbox]').attr('checked',false);
                 $('input[type=radio]').attr('checked',false);           
             } else {
@@ -112,6 +116,7 @@
 		var autoSwitch = $('input[name=autoSwitch]:checked').val();
 		var autoScale = $('input[name=autoScale]:checked').val();
 		var anythingBreak = $('input[name=anythingBreak]:checked').val();
+		var robotDead = $('input[name=robotDead]:checked').val();
 		var commentSection = $('#commentSection').val();
 
 		var id = matchType + matchNumber + "_" + teamNumber
@@ -134,6 +139,7 @@
 			"skillRating": skillRating,
 			"defenceRating": defenceRating,
 			"anythingBreak": anythingBreak,
+			"robotDead": robotDead,
 			"notesAndComments": commentSection,
 		};
 		if (localStorage.getItem('settingsCheck') == 1) {
@@ -178,6 +184,7 @@
 		var autoSwitch = $('input[name=autoSwitch]:checked').val();
 		var autoScale = $('input[name=autoScale]:checked').val();
 		var anythingBreak = $('input[name=anythingBreak]:checked').val();
+		var robotDead = $('input[name=robotDead]:checked').val();
 		var commentSection = $('#commentSection').val();
 	
 		var id = matchType + matchNumber + "_" + teamNumber
@@ -208,6 +215,7 @@
 					"skillRating": skillRating,
 					"defenceRating": defenceRating,
 					"anythingBreak": anythingBreak,
+					"robotDead": robotDead,
 					"notesAndComments": commentSection,
 					});
 				}).then(function() {
