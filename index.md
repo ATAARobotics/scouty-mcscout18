@@ -151,8 +151,21 @@ files: |
 			<div class="col-md input-group">
 				<a onclick="modifyExchange_qty(-1)" class="btn btn-danger btn-lg" style="width: 50px; height: 50px; margin-right: 15px;"
 				 role="button">-</a>
-				<input id="teleopExchangeCubes" maxlength="4" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off" type="tel" class="form-control" value="0">
+				<input id="teleopExchangeCubes" maxlength="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off" type="tel" class="form-control" value="0">
 				<a onclick="modifyExchange_qty(1)" class="btn btn-success btn-lg" style="width: 50px; height: 50px; margin-left: 15px;" role="button">+</a>
+			</div>
+		</div>
+		<div class="row" style="margin-top:15px">
+			<div class="col-md">
+				<label style="margin-bottom: 0px" for="teleopDroppedCubes">Cubes Dropped</label>
+			</div>
+		</div>
+		<div class="row" style="margin-top:15px">
+			<div class="col-md input-group">
+				<a onclick="modifyDropped_qty(-1)" class="btn btn-danger btn-lg" style="width: 50px; height: 50px; margin-right: 15px;"
+				 role="button">-</a>
+				<input id="teleopDroppedCubes" maxlength="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off" type="tel" class="form-control" value="0">
+				<a onclick="modifyDropped_qty(1)" class="btn btn-success btn-lg" style="width: 50px; height: 50px; margin-left: 15px;" role="button">+</a>
 			</div>
 		</div>
 		<div class="row">

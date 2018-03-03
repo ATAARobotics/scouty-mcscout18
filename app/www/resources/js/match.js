@@ -18,7 +18,8 @@
         	var teleopScaleCubes = doc.teleopScaleCubes;
         	var teleopSwitchCubes = doc.teleopSwitchCubes;
         	var teleopExchangeCubes = doc.teleopExchangeCubes;
-        	var teleopOppSwitchCubes = doc.teleopOpponentSwitchCubes;
+			var teleopOppSwitchCubes = doc.teleopOpponentSwitchCubes;
+			var teleopDroppedCubes = doc.teleopDroppedCubes;
         	var climbingType = doc.climbingType;
         	var speedRating = doc.speedRating
         	var cubeCycleTime = doc.cubeCycleTime.split(".");
@@ -36,7 +37,8 @@
         	$('#teleopSwitchCubes').val(teleopSwitchCubes);
         	$('#teleopScaleCubes').val(teleopScaleCubes);
         	$('#teleopExchangeCubes').val(teleopExchangeCubes);
-        	$('#teleopOppSwitchCubes').val(teleopOppSwitchCubes);
+			$('#teleopOppSwitchCubes').val(teleopOppSwitchCubes);
+			$('#teleopDroppedCubes').val(teleopDroppedCubes);
         	document.getElementById("cubeCycleSeconds").innerHTML = cubeCycleTime[0];
         	document.getElementById("cubeCycleTenths").innerHTML = cubeCycleTime[1];
         	$("input[name=allianceColor][value=" + allianceColor + "]").prop('checked', true);
@@ -70,7 +72,8 @@
                 $('#teleopScaleCubes').val('0');
                 $('#teleopExchangeCubes').val('0');
                 $('#teleopOppSwitchCubes').val('0');
-                document.getElementById("cubeCycleSeconds").innerHTML = '00';
+				$('#teleopDroppedCubes').val('0');
+				document.getElementById("cubeCycleSeconds").innerHTML = '00';
                 document.getElementById("cubeCycleTenths").innerHTML = '00';
                 $('#' + $('input[name=allianceColor]:checked').attr("id")).removeClass('active');
                 $('#' + $('input[name=startingPosition]:checked').attr("id")).removeClass('active');
@@ -106,6 +109,7 @@
 		var teleopSwitchCubes = $('#teleopSwitchCubes').val();
 		var teleopExchangeCubes = $('#teleopExchangeCubes').val();
 		var teleopOppSwitchCubes = $('#teleopOppSwitchCubes').val();
+		var teleopDroppedCubes = $('#teleopDroppedCubes').val();
 		var climbingType = $('#climbingType').val();
 		var speedRating = $('input[name=speedRating]:checked').val();
 		var cubeCycleTime = cubeCycleSeconds.innerHTML + '.' + cubeCycleTenths.innerHTML
@@ -132,6 +136,7 @@
 			"teleopSwitchCubes": teleopSwitchCubes,
 			"teleopOpponentSwitchCubes": teleopOppSwitchCubes,
 			"teleopExchangeCubes": teleopExchangeCubes,
+			"teleopDroppedCubes": teleopDroppedCubes,
 			"climbingType": climbingType,
 			"speedRating": speedRating,
 			"cubeCycleTime": cubeCycleTime,
@@ -174,6 +179,7 @@
 		var teleopSwitchCubes = $('#teleopSwitchCubes').val();
 		var teleopExchangeCubes = $('#teleopExchangeCubes').val();
 		var teleopOppSwitchCubes = $('#teleopOppSwitchCubes').val();
+		var teleopDroppedCubes = $('#teleopDroppedCubes').val();
 		var climbingType = $('#climbingType').val();
 		var speedRating = $('input[name=speedRating]:checked').val();
 		var cubeCycleTime = cubeCycleSeconds.innerHTML + '.' + cubeCycleTenths.innerHTML
@@ -208,6 +214,7 @@
 					"teleopSwitchCubes": teleopSwitchCubes,
 					"teleopOpponentSwitchCubes": teleopOppSwitchCubes,
 					"teleopExchangeCubes": teleopExchangeCubes,
+					"teleopDroppedCubes": teleopDroppedCubes,
 					"climbingType": climbingType,
 					"speedRating": speedRating,
 					"cubeCycleTime": cubeCycleTime,
@@ -280,8 +287,17 @@ function modifyOppSwitch_qty(val) {
 	document.getElementById('teleopOppSwitchCubes').value = new_qty;
 	return new_qty;
 }
+function modifyDropped_qty(val) {
+	var qty = document.getElementById('teleopDroppedCubes').value;
+	var new_qty = parseInt(qty, 10) + parseInt(val, 10);
 
+	if (new_qty < 0) {
+		new_qty = 0;
+	}
 
+	document.getElementById('teleopDroppedCubes').value = new_qty;
+	return new_qty;
+}
 
 window.onload = function () {
 
