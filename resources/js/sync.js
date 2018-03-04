@@ -22,7 +22,9 @@ $(document).ready(function () {
                     200: function (response) {
                         PouchDB.sync(databaseName, 'http://' + serverUsername + ':' + serverPassword + '@' + serverIp + ':5984/' + databaseName, {
                             live: false,
-                            retry: true
+                            retry: true,
+                            batches_limit: 1,
+                            batch_size: 1
                         }).on('denied', function (err) {
                             document.getElementById("spinner").style.display = "none";
                             document.getElementById("header").style.display = "block";

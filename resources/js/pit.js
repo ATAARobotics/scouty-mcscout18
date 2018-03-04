@@ -2,7 +2,7 @@ $(document).ready(function () {
     if (localStorage.getItem('settingsCheck') == 1){
         var databaseName = localStorage.getItem('databaseName');
         var scoutName = localStorage.getItem('scoutName');
-        var db = new PouchDB(databaseName);
+        var db = new PouchDB(databaseName, {auto_compaction: true});
     } else {
         window.alert("Check Settings!")
     }
