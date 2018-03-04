@@ -95,4 +95,7 @@
     <preference name="KeepAVAudioSessionAlwaysActive" value="NO" />
     <preference name="SplashScreenDelay" value="3000" />
     <preference name="Orientation" value="landscape" />
+    <feature name="SQLitePlugin">
+        <param name="ios-package" value="SQLitePlugin" />
+    </feature>
 </widget>

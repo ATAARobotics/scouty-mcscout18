@@ -2,8 +2,13 @@
 	if (localStorage.getItem('settingsCheck') == 1){
 		var databaseName = localStorage.getItem('databaseName');
 		var scoutName = localStorage.getItem('scoutName');
-		var db = new PouchDB(databaseName, {auto_compaction: true});
+		var db;
+		if (window.cordova) {
+			var db = new PouchDB(databaseName, {auto_compaction: true, adapter: 'cordova-sqlite'});
 		} else {
+			var db = new PouchDB(databaseName, {auto_compaction: true});
+		}
+	} else {
         window.alert("Check Settings!")
     }
 	function update(){

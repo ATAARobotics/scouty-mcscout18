@@ -8,6 +8,12 @@ $(document).ready(function () {
         var serverUsername = localStorage.getItem('serverUsername');
         var serverPassword = localStorage.getItem('serverPassword');
         if (localStorage.getItem('settingsCheck') == 1) {
+            var syncdb;
+            if (window.cordova) {
+                var syncdb = new PouchDB(databaseName, {auto_compaction: true, adapter: 'cordova-sqlite'});
+            } else {
+                var syncdb = databaseName;
+            }    
             $.ajax({
                 xhrFields: {
                     withCredentials: true
@@ -20,7 +26,7 @@ $(document).ready(function () {
                 timeout: 1000,
                 statusCode: {
                     200: function (response) {
-                        PouchDB.sync(databaseName, 'http://' + serverUsername + ':' + serverPassword + '@' + serverIp + ':5984/' + databaseName, {
+                        PouchDB.sync(syncdb, 'http://' + serverUsername + ':' + serverPassword + '@' + serverIp + ':5984/' + databaseName, {
                             live: false,
                             retry: true,
                             batches_limit: 1,
