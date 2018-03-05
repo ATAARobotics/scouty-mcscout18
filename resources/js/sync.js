@@ -10,9 +10,9 @@ $(document).ready(function () {
         if (localStorage.getItem('settingsCheck') == 1) {
             var syncdb;
             if (window.cordova) {
-                var syncdb = new PouchDB(databaseName, {auto_compaction: true, adapter: 'cordova-sqlite'});
+                syncdb = new PouchDB(databaseName, {auto_compaction: true, adapter: 'cordova-sqlite'});
             } else {
-                var syncdb = databaseName;
+                syncdb = databaseName;
             }    
             $.ajax({
                 xhrFields: {

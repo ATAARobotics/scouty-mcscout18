@@ -84,15 +84,15 @@
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
-              "count": 27
+              "count": 40
             },
             {
               "xml": "<uses-feature android:name=\"android.hardware.camera\" />",
-              "count": 27
+              "count": 40
             },
             {
               "xml": "<uses-feature android:name=\"android.hardware.camera.autofocus\" />",
-              "count": 27
+              "count": 40
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",

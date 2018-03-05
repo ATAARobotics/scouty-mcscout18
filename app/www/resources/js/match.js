@@ -4,9 +4,10 @@
 		var scoutName = localStorage.getItem('scoutName');
 		var db;
 		if (window.cordova) {
-			var db = new PouchDB(databaseName, {auto_compaction: true, adapter: 'cordova-sqlite'});
+			db = new PouchDB(databaseName, {auto_compaction: true, adapter: 'cordova-sqlite'});
+			console.log("cordova")
 		} else {
-			var db = new PouchDB(databaseName, {auto_compaction: true});
+			db = new PouchDB(databaseName, {auto_compaction: true});
 		}
 	} else {
         window.alert("Check Settings!")

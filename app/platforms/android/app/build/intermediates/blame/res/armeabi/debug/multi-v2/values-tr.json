@@ -21,23 +21,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\John\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\017c13b3f5fbe0ffd061c85af4a457c3\\res\\values-tr\\values-tr.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "51",
-                        "startColumns": "4",
-                        "startOffsets": "3715",
-                        "endColumns": "100",
-                        "endOffsets": "3811"
-                    }
-                },
-                {
                     "source": "C:\\Users\\John\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\7db1f622776de50bccd596a1ef797263\\res\\values-tr\\android_ui_strings.xml",
                     "from": {
                         "startLines": "20,24,21,38,39,33,29,32,30,31,45,43,17,13,9,12,14,15,4,11,8,18,16,10,5,6,7,19,42,40,22,41,37,2,23,3,44,26,34,35,27,36,28,46,25",
@@ -52,6 +35,23 @@
                         "startOffsets": "55,120,187,252,323,394,461,527,600,670,927,1018,1122,1184,1244,1307,1372,1434,1500,1566,1628,1689,1751,1813,1880,1931,1995,2050,2135,2198,2272,2332,2404,2490,3045,3115,3188,3816,3871,3944,4019,4074,4152,4223,4293",
                         "endColumns": "64,66,64,70,70,66,65,72,69,69,90,103,61,59,62,64,61,65,65,61,60,61,61,66,50,63,54,84,62,73,59,71,85,100,69,72,114,54,72,74,54,77,70,69,72",
                         "endOffsets": "115,182,247,318,389,456,522,595,665,735,1013,1117,1179,1239,1302,1367,1429,1495,1561,1623,1684,1746,1808,1875,1926,1990,2045,2130,2193,2267,2327,2399,2485,2586,3110,3183,3298,3866,3939,4014,4069,4147,4218,4288,4361"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\John\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\e8a1445b17744bf2a815aeeed699a2d5\\res\\values-tr\\values-tr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "51",
+                        "startColumns": "4",
+                        "startOffsets": "3715",
+                        "endColumns": "100",
+                        "endOffsets": "3811"
                     }
                 }
             ]
