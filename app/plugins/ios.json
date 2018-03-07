@@ -41,6 +41,9 @@
     },
     "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
+    },
+    "cordova-plugin-sqlite-2": {
+      "PACKAGE_NAME": "ca.fourthreethreefour.scoutymcscout18"
     }
   },
   "dependent_plugins": {}

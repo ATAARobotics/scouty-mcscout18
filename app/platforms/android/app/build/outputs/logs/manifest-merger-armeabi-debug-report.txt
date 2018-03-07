@@ -16,14 +16,17 @@ INJECTED from C:\Users\John\Downloads\Website\scouty-mcscout18\app\platforms\and
 INJECTED from C:\Users\John\Downloads\Website\scouty-mcscout18\app\platforms\android\app\src\main\AndroidManifest.xml:2:1-28:12
 INJECTED from C:\Users\John\Downloads\Website\scouty-mcscout18\app\platforms\android\app\src\main\AndroidManifest.xml:2:1-28:12
 MERGED from [org.xwalk:xwalk_core_library:23.53.589.4] C:\Users\John\.gradle\caches\transforms-1\files-1.1\xwalk_core_library-23.53.589.4.aar\7db1f622776de50bccd596a1ef797263\AndroidManifest.xml:1:1-9:12
-MERGED from [com.android.support:support-v4:27.0.2] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\eafbc212a91cb0290e3f3344317514d7\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\f220dffc58e8e44e8c4549e2f4c31a99\AndroidManifest.xml:17:1-22:12
 MERGED from [:CordovaLib] C:\Users\John\Downloads\Website\scouty-mcscout18\app\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:20:1-27:12
-MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\1d0b0fbae2bd27b106b9aab7780383bc\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\1b766d000f8193da21b94954c12bdae5\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\7fba5f7098921ce9dbc3cccfdb0e4e57\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\7442f712edb4ef1f5662e7517f0f5348\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.0.2] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\017c13b3f5fbe0ffd061c85af4a457c3\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\John\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\e0f6d4568821e531bbeffb01429428db\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\67b624c532a09682521cd5e4d4643ce3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\7713f73395aef0f5ad5fc1fa48d5e56d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\4c1a28eade9dfdacaf2fa4365d2a2386\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\fdfcca132bf4c57bc63806eaf7e06486\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\e8a1445b17744bf2a815aeeed699a2d5\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\2cfdceced5e90b7c309a9892c2d1c8b1\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\ee8687ef3116632744a93423f954700a\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\bd717212de5cbbe62cbb83bec132c121\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\3dc8e921aff2613280fff7d468f36fc6\AndroidManifest.xml:17:1-22:12
 INJECTED from C:\Users\John\Downloads\Website\scouty-mcscout18\app\platforms\android\app\src\main\AndroidManifest.xml:2:1-28:12
 INJECTED from C:\Users\John\Downloads\Website\scouty-mcscout18\app\platforms\android\app\src\main\AndroidManifest.xml:2:1-28:12
 INJECTED from C:\Users\John\Downloads\Website\scouty-mcscout18\app\platforms\android\app\src\main\AndroidManifest.xml:2:1-28:12
@@ -104,22 +107,28 @@ ADDED from C:\Users\John\Downloads\Website\scouty-mcscout18\app\platforms\androi
 INJECTED from C:\Users\John\Downloads\Website\scouty-mcscout18\app\platforms\android\app\src\main\AndroidManifest.xml:16:5-74
 MERGED from [org.xwalk:xwalk_core_library:23.53.589.4] C:\Users\John\.gradle\caches\transforms-1\files-1.1\xwalk_core_library-23.53.589.4.aar\7db1f622776de50bccd596a1ef797263\AndroidManifest.xml:6:5-8:41
 MERGED from [org.xwalk:xwalk_core_library:23.53.589.4] C:\Users\John\.gradle\caches\transforms-1\files-1.1\xwalk_core_library-23.53.589.4.aar\7db1f622776de50bccd596a1ef797263\AndroidManifest.xml:6:5-8:41
-MERGED from [com.android.support:support-v4:27.0.2] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\eafbc212a91cb0290e3f3344317514d7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.0.2] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\eafbc212a91cb0290e3f3344317514d7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\f220dffc58e8e44e8c4549e2f4c31a99\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\f220dffc58e8e44e8c4549e2f4c31a99\AndroidManifest.xml:20:5-44
 MERGED from [:CordovaLib] C:\Users\John\Downloads\Website\scouty-mcscout18\app\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:25:5-44
 MERGED from [:CordovaLib] C:\Users\John\Downloads\Website\scouty-mcscout18\app\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:25:5-44
-MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\1d0b0fbae2bd27b106b9aab7780383bc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\1d0b0fbae2bd27b106b9aab7780383bc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\1b766d000f8193da21b94954c12bdae5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\1b766d000f8193da21b94954c12bdae5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\7fba5f7098921ce9dbc3cccfdb0e4e57\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\7fba5f7098921ce9dbc3cccfdb0e4e57\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\7442f712edb4ef1f5662e7517f0f5348\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\7442f712edb4ef1f5662e7517f0f5348\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.0.2] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\017c13b3f5fbe0ffd061c85af4a457c3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.0.2] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\017c13b3f5fbe0ffd061c85af4a457c3\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\John\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\e0f6d4568821e531bbeffb01429428db\AndroidManifest.xml:20:5-22:41
-MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\John\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\e0f6d4568821e531bbeffb01429428db\AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\67b624c532a09682521cd5e4d4643ce3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\67b624c532a09682521cd5e4d4643ce3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\7713f73395aef0f5ad5fc1fa48d5e56d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\7713f73395aef0f5ad5fc1fa48d5e56d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\4c1a28eade9dfdacaf2fa4365d2a2386\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\4c1a28eade9dfdacaf2fa4365d2a2386\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\fdfcca132bf4c57bc63806eaf7e06486\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\fdfcca132bf4c57bc63806eaf7e06486\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\e8a1445b17744bf2a815aeeed699a2d5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\e8a1445b17744bf2a815aeeed699a2d5\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\2cfdceced5e90b7c309a9892c2d1c8b1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\2cfdceced5e90b7c309a9892c2d1c8b1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\ee8687ef3116632744a93423f954700a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\ee8687ef3116632744a93423f954700a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\bd717212de5cbbe62cbb83bec132c121\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\bd717212de5cbbe62cbb83bec132c121\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\3dc8e921aff2613280fff7d468f36fc6\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\John\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\3dc8e921aff2613280fff7d468f36fc6\AndroidManifest.xml:20:5-44
 INJECTED from C:\Users\John\Downloads\Website\scouty-mcscout18\app\platforms\android\app\src\main\AndroidManifest.xml:16:5-74
 	android:targetSdkVersion
 		ADDED from C:\Users\John\Downloads\Website\scouty-mcscout18\app\platforms\android\app\src\main\AndroidManifest.xml:16:42-71

@@ -33,6 +33,8 @@
 		7005170C8A4C4EC1A1F68778 /* CDVSound.m in Sources */ = {isa = PBXBuildFile; fileRef = F966594834FA40168FA8AD8A /* CDVSound.m */; };
 		36EE57C14D904AADB5A6033B /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E56D01A1F844981A536D3C8 /* CDVSplashScreen.m */; };
 		BB031AA2A3EE479F8FB5120D /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 586C4B9C8D704E36828617C7 /* CDVViewController+SplashScreen.m */; };
+		F059E5BEA65945D58D4060DD /* SQLitePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8157DB26B9D6401F9E3A6759 /* SQLitePlugin.m */; };
+		AD9F110C3A784E22B7C2CCCC /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 967FE0C07B524C50B046D759 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,9 @@
 		586C4B9C8D704E36828617C7 /* CDVViewController+SplashScreen.m */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.m"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		343B7E1662B345A2AE5668B1 /* CDVSplashScreen.h */ = {isa = PBXFileReference; name = "CDVSplashScreen.h"; path = "cordova-plugin-splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		80C2F98A6AF44D41ACC4A056 /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		8157DB26B9D6401F9E3A6759 /* SQLitePlugin.m */ = {isa = PBXFileReference; name = "SQLitePlugin.m"; path = "cordova-plugin-sqlite-2/SQLitePlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		82D917CA3CD04CE198EF35E0 /* SQLitePlugin.h */ = {isa = PBXFileReference; name = "SQLitePlugin.h"; path = "cordova-plugin-sqlite-2/SQLitePlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		967FE0C07B524C50B046D759 /* libsqlite3.dylib */ = {isa = PBXFileReference; name = "libsqlite3.dylib"; path = "usr/lib/libsqlite3.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +133,7 @@
 				41AC6880AF1E4D5F86095F42 /* CoreLocation.framework in Frameworks */,
 				2C9E67FEBBAC450695E39C76 /* AVFoundation.framework in Frameworks */,
 				9189D75747CA4691B0F0D5A4 /* libz.tbd in Frameworks */,
+				AD9F110C3A784E22B7C2CCCC /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +210,7 @@
 				C2DE49B5C76945D7AF6C0E26 /* CoreLocation.framework */,
 				36BF577FCCC04D9C8C3F5C0C /* AVFoundation.framework */,
 				917552F5D6614DBA9837B972 /* libz.tbd */,
+				967FE0C07B524C50B046D759 /* libsqlite3.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -259,6 +266,8 @@
 				586C4B9C8D704E36828617C7 /* CDVViewController+SplashScreen.m */,
 				343B7E1662B345A2AE5668B1 /* CDVSplashScreen.h */,
 				80C2F98A6AF44D41ACC4A056 /* CDVViewController+SplashScreen.h */,
+				8157DB26B9D6401F9E3A6759 /* SQLitePlugin.m */,
+				82D917CA3CD04CE198EF35E0 /* SQLitePlugin.h */,
 			);
 			name = Plugins;
 			path = "Scouty-McScout18/Plugins";
@@ -401,6 +410,7 @@
 				7005170C8A4C4EC1A1F68778 /* CDVSound.m in Sources */,
 				36EE57C14D904AADB5A6033B /* CDVSplashScreen.m in Sources */,
 				BB031AA2A3EE479F8FB5120D /* CDVViewController+SplashScreen.m in Sources */,
+				F059E5BEA65945D58D4060DD /* SQLitePlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

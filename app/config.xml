@@ -16,7 +16,7 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <preference name="SplashScreen" value="screen"/>
+    <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
     <preference name="Orientation" value="landscape" />
     <platform name="android">
@@ -85,6 +85,7 @@
         <plugin name="cordova-plugin-wkwebview-engine" spec="^1.1.4" />
     </platform>
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
+    <plugin name="cordova-plugin-sqlite-2" spec="^1.0.4" />
     <engine name="ios" spec="^4.5.4" />
     <engine name="android" spec="^7.0.0" />
 </widget>

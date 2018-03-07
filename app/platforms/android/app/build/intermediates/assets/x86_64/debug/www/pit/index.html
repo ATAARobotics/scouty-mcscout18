@@ -5,91 +5,143 @@
 <html lang="en">
 
 <head>
-<title>Team 4334 Scouting - Pit</title>
-<meta charset="utf-8">
-<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-<link href="../resources/css/bootstrap.min.css" rel="stylesheet">
-<script src="../resources/js/jquery.min.js"></script>
-<script src="../resources/js/bootstrap.min.js"></script>
-<script src="../resources/js/pouchdb-6.4.3.min.js"></script>
-<script src="../resources/js/sync.js"></script>
-<script src="../resources/js/pit.js"></script>
+	<title>Team 4334 Scouting - Pit</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"
+	/>
+	<link href="../resources/css/bootstrap.min.css" rel="stylesheet">
+	<script src="../cordova.js"></script>
+	<script src="../resources/js/jquery.min.js"></script>
+	<script src="../resources/js/bootstrap.min.js"></script>
+	<script src="../resources/js/pouchdb-6.4.1.min.js"></script>
+	<script src="../resources/js/pouchdb-cordova-sqlite.js"></script>
+	<script src="../resources/js/sync.js"></script> <script src="../resources/js/pit.js"></script>
 
-<meta name="description" content="Scouting App for Team 4334">
-<link href="../favicon.ico" rel="icon" type="image/png">
+	<meta name="description" content="Scouting App for Team 4334">
+	<link href="../favicon.ico" rel="icon" type="image/png">
 
-<style>
-	.navbar {
-		font-size: 18px;
-	}
-	.navbar-nav li a:hover {
-		color: #afafaf !important;
-	}
-	.navbar-nav li a.active {
-		color: #afafaf !important;
-	}
-	.dropdown-item.active, .dropdown-item:active {
-		background-color: #d3d3d3;
-	}
-	.navbar li a, .navbar .navbar-brand {
-		color: #000000 !important;
-	}
-	.dropdown-toggle::after {
-		margin-left: 0;
-	}
-	hr {
-		height: 1px;
-	}
+	<style>
+		.navbar {
+			font-size: 18px;
+		}
+
+		.navbar-nav li a:hover {
+			color: #afafaf !important;
+		}
+
+		.navbar-nav li a.active {
+			color: #afafaf !important;
+		}
+
+		.dropdown-item.active,
+		.dropdown-item:active {
+			background-color: #d3d3d3;
+		}
+
+		.navbar li a,
+		.navbar .navbar-brand {
+			color: #000000 !important;
+		}
+
+		.dropdown-toggle::after {
+			margin-left: 0;
+		}
+
+		hr {
+			height: 1px;
+		}
+
+		#spinner {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			z-index: 1;
+			width: 150px;
+			height: 150px;
+			margin: -75px 0 0 -75px;
+			border: 16px solid #f0f0f0;
+			border-radius: 50%;
+			border-top: 16px solid #6c757d;
+			width: 120px;
+			height: 120px;
+			-webkit-animation: spin 2s linear infinite;
+			animation: spin 2s linear infinite;
+			display: none;
+		}
+
+		@-webkit-keyframes spin {
+			0% {
+				-webkit-transform: rotate(0deg);
+			}
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
 	</style>
-	
+
 </head>
 
 <body>
-<div class="container-fluid">
-	<nav class="navbar navbar-expand-lg navbar-light">
-		<a class="navbar-brand" style="width: 60%" href="../index.html">
-		<img class="img-fluid" src="../resources/img/atalogo.png"></a>
-		<button class="navbar-toggler" data-target="#primaryNavbar" data-toggle="collapse" type="button">
-		<span class="navbar-toggler-icon"></span></button>
-		<div id="primaryNavbar" class="collapse navbar-collapse justify-content-end">
-			<ul class="navbar-nav">
-				<li class="nav-item"><a class="nav-link " href="../index.html">Match</a>
-				</li>
-				<li class="nav-item"><a class="nav-link active" href="../pit/index.html">Pit</a>
-                </li>
-                <li class="nav-item"><a class="nav-link " href="../settings/index.html">Settings</a>
-				</li>
-				
-                <li class="nav-item"><a id="sync" class="nav-link" href="#">Sync</a>
-				</li>
-				
-			</ul>
-		</div>
-	</nav>
-</div>
-
-<div class="container-fluid" style="background-color: #f0f0f0; margin-bottom: 15px">
+	<div id='header' class="container-fluid">
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<a class="navbar-brand" style="width: 60%" href="#" onclick="window.location.reload();">
+				<img class="img-fluid" src="../resources/img/atalogo.png">
+			</a>
+			<button class="navbar-toggler" data-target="#primaryNavbar" data-toggle="collapse" type="button">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div id="primaryNavbar" class="collapse navbar-collapse justify-content-end">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link " href="../index.html">Match</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="../pit/index.html">Pit</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="../settings/index.html">Settings</a>
+					</li>
+					
+					<li class="nav-item">
+						<a id="sync" class="nav-link" href="#">Sync</a>
+					</li>
+					
+				</ul>
+			</div>
+		</nav>
+	</div>
+<div id="spinner"></div>
+<div id="page" class="container-fluid" style="background-color: #f0f0f0; margin-bottom: 15px">
 	<form>
 		<div class="row">
 			<div class="col">
 				<label class="mr-sm-2" for="teamNumber">Team Number</label>
-				<input id="teamNumber" type="tel" class="form-control" placeholder="Team Number" />
+				<input id="teamNumber" maxlength="4" onkeypress="return event.charCode &gt;= 48 &amp;&amp; event.charCode &lt;= 57" autocomplete="off" type="tel" class="form-control" placeholder="Team Number" />
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-4 col-md-6">
 				<label class="mr-sm-2" style="display: block" for="manipulatorType">Cube Manipulator Type:</label>
 				<div id="manipulatorType" class="btn-group btn-group-toggle" data-toggle="buttons">
-					<label class="btn btn-secondary">
+					<label id="manipulatorArm" class="btn btn-secondary">
 						<input type="radio" value="arm" name="manipulatorType" id="manipulatorArm" autocomplete="off" /> Arm
 					</label>
-					<label class="btn btn-secondary">
+					<label id="manipulatorElevator" class="btn btn-secondary">
 						<input type="radio" value="elevator" name="manipulatorType" id="manipulatorElevator" autocomplete="off" /> Elevator
 					</label>
-					<label class="btn btn-secondary">
+					<label id="maipulatorPusher" class="btn btn-secondary">
 						<input type="radio" value="pusher" name="manipulatorType" id="maipulatorPusher" autocomplete="off" /> Pusher
 					</label>
-					<label class="btn btn-secondary">
+					<label id="manipulatorOther" class="btn btn-secondary">
 						<input type="radio" value="other" name="manipulatorType" id="manipulatorOther" autocomplete="off" /> Other
 					</label>
 				</div>
@@ -97,13 +149,13 @@
 			<div class="col-lg-4 col">
 				<label class="mr-sm-2" style="display: block" for="placeCubes">Can Place Cubes In:</label>
 				<div id="placeCubes" class="btn-group btn-group-toggle" data-toggle="buttons">
-					<label class="btn btn-secondary">
+					<label id="cubeSwitch" class="btn btn-secondary">
 						<input type="checkbox" value="switch" name="placeCubes" id="cubeSwitch" autocomplete="off" /> Switch
 					</label>
-					<label class="btn btn-secondary">
+					<label id="cubeScale" class="btn btn-secondary">
 						<input type="checkbox" value="scale" name="placeCubes" id="cubeScale" autocomplete="off" /> Scale
 					</label>
-					<label class="btn btn-secondary">
+					<label id="cubeExchange" class="btn btn-secondary">
 						<input type="checkbox" value="exchange" name="placeCubes" id="cubeExchange" autocomplete="off" /> Exchange
 					</label>
 				</div>
@@ -111,13 +163,13 @@
 			<div class="col-md-4 col">
 				<label class="mr-sm-2" style="display: block" for="robotSize">Size:</label>
 				<div id="robotSize" class="btn-group btn-group-toggle" data-toggle="buttons">
-					<label class="btn btn-secondary">
+					<label id="sizeSmall" class="btn btn-secondary">
 						<input type="radio" value="small" name="robotSize" id="sizeSmall" autocomplete="off" /> Small
 					</label>
-					<label class="btn btn-secondary">
+					<label id="sizeMedium" class="btn btn-secondary">
 						<input type="radio" value="medium" name="robotSize" id="sizeMedium" autocomplete="off" /> Medium
 					</label>
-					<label class="btn btn-secondary">
+					<label id="sizeLarge" class="btn btn-secondary">
 						<input type="radio" value="large" name="robotSize" id="sizeLarge" autocomplete="off" /> Large
 					</label>
 				</div>
@@ -127,34 +179,34 @@
 			<div class="col-xl-4 col-md-6">
 				<label class="mr-sm-2" style="display: block" for="robotAppearance">Overall Appearance:</label>
 				<div id="robotAppearance" class="btn-group btn-group-toggle" data-toggle="buttons">
-					<label class="btn btn-secondary">
+					<label id="appearance1" class="btn btn-secondary">
 						<input type="radio" value="1" name="robotAppearance" id="appearance1" autocomplete="off" /> 1
 					</label>
-					<label class="btn btn-secondary">
+					<label id="appearance2" class="btn btn-secondary">
 						<input type="radio" value="2" name="robotAppearance" id="appearance2" autocomplete="off" /> 2
 					</label>
-					<label class="btn btn-secondary">
+					<label id="appearance3" class="btn btn-secondary">
 						<input type="radio" value="3" name="robotAppearance" id="appearance3" autocomplete="off" /> 3
 					</label>
-					<label class="btn btn-secondary">
+					<label id="appearance4" class="btn btn-secondary">
 						<input type="radio" value="4" name="robotAppearance" id="appearance4" autocomplete="off" /> 4
 					</label>
-					<label class="btn btn-secondary">
+					<label id="appearance5" class="btn btn-secondary">
 						<input type="radio" value="5" name="robotAppearance" id="appearance5" autocomplete="off" /> 5
 					</label>
-					<label class="btn btn-secondary">
+					<label id="appearance6" class="btn btn-secondary">
 						<input type="radio" value="6" name="robotAppearance" id="appearance6" autocomplete="off" /> 6
 					</label>
-					<label class="btn btn-secondary">
+					<label id="appearance7" class="btn btn-secondary">
 						<input type="radio" value="7" name="robotAppearance" id="appearance7" autocomplete="off" /> 7
 					</label>
-					<label class="btn btn-secondary">
+					<label id="appearance8" class="btn btn-secondary">
 						<input type="radio" value="8" name="robotAppearance" id="appearance8" autocomplete="off" /> 8
 					</label>
-					<label class="btn btn-secondary">
+					<label id="appearance9" class="btn btn-secondary">
 						<input type="radio" value="9" name="robotAppearance" id="appearance9" autocomplete="off" /> 9
 					</label>
-					<label class="btn btn-secondary">
+					<label id="appearance10" class="btn btn-secondary">
 						<input type="radio" value="10" name="robotAppearance" id="appearance10" autocomplete="off" /> 10
 					</label>
 				</div>
@@ -162,34 +214,34 @@
 			<div class="col-xl-4 col-md-6">
 				<label class="mr-sm-2" style="display: block" for="pitSkill">Pit Crew Skill:</label>
 				<div id="pitSkill" class="btn-group btn-group-toggle" data-toggle="buttons">
-					<label class="btn btn-secondary">
+					<label id="pit1" class="btn btn-secondary">
 						<input type="radio" value="1" name="pitSkill" id="pit1" autocomplete="off" /> 1
 					</label>
-					<label class="btn btn-secondary">
+					<label id="pit2" class="btn btn-secondary">
 						<input type="radio" value="2" name="pitSkill" id="pit2" autocomplete="off" /> 2
 					</label>
-					<label class="btn btn-secondary">
+					<label id="pit3" class="btn btn-secondary">
 						<input type="radio" value="3" name="pitSkill" id="pit3" autocomplete="off" /> 3
 					</label>
-					<label class="btn btn-secondary">
+					<label id="pit4" class="btn btn-secondary">
 						<input type="radio" value="4" name="pitSkill" id="pit4" autocomplete="off" /> 4
 					</label>
-					<label class="btn btn-secondary">
+					<label id="pit5" class="btn btn-secondary">
 						<input type="radio" value="5" name="pitSkill" id="pit5" autocomplete="off" /> 5
 					</label>
-					<label class="btn btn-secondary">
+					<label id="pit6" class="btn btn-secondary">
 						<input type="radio" value="6" name="pitSkill" id="pit6" autocomplete="off" /> 6
 					</label>
-					<label class="btn btn-secondary">
+					<label id="pit7" class="btn btn-secondary">
 						<input type="radio" value="7" name="pitSkill" id="pit7" autocomplete="off" /> 7
 					</label>
-					<label class="btn btn-secondary">
+					<label id="pit8" class="btn btn-secondary">
 						<input type="radio" value="8" name="pitSkill" id="pit8" autocomplete="off" /> 8
 					</label>
-					<label class="btn btn-secondary">
+					<label id="pit9" class="btn btn-secondary">
 						<input type="radio" value="9" name="pitSkill" id="pit9" autocomplete="off" /> 9
 					</label>
-					<label class="btn btn-secondary">
+					<label id="pit10" class="btn btn-secondary">
 						<input type="radio" value="10" name="pitSkill" id="pit10" autocomplete="off" /> 10
 					</label>
 				</div>
@@ -197,16 +249,16 @@
 			<div class="col-xl-4 col-md-4">
 				<label class="mr-sm-2" style="display: block" for="robotClimber">Climber:</label>
 				<div id="robotClimber" class="btn-group btn-group-toggle" data-toggle="buttons">
-					<label class="btn btn-secondary">
+					<label id="climberRung" class="btn btn-secondary">
 						<input type="radio" value="rung" name="robotClimber" id="climberRung" autocomplete="off" /> Rung Climber
 					</label>
-					<label class="btn btn-secondary">
+					<label id="climberRamp" class="btn btn-secondary">
 						<input type="radio" value="ramp" name="robotClimber" id="climberRamp" autocomplete="off" /> Ramp
 					</label>
-					<label class="btn btn-secondary">
+					<label id="climberNone" class="btn btn-secondary">
 						<input type="radio" value="none" name="robotClimber" id="climberNone" autocomplete="off" /> None
 					</label>
-					<label class="btn btn-secondary">
+					<label id="climberOther" class="btn btn-secondary">
 						<input type="radio" value="other" name="robotClimber" id="climberOther" autocomplete="off" /> Other
 					</label>
 				</div>
@@ -216,10 +268,10 @@
 			<div class="col-lg-4 col-6">
 				<label class="mr-sm-2" style="display: block" for="robotDone">Robot Done</label>
 				<div id="robotDone" class="btn-group btn-group-toggle" data-toggle="buttons">
-					<label class="btn btn-secondary">
+					<label id="robotDoneNo" class="btn btn-secondary">
 						<input type="radio" value="0" name="robotDone" id="robotDoneNo" autocomplete="off" /> No
 					</label>
-					<label class="btn btn-secondary">
+					<label id="robotDoneYes" class="btn btn-secondary">
 						<input type="radio" value="1" name="robotDone" id="robotDoneYes" autocomplete="off" /> Yes
 					</label>
 				</div>
@@ -227,10 +279,10 @@
 			<div class="col-lg-4 col-6">
 				<label class="mr-sm-2" style="display: block" for="robotBroken">Anything Broken?</label>
 				<div id="robotBroken" class="btn-group btn-group-toggle" data-toggle="buttons">
-					<label class="btn btn-secondary">
+					<label id="robotBrokenNo" class="btn btn-secondary">
 						<input type="radio" value="0" name="robotBroken" id="robotBrokenNo" autocomplete="off" /> No
 					</label>
-					<label class="btn btn-secondary">
+					<label id="robotBrokenYes" class="btn btn-secondary">
 						<input type="radio" value="1" name="robotBroken" id="robotBrokenYes" autocomplete="off" /> Yes
 					</label>
 				</div>
@@ -238,23 +290,38 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-3 col-md-4 col-6">
-				<label class="mr-sm-2" style="display: block" for="robotPhoto">Robot Photo Front</label>
+				<div>
+					<img class="img-fluid" style="margin-top: 15px; display:none" alt="No Image" id="robotPhotoFrontPreview" />
+				</div>
+				<label class="mr-sm-2" style="display: block" for="robotPhotoFront">Robot Photo Front</label>
 				<input style="margin-bottom: 15px; width:100%" type="file" accept="image/*" id="robotPhotoFront" name="robotPhotoFront" />
 			</div>
 			<div class="col-lg-3 col-md-4 col-6">
-				<label class="mr-sm-2" style="display: block" for="robotPhoto">Robot Photo Back</label>
+				<div>
+					<img class="img-fluid" style="margin-top: 15px; display:none" alt="No Image" id="robotPhotoBackPreview" />
+				</div>
+				<label class="mr-sm-2" style="display: block" for="robotPhotoBack">Robot Photo Back</label>
 				<input style="margin-bottom: 15px; width:100%" type="file" accept="image/*" id="robotPhotoBack" name="robotPhotoBack" />
 			</div>
 			<div class="col-lg-3 col-md-4 col-6">
-				<label class="mr-sm-2" style="display: block" for="robotPhoto">Robot Photo Left</label>
+				<div>
+					<img class="img-fluid" style="margin-top: 15px; display:none" alt="No Image" id="robotPhotoLeftPreview" />
+				</div>
+				<label class="mr-sm-2" style="display: block" for="robotPhotoLeft">Robot Photo Left</label>
 				<input style="margin-bottom: 15px; width:100%" type="file" accept="image/*" id="robotPhotoLeft" name="robotPhotoLeft" />
 			</div>
 			<div class="col-lg-3 col-md-4 col-6">
-				<label class="mr-sm-2" style="display: block" for="robotPhoto">Robot Photo Right</label>
+				<div>
+					<img class="img-fluid" style="margin-top: 15px; display:none" alt="No Image" id="robotPhotoRightPreview" />
+				</div>
+				<label class="mr-sm-2" style="display: block" for="robotPhotoRight">Robot Photo Right</label>
 				<input style="margin-bottom: 15px; width:100%" type="file" accept="image/*" id="robotPhotoRight" name="robotPhotoRight" />
 			</div>
 			<div class="col-lg-3 col-md-4 col-6">
-				<label class="mr-sm-2" style="display: block" for="robotPhoto">Robot Photo Top</label>
+				<div>
+					<img class="img-fluid" style="margin-top: 15px; display:none" alt="No Image" id="robotPhotoTopPreview" />
+				</div>
+				<label class="mr-sm-2" style="display: block" for="robotPhotoTop">Robot Photo Top</label>
 				<input style="margin-bottom: 15px; width:100%" type="file" accept="image/*" id="robotPhotoTop" name="robotPhotoTop" />
 			</div>
 		</div>
@@ -265,5 +332,6 @@
 			</div>
 		</div>
 		<button id="Submit" class="btn btn-success" type="button" style="margin-top: 15px; margin-bottom: 15px">Submit</button>
+		<button id="Edit" class="btn btn-primary" type="button" style="margin-top: 15px; margin-bottom: 15px">Edit</button>
 	</form>
 </div>
