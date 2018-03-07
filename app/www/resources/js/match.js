@@ -18,7 +18,29 @@
 		var matchType = $('#matchType').val();
 		var id = matchType + matchNumber + "_" + teamNumber
         db.get(id).then(function (doc) {
-        	console.log("found");
+			console.log("found");
+			$('#commentSection').val('');
+			$('#climbingType').val('Choose...');
+			$('#teleopSwitchCubes').val('0');
+			$('#teleopScaleCubes').val('0');
+			$('#teleopExchangeCubes').val('0');
+			$('#teleopOppSwitchCubes').val('0');
+			$('#teleopDroppedCubes').val('0');
+			document.getElementById("cubeCycleSeconds").innerHTML = '00';
+			document.getElementById("cubeCycleTenths").innerHTML = '00';
+			$('#' + $('input[name=allianceColor]:checked').attr("id")).removeClass('active');
+			$('#' + $('input[name=startingPosition]:checked').attr("id")).removeClass('active');
+			$('#' + $('input[name=autoCrossedBaseline]:checked').attr("id")).removeClass('active');
+			$('#' + $('input[name=autoSwitch]:checked').attr("id")).removeClass('active');
+			$('#' + $('input[name=autoScale]:checked').attr("id")).removeClass('active');
+			$('#' + $('input[name=speedRating]:checked').attr("id")).removeClass('active');
+			$('#' + $('input[name=stabilityRating]:checked').attr("id")).removeClass('active');
+			$('#' + $('input[name=skillRating]:checked').attr("id")).removeClass('active');
+			$('#' + $('input[name=defenceRating]:checked').attr("id")).removeClass('active');
+			$('#' + $('input[name=anythingBreak]:checked').attr("id")).removeClass('active');
+			$('#' + $('input[name=robotDead]:checked').attr("id")).removeClass('active');  
+			$('input[type=checkbox]').attr('checked',false);
+			$('input[type=radio]').attr('checked',false);
         	var allianceColor = doc.allianceColor;
         	var startingPosition = doc.startingPosition;
         	var teleopScaleCubes = doc.teleopScaleCubes;
