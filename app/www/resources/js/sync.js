@@ -3,6 +3,7 @@ $(document).ready(function () {
         document.getElementById("page").style.display = "none";
         document.getElementById("header").style.display = "none";
         document.getElementById("spinner").style.display = "block";
+        document.getElementById("status").style.display = "block";
         var databaseName = localStorage.getItem('databaseName');
         var serverIp = localStorage.getItem('serverIp');
         var serverUsername = localStorage.getItem('serverUsername');
@@ -26,6 +27,8 @@ $(document).ready(function () {
                 timeout: 1000,
                 statusCode: {
                     200: function (response) {
+                        var status = 0
+                        var statusBox = document.getElementById('status');
                         PouchDB.sync(syncdb, 'http://' + serverUsername + ':' + serverPassword + '@' + serverIp + ':5984/' + databaseName, {
                             live: false,
                             retry: true,
@@ -33,19 +36,26 @@ $(document).ready(function () {
                             batch_size: 1
                         }).on('denied', function (err) {
                             document.getElementById("spinner").style.display = "none";
+                            document.getElementById("status").style.display = "none";
                             document.getElementById("header").style.display = "block";
                             document.getElementById("page").style.display = "block";                    
                             window.alert("Access Denied? This shouldn't happen.");
                             window.location.reload();
+                        }).on('change', function (info) {
+                            status = status + 1
+                            var statusString = status.toString();
+                            statusBox.innerHTML = statusString;
                         }).on('complete', function (info) {
                             console.log('done');
                             document.getElementById("spinner").style.display = "none";
+                            document.getElementById("status").style.display = "none";
                             document.getElementById("header").style.display = "block";
                             document.getElementById("page").style.display = "block";                  
                             window.alert("Synced successfully!");
                             window.location.reload();  
                         }).on('error', function (err) {
                             document.getElementById("spinner").style.display = "none";
+                            document.getElementById("status").style.display = "none";
                             document.getElementById("header").style.display = "block";
                             document.getElementById("page").style.display = "block";                    
                             window.alert("Sync Error! Try Again!");
@@ -55,6 +65,7 @@ $(document).ready(function () {
                     404: function (response) {
                         window.alert("Server ip or database name is incorrect! Check server ip and database name!");
                         document.getElementById("spinner").style.display = "none";
+                        document.getElementById("status").style.display = "none";
                         document.getElementById("header").style.display = "block";
                         document.getElementById("page").style.display = "block";
                         window.location.reload();                    
@@ -62,6 +73,7 @@ $(document).ready(function () {
                     401: function (response) {
                         window.alert("Incorrect username or password!");
                         document.getElementById("spinner").style.display = "none";
+                        document.getElementById("status").style.display = "none";
                         document.getElementById("header").style.display = "block";
                         document.getElementById("page").style.display = "block";
                         window.location.reload();                    
@@ -69,6 +81,7 @@ $(document).ready(function () {
                     0: function (response) {
                         window.alert("Couldn't reach server. Are you connected to the internet?");
                         document.getElementById("spinner").style.display = "none";
+                        document.getElementById("status").style.display = "none";
                         document.getElementById("header").style.display = "block";
                         document.getElementById("page").style.display = "block";
                         window.location.reload();                    
@@ -78,6 +91,7 @@ $(document).ready(function () {
         } else {
             window.alert("Check settings!");
             document.getElementById("spinner").style.display = "none";
+            document.getElementById("status").style.display = "none";
             document.getElementById("header").style.display = "block";
             document.getElementById("page").style.display = "block";
             window.location.reload();                    
