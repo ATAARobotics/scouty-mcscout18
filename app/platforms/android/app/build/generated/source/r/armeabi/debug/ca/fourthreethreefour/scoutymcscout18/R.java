@@ -33,26 +33,19 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int coordinatorLayoutStyle=0x7f020002;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int font=0x7f020003;
+    public static final int font=0x7f020002;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderAuthority=0x7f020004;
+    public static final int fontProviderAuthority=0x7f020003;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int fontProviderCerts=0x7f020005;
+    public static final int fontProviderCerts=0x7f020004;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -64,7 +57,7 @@ public final class R {
      * <tr><td>blocking</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int fontProviderFetchStrategy=0x7f020006;
+    public static final int fontProviderFetchStrategy=0x7f020005;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      * <p>Must be one of the following constant values.</p>
@@ -76,17 +69,17 @@ public final class R {
      * <tr><td>forever</td><td>ffffffff</td><td></td></tr>
      * </table>
      */
-    public static final int fontProviderFetchTimeout=0x7f020007;
+    public static final int fontProviderFetchTimeout=0x7f020006;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderPackage=0x7f020008;
+    public static final int fontProviderPackage=0x7f020007;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderQuery=0x7f020009;
+    public static final int fontProviderQuery=0x7f020008;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -98,93 +91,11 @@ public final class R {
      * <tr><td>normal</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int fontStyle=0x7f02000a;
+    public static final int fontStyle=0x7f020009;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int fontWeight=0x7f02000b;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int keylines=0x7f02000c;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int layout_anchor=0x7f02000d;
-    /**
-     * <p>Must be one or more (separated by '|') of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>center</td><td>11</td><td></td></tr>
-     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
-     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
-     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
-     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>fill</td><td>77</td><td></td></tr>
-     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
-     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
-     * </table>
-     */
-    public static final int layout_anchorGravity=0x7f02000e;
-    /**
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     */
-    public static final int layout_behavior=0x7f02000f;
-    /**
-     * <p>Must be one or more (separated by '|') of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>all</td><td>77</td><td></td></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
-     * </table>
-     */
-    public static final int layout_dodgeInsetEdges=0x7f020010;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
-     * </table>
-     */
-    public static final int layout_insetEdge=0x7f020011;
-    /**
-     * <p>May be an integer value, such as "<code>100</code>".
-     */
-    public static final int layout_keyline=0x7f020012;
+    public static final int fontWeight=0x7f02000a;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -196,7 +107,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int leading=0x7f020013;
+    public static final int leading=0x7f02000b;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -205,7 +116,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int primaryButtonText=0x7f020014;
+    public static final int primaryButtonText=0x7f02000c;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -214,38 +125,28 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int secondaryButtonText=0x7f020015;
+    public static final int secondaryButtonText=0x7f02000d;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int select_dialog_multichoice=0x7f020016;
+    public static final int select_dialog_multichoice=0x7f02000e;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int select_dialog_singlechoice=0x7f020017;
+    public static final int select_dialog_singlechoice=0x7f02000f;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int stackedMargin=0x7f020018;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
-     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
-     * "<code>#<i>aarrggbb</i></code>".
-     */
-    public static final int statusBarBackground=0x7f020019;
+    public static final int stackedMargin=0x7f020010;
   }
   public static final class bool {
     public static final int abc_action_bar_embed_tabs=0x7f030000;
@@ -336,93 +237,76 @@ public final class R {
     public static final int action_image=0x7f070003;
     public static final int action_text=0x7f070004;
     public static final int actions=0x7f070005;
-    public static final int all=0x7f070006;
-    public static final int ampm=0x7f070007;
-    public static final int arrow_image=0x7f070008;
-    public static final int async=0x7f070009;
-    public static final int autofill_keyboard_accessory_item_label=0x7f07000a;
-    public static final int autofill_keyboard_accessory_item_sublabel=0x7f07000b;
-    public static final int blocking=0x7f07000c;
-    public static final int bottom=0x7f07000d;
-    public static final int cancel_action=0x7f07000e;
-    public static final int center=0x7f07000f;
-    public static final int center_horizontal=0x7f070010;
-    public static final int center_vertical=0x7f070011;
-    public static final int chronometer=0x7f070012;
-    public static final int clip_horizontal=0x7f070013;
-    public static final int clip_vertical=0x7f070014;
-    public static final int color_button_swatch=0x7f070015;
-    public static final int color_picker_advanced=0x7f070016;
-    public static final int color_picker_simple=0x7f070017;
-    public static final int date_picker=0x7f070018;
-    public static final int date_time_suggestion=0x7f070019;
-    public static final int date_time_suggestion_label=0x7f07001a;
-    public static final int date_time_suggestion_value=0x7f07001b;
-    public static final int download_service_notification=0x7f07001c;
-    public static final int dropdown_icon=0x7f07001d;
-    public static final int dropdown_label=0x7f07001e;
-    public static final int dropdown_label_wrapper=0x7f07001f;
-    public static final int dropdown_popup_window=0x7f070020;
-    public static final int dropdown_sublabel=0x7f070021;
-    public static final int end=0x7f070022;
-    public static final int end_padder=0x7f070023;
-    public static final int fill=0x7f070024;
-    public static final int fill_horizontal=0x7f070025;
-    public static final int fill_vertical=0x7f070026;
-    public static final int forever=0x7f070027;
-    public static final int gradient=0x7f070028;
-    public static final int gradient_border=0x7f070029;
-    public static final int hour=0x7f07002a;
-    public static final int icon=0x7f07002b;
-    public static final int icon_group=0x7f07002c;
-    public static final int icon_view=0x7f07002d;
-    public static final int info=0x7f07002e;
-    public static final int italic=0x7f07002f;
-    public static final int left=0x7f070030;
-    public static final int line1=0x7f070031;
-    public static final int line3=0x7f070032;
-    public static final int main_text=0x7f070033;
-    public static final int media_actions=0x7f070034;
-    public static final int milli=0x7f070035;
-    public static final int minute=0x7f070036;
-    public static final int more_colors_button=0x7f070037;
-    public static final int more_colors_button_border=0x7f070038;
-    public static final int none=0x7f070039;
-    public static final int normal=0x7f07003a;
-    public static final int notification_background=0x7f07003b;
-    public static final int notification_main_column=0x7f07003c;
-    public static final int notification_main_column_container=0x7f07003d;
-    public static final int pickers=0x7f07003e;
-    public static final int position_in_year=0x7f07003f;
-    public static final int right=0x7f070040;
-    public static final int right_icon=0x7f070041;
-    public static final int right_side=0x7f070042;
-    public static final int second=0x7f070043;
-    public static final int second_colon=0x7f070044;
-    public static final int second_dot=0x7f070045;
-    public static final int seek_bar=0x7f070046;
-    public static final int select_action_menu_copy=0x7f070047;
-    public static final int select_action_menu_cut=0x7f070048;
-    public static final int select_action_menu_paste=0x7f070049;
-    public static final int select_action_menu_select_all=0x7f07004a;
-    public static final int select_action_menu_share=0x7f07004b;
-    public static final int select_action_menu_text_processing_menus=0x7f07004c;
-    public static final int select_action_menu_web_search=0x7f07004d;
-    public static final int selected_color_view=0x7f07004e;
-    public static final int selected_color_view_border=0x7f07004f;
-    public static final int start=0x7f070050;
-    public static final int status_bar_latest_event_content=0x7f070051;
-    public static final int sub_text=0x7f070052;
-    public static final int tag_transition_group=0x7f070053;
-    public static final int text=0x7f070054;
-    public static final int text2=0x7f070055;
-    public static final int text_wrapper=0x7f070056;
-    public static final int time=0x7f070057;
-    public static final int time_picker=0x7f070058;
-    public static final int title=0x7f070059;
-    public static final int top=0x7f07005a;
-    public static final int top_view=0x7f07005b;
-    public static final int year=0x7f07005c;
+    public static final int ampm=0x7f070006;
+    public static final int arrow_image=0x7f070007;
+    public static final int async=0x7f070008;
+    public static final int autofill_keyboard_accessory_item_label=0x7f070009;
+    public static final int autofill_keyboard_accessory_item_sublabel=0x7f07000a;
+    public static final int blocking=0x7f07000b;
+    public static final int cancel_action=0x7f07000c;
+    public static final int chronometer=0x7f07000d;
+    public static final int color_button_swatch=0x7f07000e;
+    public static final int color_picker_advanced=0x7f07000f;
+    public static final int color_picker_simple=0x7f070010;
+    public static final int date_picker=0x7f070011;
+    public static final int date_time_suggestion=0x7f070012;
+    public static final int date_time_suggestion_label=0x7f070013;
+    public static final int date_time_suggestion_value=0x7f070014;
+    public static final int download_service_notification=0x7f070015;
+    public static final int dropdown_icon=0x7f070016;
+    public static final int dropdown_label=0x7f070017;
+    public static final int dropdown_label_wrapper=0x7f070018;
+    public static final int dropdown_popup_window=0x7f070019;
+    public static final int dropdown_sublabel=0x7f07001a;
+    public static final int end_padder=0x7f07001b;
+    public static final int forever=0x7f07001c;
+    public static final int gradient=0x7f07001d;
+    public static final int gradient_border=0x7f07001e;
+    public static final int hour=0x7f07001f;
+    public static final int icon=0x7f070020;
+    public static final int icon_group=0x7f070021;
+    public static final int icon_view=0x7f070022;
+    public static final int info=0x7f070023;
+    public static final int italic=0x7f070024;
+    public static final int line1=0x7f070025;
+    public static final int line3=0x7f070026;
+    public static final int main_text=0x7f070027;
+    public static final int media_actions=0x7f070028;
+    public static final int milli=0x7f070029;
+    public static final int minute=0x7f07002a;
+    public static final int more_colors_button=0x7f07002b;
+    public static final int more_colors_button_border=0x7f07002c;
+    public static final int normal=0x7f07002d;
+    public static final int notification_background=0x7f07002e;
+    public static final int notification_main_column=0x7f07002f;
+    public static final int notification_main_column_container=0x7f070030;
+    public static final int pickers=0x7f070031;
+    public static final int position_in_year=0x7f070032;
+    public static final int right_icon=0x7f070033;
+    public static final int right_side=0x7f070034;
+    public static final int second=0x7f070035;
+    public static final int second_colon=0x7f070036;
+    public static final int second_dot=0x7f070037;
+    public static final int seek_bar=0x7f070038;
+    public static final int select_action_menu_copy=0x7f070039;
+    public static final int select_action_menu_cut=0x7f07003a;
+    public static final int select_action_menu_paste=0x7f07003b;
+    public static final int select_action_menu_select_all=0x7f07003c;
+    public static final int select_action_menu_share=0x7f07003d;
+    public static final int select_action_menu_text_processing_menus=0x7f07003e;
+    public static final int select_action_menu_web_search=0x7f07003f;
+    public static final int selected_color_view=0x7f070040;
+    public static final int selected_color_view_border=0x7f070041;
+    public static final int status_bar_latest_event_content=0x7f070042;
+    public static final int sub_text=0x7f070043;
+    public static final int text=0x7f070044;
+    public static final int text2=0x7f070045;
+    public static final int text_wrapper=0x7f070046;
+    public static final int time=0x7f070047;
+    public static final int time_picker=0x7f070048;
+    public static final int title=0x7f070049;
+    public static final int top_view=0x7f07004a;
+    public static final int year=0x7f07004b;
   }
   public static final class integer {
     public static final int cancel_button_image_alpha=0x7f080000;
@@ -591,7 +475,6 @@ public final class R {
     public static final int TextAppearance_Compat_Notification_Title_Media=0x7f0e0012;
     public static final int Widget_Compat_NotificationActionContainer=0x7f0e0013;
     public static final int Widget_Compat_NotificationActionText=0x7f0e0014;
-    public static final int Widget_Support_CoordinatorLayout=0x7f0e0015;
   }
   public static final class styleable {
     /**
@@ -636,210 +519,6 @@ public final class R {
      */
     public static final int ButtonCompat_buttonRaised=1;
     /**
-     * Attributes that can be used with a CoordinatorLayout.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_keylines ca.fourthreethreefour.scoutymcscout18:keylines}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_statusBarBackground ca.fourthreethreefour.scoutymcscout18:statusBarBackground}</code></td><td></td></tr>
-     * </table>
-     * @see #CoordinatorLayout_keylines
-     * @see #CoordinatorLayout_statusBarBackground
-     */
-    public static final int[] CoordinatorLayout={
-        0x7f02000c, 0x7f020019
-      };
-    /**
-     * <p>This symbol is the offset where the {@link ca.fourthreethreefour.scoutymcscout18.R.attr#keylines}
-     * attribute's value can be found in the {@link #CoordinatorLayout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name ca.fourthreethreefour.scoutymcscout18:keylines
-     */
-    public static final int CoordinatorLayout_keylines=0;
-    /**
-     * <p>This symbol is the offset where the {@link ca.fourthreethreefour.scoutymcscout18.R.attr#statusBarBackground}
-     * attribute's value can be found in the {@link #CoordinatorLayout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
-     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
-     * "<code>#<i>aarrggbb</i></code>".
-     *
-     * @attr name ca.fourthreethreefour.scoutymcscout18:statusBarBackground
-     */
-    public static final int CoordinatorLayout_statusBarBackground=1;
-    /**
-     * Attributes that can be used with a CoordinatorLayout_Layout.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_android_layout_gravity android:layout_gravity}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchor ca.fourthreethreefour.scoutymcscout18:layout_anchor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchorGravity ca.fourthreethreefour.scoutymcscout18:layout_anchorGravity}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_behavior ca.fourthreethreefour.scoutymcscout18:layout_behavior}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_dodgeInsetEdges ca.fourthreethreefour.scoutymcscout18:layout_dodgeInsetEdges}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_insetEdge ca.fourthreethreefour.scoutymcscout18:layout_insetEdge}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_keyline ca.fourthreethreefour.scoutymcscout18:layout_keyline}</code></td><td></td></tr>
-     * </table>
-     * @see #CoordinatorLayout_Layout_android_layout_gravity
-     * @see #CoordinatorLayout_Layout_layout_anchor
-     * @see #CoordinatorLayout_Layout_layout_anchorGravity
-     * @see #CoordinatorLayout_Layout_layout_behavior
-     * @see #CoordinatorLayout_Layout_layout_dodgeInsetEdges
-     * @see #CoordinatorLayout_Layout_layout_insetEdge
-     * @see #CoordinatorLayout_Layout_layout_keyline
-     */
-    public static final int[] CoordinatorLayout_Layout={
-        0x010100b3, 0x7f02000d, 0x7f02000e, 0x7f02000f, 
-        0x7f020010, 0x7f020011, 0x7f020012
-      };
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#layout_gravity}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
-     *
-     * <p>Must be one or more (separated by '|') of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>center</td><td>11</td><td></td></tr>
-     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
-     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
-     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
-     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>fill</td><td>77</td><td></td></tr>
-     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
-     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
-     * </table>
-     *
-     * @attr name android:layout_gravity
-     */
-    public static final int CoordinatorLayout_Layout_android_layout_gravity=0;
-    /**
-     * <p>This symbol is the offset where the {@link ca.fourthreethreefour.scoutymcscout18.R.attr#layout_anchor}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name ca.fourthreethreefour.scoutymcscout18:layout_anchor
-     */
-    public static final int CoordinatorLayout_Layout_layout_anchor=1;
-    /**
-     * <p>This symbol is the offset where the {@link ca.fourthreethreefour.scoutymcscout18.R.attr#layout_anchorGravity}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
-     *
-     * <p>Must be one or more (separated by '|') of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>center</td><td>11</td><td></td></tr>
-     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
-     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
-     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
-     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>fill</td><td>77</td><td></td></tr>
-     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
-     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
-     * </table>
-     *
-     * @attr name ca.fourthreethreefour.scoutymcscout18:layout_anchorGravity
-     */
-    public static final int CoordinatorLayout_Layout_layout_anchorGravity=2;
-    /**
-     * <p>This symbol is the offset where the {@link ca.fourthreethreefour.scoutymcscout18.R.attr#layout_behavior}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name ca.fourthreethreefour.scoutymcscout18:layout_behavior
-     */
-    public static final int CoordinatorLayout_Layout_layout_behavior=3;
-    /**
-     * <p>This symbol is the offset where the {@link ca.fourthreethreefour.scoutymcscout18.R.attr#layout_dodgeInsetEdges}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
-     *
-     * <p>Must be one or more (separated by '|') of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>all</td><td>77</td><td></td></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
-     * </table>
-     *
-     * @attr name ca.fourthreethreefour.scoutymcscout18:layout_dodgeInsetEdges
-     */
-    public static final int CoordinatorLayout_Layout_layout_dodgeInsetEdges=4;
-    /**
-     * <p>This symbol is the offset where the {@link ca.fourthreethreefour.scoutymcscout18.R.attr#layout_insetEdge}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
-     * </table>
-     *
-     * @attr name ca.fourthreethreefour.scoutymcscout18:layout_insetEdge
-     */
-    public static final int CoordinatorLayout_Layout_layout_insetEdge=5;
-    /**
-     * <p>This symbol is the offset where the {@link ca.fourthreethreefour.scoutymcscout18.R.attr#layout_keyline}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name ca.fourthreethreefour.scoutymcscout18:layout_keyline
-     */
-    public static final int CoordinatorLayout_Layout_layout_keyline=6;
-    /**
      * Attributes that can be used with a DualControlLayout.
      * <p>Includes the following attributes:</p>
      * <table>
@@ -855,7 +534,7 @@ public final class R {
      * @see #DualControlLayout_stackedMargin
      */
     public static final int[] DualControlLayout={
-        0x7f020014, 0x7f020015, 0x7f020018
+        0x7f02000c, 0x7f02000d, 0x7f020010
       };
     /**
      * <p>This symbol is the offset where the {@link ca.fourthreethreefour.scoutymcscout18.R.attr#primaryButtonText}
@@ -919,8 +598,8 @@ public final class R {
      * @see #FontFamily_fontProviderQuery
      */
     public static final int[] FontFamily={
-        0x7f020004, 0x7f020005, 0x7f020006, 0x7f020007, 
-        0x7f020008, 0x7f020009
+        0x7f020003, 0x7f020004, 0x7f020005, 0x7f020006, 
+        0x7f020007, 0x7f020008
       };
     /**
      * <p>This symbol is the offset where the {@link ca.fourthreethreefour.scoutymcscout18.R.attr#fontProviderAuthority}
@@ -1005,62 +684,17 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #FontFamilyFont_android_font android:font}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_android_fontWeight android:fontWeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_android_fontStyle android:fontStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_font ca.fourthreethreefour.scoutymcscout18:font}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_fontStyle ca.fourthreethreefour.scoutymcscout18:fontStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_fontWeight ca.fourthreethreefour.scoutymcscout18:fontWeight}</code></td><td></td></tr>
      * </table>
-     * @see #FontFamilyFont_android_font
-     * @see #FontFamilyFont_android_fontWeight
-     * @see #FontFamilyFont_android_fontStyle
      * @see #FontFamilyFont_font
      * @see #FontFamilyFont_fontStyle
      * @see #FontFamilyFont_fontWeight
      */
     public static final int[] FontFamilyFont={
-        0x01010532, 0x01010533, 0x0101053f, 0x7f020003, 
-        0x7f02000a, 0x7f02000b
+        0x7f020002, 0x7f020009, 0x7f02000a
       };
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#font}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name android:font
-     */
-    public static final int FontFamilyFont_android_font=0;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#fontWeight}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name android:fontWeight
-     */
-    public static final int FontFamilyFont_android_fontWeight=1;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#fontStyle}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>italic</td><td>1</td><td></td></tr>
-     * <tr><td>normal</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name android:fontStyle
-     */
-    public static final int FontFamilyFont_android_fontStyle=2;
     /**
      * <p>This symbol is the offset where the {@link ca.fourthreethreefour.scoutymcscout18.R.attr#font}
      * attribute's value can be found in the {@link #FontFamilyFont} array.
@@ -1072,7 +706,7 @@ public final class R {
      *
      * @attr name ca.fourthreethreefour.scoutymcscout18:font
      */
-    public static final int FontFamilyFont_font=3;
+    public static final int FontFamilyFont_font=0;
     /**
      * <p>This symbol is the offset where the {@link ca.fourthreethreefour.scoutymcscout18.R.attr#fontStyle}
      * attribute's value can be found in the {@link #FontFamilyFont} array.
@@ -1089,7 +723,7 @@ public final class R {
      *
      * @attr name ca.fourthreethreefour.scoutymcscout18:fontStyle
      */
-    public static final int FontFamilyFont_fontStyle=4;
+    public static final int FontFamilyFont_fontStyle=1;
     /**
      * <p>This symbol is the offset where the {@link ca.fourthreethreefour.scoutymcscout18.R.attr#fontWeight}
      * attribute's value can be found in the {@link #FontFamilyFont} array.
@@ -1098,7 +732,7 @@ public final class R {
      *
      * @attr name ca.fourthreethreefour.scoutymcscout18:fontWeight
      */
-    public static final int FontFamilyFont_fontWeight=5;
+    public static final int FontFamilyFont_fontWeight=2;
     /**
      * Attributes that can be used with a TextViewWithLeading.
      * <p>Includes the following attributes:</p>
@@ -1111,7 +745,7 @@ public final class R {
      * @see #TextViewWithLeading_leading
      */
     public static final int[] TextViewWithLeading={
-        0x7f020013
+        0x7f02000b
       };
     /**
      * <p>This symbol is the offset where the {@link ca.fourthreethreefour.scoutymcscout18.R.attr#leading}

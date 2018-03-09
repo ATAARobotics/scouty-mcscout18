@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\John\\Downloads\\Website\\scouty-mcscout18\\app\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeX86_64DebugResources\\merged.dir\\values-bg\\values-bg.xml",
+            "outputFile": "C:\\Users\\John\\Documents\\scouty-mcscout18\\app\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeX86_64DebugResources\\merged.dir\\values-bg\\values-bg.xml",
             "map": [
                 {
                     "source": "C:\\Users\\John\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\7db1f622776de50bccd596a1ef797263\\res\\values-bg\\android_content_strings.xml",
@@ -21,23 +21,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\John\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\e8a1445b17744bf2a815aeeed699a2d5\\res\\values-bg\\values-bg.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "51",
-                        "startColumns": "4",
-                        "startOffsets": "3868",
-                        "endColumns": "100",
-                        "endOffsets": "3964"
-                    }
-                },
-                {
                     "source": "C:\\Users\\John\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\7db1f622776de50bccd596a1ef797263\\res\\values-bg\\android_ui_strings.xml",
                     "from": {
                         "startLines": "20,24,21,38,39,33,29,32,30,31,45,43,17,13,9,12,14,15,4,11,8,18,16,10,5,6,7,19,42,40,22,41,37,2,23,3,44,26,34,35,27,36,28,46,25",
@@ -52,6 +35,23 @@
                         "startOffsets": "55,123,192,260,330,401,468,533,607,677,951,1051,1172,1234,1295,1358,1425,1488,1555,1614,1676,1739,1800,1863,1933,1992,2055,2113,2220,2286,2360,2422,2496,2582,3187,3262,3339,3969,4024,4097,4172,4227,4305,4377,4448",
                         "endColumns": "67,68,67,69,70,66,64,73,69,70,99,120,61,60,62,66,62,66,58,61,62,60,62,69,58,62,57,106,65,73,61,73,85,110,74,76,130,54,72,74,54,77,71,70,76",
                         "endOffsets": "118,187,255,325,396,463,528,602,672,743,1046,1167,1229,1290,1353,1420,1483,1550,1609,1671,1734,1795,1858,1928,1987,2050,2108,2215,2281,2355,2417,2491,2577,2688,3257,3334,3465,4019,4092,4167,4222,4300,4372,4443,4520"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\John\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\1a0e49cc73a3e24f99c3cd85dc48dfa0\\res\\values-bg\\values-bg.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "51",
+                        "startColumns": "4",
+                        "startOffsets": "3868",
+                        "endColumns": "100",
+                        "endOffsets": "3964"
                     }
                 }
             ]

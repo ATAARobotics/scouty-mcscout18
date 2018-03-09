@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\John\\Downloads\\Website\\scouty-mcscout18\\app\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeX86_64DebugResources\\merged.dir\\values-da\\values-da.xml",
+            "outputFile": "C:\\Users\\John\\Documents\\scouty-mcscout18\\app\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeX86_64DebugResources\\merged.dir\\values-da\\values-da.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\John\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\1a0e49cc73a3e24f99c3cd85dc48dfa0\\res\\values-da\\values-da.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "51",
+                        "startColumns": "4",
+                        "startOffsets": "3743",
+                        "endColumns": "100",
+                        "endOffsets": "3839"
+                    }
+                },
                 {
                     "source": "C:\\Users\\John\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\7db1f622776de50bccd596a1ef797263\\res\\values-da\\android_content_strings.xml",
                     "from": {
@@ -35,23 +52,6 @@
                         "startOffsets": "55,123,188,252,322,391,462,528,602,671,923,1022,1113,1174,1233,1299,1359,1420,1486,1546,1604,1664,1725,1786,1853,1910,1972,2027,2133,2192,2266,2325,2391,2476,3051,3119,3200,3844,3901,3974,4049,4106,4184,4256,4322",
                         "endColumns": "67,64,63,69,68,70,65,73,68,69,98,90,60,58,65,59,60,65,59,57,59,60,60,66,56,61,54,105,58,73,58,65,84,125,67,80,119,56,72,74,56,77,71,65,64",
                         "endOffsets": "118,183,247,317,386,457,523,597,666,736,1017,1108,1169,1228,1294,1354,1415,1481,1541,1599,1659,1720,1781,1848,1905,1967,2022,2128,2187,2261,2320,2386,2471,2597,3114,3195,3315,3896,3969,4044,4101,4179,4251,4317,4382"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\John\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\e8a1445b17744bf2a815aeeed699a2d5\\res\\values-da\\values-da.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "51",
-                        "startColumns": "4",
-                        "startOffsets": "3743",
-                        "endColumns": "100",
-                        "endOffsets": "3839"
                     }
                 }
             ]

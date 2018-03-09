@@ -5,7 +5,6 @@
 <item>xwalk_100_percent.pak</item>
 <item>icudtl.dat</item>
 </string-array>
-    <attr format="reference" name="coordinatorLayoutStyle"/>
     <attr format="reference" name="select_dialog_multichoice"/>
     <attr format="reference" name="select_dialog_singlechoice"/>
     <color name="color_picker_background_color">#FFFFFF</color>
@@ -20,69 +19,6 @@
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
     <color name="secondary_text_default_material_light">#8a000000</color>
     <declare-styleable name="ButtonCompat"><attr format="reference|color" name="buttonColor"/><attr format="boolean" name="buttonRaised"/></declare-styleable>
-    <declare-styleable name="CoordinatorLayout"><attr format="reference" name="keylines"/><attr format="color|reference" name="statusBarBackground"/></declare-styleable>
-    <declare-styleable name="CoordinatorLayout_Layout"><attr name="android:layout_gravity"/><attr format="string" name="layout_behavior"/><attr format="reference" name="layout_anchor"/><attr format="integer" name="layout_keyline"/><attr name="layout_anchorGravity">
-            
-            <flag name="top" value="0x30"/>
-            
-            <flag name="bottom" value="0x50"/>
-            
-            <flag name="left" value="0x03"/>
-            
-            <flag name="right" value="0x05"/>
-            
-            <flag name="center_vertical" value="0x10"/>
-            
-            <flag name="fill_vertical" value="0x70"/>
-            
-            <flag name="center_horizontal" value="0x01"/>
-            
-            <flag name="fill_horizontal" value="0x07"/>
-            
-            <flag name="center" value="0x11"/>
-            
-            <flag name="fill" value="0x77"/>
-            
-            <flag name="clip_vertical" value="0x80"/>
-            
-            <flag name="clip_horizontal" value="0x08"/>
-            
-            <flag name="start" value="0x00800003"/>
-            
-            <flag name="end" value="0x00800005"/>
-        </attr><attr format="enum" name="layout_insetEdge">
-            
-            <enum name="none" value="0x0"/>
-            
-            <enum name="top" value="0x30"/>
-            
-            <enum name="bottom" value="0x50"/>
-            
-            <enum name="left" value="0x03"/>
-            
-            <enum name="right" value="0x05"/>
-            
-            <enum name="start" value="0x00800003"/>
-            
-            <enum name="end" value="0x00800005"/>
-        </attr><attr name="layout_dodgeInsetEdges">
-            
-            <flag name="none" value="0x0"/>
-            
-            <flag name="top" value="0x30"/>
-            
-            <flag name="bottom" value="0x50"/>
-            
-            <flag name="left" value="0x03"/>
-            
-            <flag name="right" value="0x05"/>
-            
-            <flag name="start" value="0x00800003"/>
-            
-            <flag name="end" value="0x00800005"/>
-            
-            <flag name="all" value="0x77"/>
-        </attr></declare-styleable>
     <declare-styleable name="DualControlLayout"><attr format="reference" name="stackedMargin"/><attr format="reference|string" name="primaryButtonText"/><attr format="reference|string" name="secondaryButtonText"/></declare-styleable>
     <declare-styleable name="FontFamily"><attr format="string" name="fontProviderAuthority"/><attr format="string" name="fontProviderPackage"/><attr format="string" name="fontProviderQuery"/><attr format="reference" name="fontProviderCerts"/><attr name="fontProviderFetchStrategy">
             
@@ -96,7 +32,7 @@
     <declare-styleable name="FontFamilyFont"><attr name="fontStyle">
             <enum name="normal" value="0"/>
             <enum name="italic" value="1"/>
-        </attr><attr format="reference" name="font"/><attr format="integer" name="fontWeight"/><attr name="android:fontStyle"/><attr name="android:font"/><attr name="android:fontWeight"/></declare-styleable>
+        </attr><attr format="reference" name="font"/><attr format="integer" name="fontWeight"/></declare-styleable>
     <declare-styleable name="TextViewWithLeading"><attr format="reference|dimension" name="leading"/></declare-styleable>
     <dimen name="color_button_height">60dp</dimen>
     <dimen name="color_picker_gradient_margin">14.5dp</dimen>
@@ -135,7 +71,6 @@
     <item name="dropdown_popup_window" type="id"/>
     <item name="line1" type="id"/>
     <item name="line3" type="id"/>
-    <item name="tag_transition_group" type="id"/>
     <item name="text" type="id"/>
     <item name="text2" type="id"/>
     <item name="title" type="id"/>
@@ -355,7 +290,4 @@
     <style name="TextAppearance.Compat.Notification.Title.Media"/>
     <style name="Widget.Compat.NotificationActionContainer" parent=""/>
     <style name="Widget.Compat.NotificationActionText" parent=""/>
-    <style name="Widget.Support.CoordinatorLayout" parent="android:Widget">
-        <item name="statusBarBackground">#000000</item>
-    </style>
 </resources>

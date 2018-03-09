@@ -17,6 +17,10 @@
        under the License.
 */
 
+configurations.all {
+  resolutionStrategy.force 'com.android.support:support-v4:26+'
+}
+
 def EMBEDDED_MODE = "embedded"
 def SHARED_MODE = "shared"
 def LITE_MODE = "lite"

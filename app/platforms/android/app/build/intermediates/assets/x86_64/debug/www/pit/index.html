@@ -64,18 +64,15 @@
 			border-top: 16px solid #6c757d;
 			width: 120px;
 			height: 120px;
-			-webkit-animation: spin 2s linear infinite;
-			animation: spin 2s linear infinite;
+			animation: none;
 			display: none;
 		}
 
-		@-webkit-keyframes spin {
-			0% {
-				-webkit-transform: rotate(0deg);
-			}
-			100% {
-				-webkit-transform: rotate(360deg);
-			}
+		#status {
+			position: absolute;
+			left: 47%;
+			top: 46%;
+			display: none;
 		}
 
 		@keyframes spin {
@@ -120,6 +117,7 @@
 		</nav>
 	</div>
 <div id="spinner"></div>
+<div id="status">0</div>
 <div id="page" class="container-fluid" style="background-color: #f0f0f0; margin-bottom: 15px">
 	<form>
 		<div class="row">
