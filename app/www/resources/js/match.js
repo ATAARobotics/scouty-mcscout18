@@ -26,7 +26,6 @@
 			$('#teleopExchangeCubes').val('0');
 			$('#teleopOppSwitchCubes').val('0');
 			$('#teleopDroppedCubes').val('0');
-			$('#' + $('input[name=allianceColor]:checked').attr("id")).removeClass('active');
 			$('#' + $('input[name=startingPosition]:checked').attr("id")).removeClass('active');
 			$('#' + $('input[name=autoCrossedBaseline]:checked').attr("id")).removeClass('active');
 			$('#' + $('input[name=autoSwitch]:checked').attr("id")).removeClass('active');
@@ -39,7 +38,6 @@
 			$('#' + $('input[name=robotDead]:checked').attr("id")).removeClass('active');  
 			$('input[type=checkbox]').attr('checked',false);
 			$('input[type=radio]').attr('checked',false);
-        	var allianceColor = doc.allianceColor;
         	var startingPosition = doc.startingPosition;
         	var teleopScaleCubes = doc.teleopScaleCubes;
         	var teleopSwitchCubes = doc.teleopSwitchCubes;
@@ -64,8 +62,6 @@
         	$('#teleopExchangeCubes').val(teleopExchangeCubes);
 			$('#teleopOppSwitchCubes').val(teleopOppSwitchCubes);
 			$('#teleopDroppedCubes').val(teleopDroppedCubes);
-        	$("input[name=allianceColor][value=" + allianceColor + "]").prop('checked', true);
-        	$('#' + $('input[name=allianceColor]:checked').attr("id")).addClass('active');
         	$("input[name=startingPosition][value=" + startingPosition + "]").prop('checked', true);
         	$('#' + $('input[name=startingPosition]:checked').attr("id")).addClass('active');
         	$("input[name=autoCrossedBaseline][value=" + autoCrossedBaseline + "]").prop('checked', true);
@@ -96,7 +92,6 @@
                 $('#teleopExchangeCubes').val('0');
                 $('#teleopOppSwitchCubes').val('0');
 				$('#teleopDroppedCubes').val('0');
-                $('#' + $('input[name=allianceColor]:checked').attr("id")).removeClass('active');
                 $('#' + $('input[name=startingPosition]:checked').attr("id")).removeClass('active');
                 $('#' + $('input[name=autoCrossedBaseline]:checked').attr("id")).removeClass('active');
                 $('#' + $('input[name=autoSwitch]:checked').attr("id")).removeClass('active');
@@ -124,7 +119,6 @@
 		var teamNumber = $('#teamNumber').val();
 		var matchNumber = $('#matchNumber').val();
 		var matchType = $('#matchType').val();
-		var allianceColor = $('input[name=allianceColor]:checked').val();
 		var startingPosition = $('input[name=startingPosition]:checked').val();
 		var teleopScaleCubes = $('#teleopScaleCubes').val();
 		var teleopSwitchCubes = $('#teleopSwitchCubes').val();
@@ -147,7 +141,6 @@
 		var doc = {
 			"_id": id,
 			"scoutName": scoutName,
-			"allianceColor": allianceColor,
 			"startingPosition": startingPosition,
 			"autoCrossedBaseline": autoCrossedBaseline,
 			"autoSwitchCube": autoSwitch,
@@ -192,7 +185,6 @@
 		var teamNumber = $('#teamNumber').val();
 		var matchNumber = $('#matchNumber').val();
 		var matchType = $('#matchType').val();
-		var allianceColor = $('input[name=allianceColor]:checked').val();
 		var startingPosition = $('input[name=startingPosition]:checked').val();
 		var teleopScaleCubes = $('#teleopScaleCubes').val();
 		var teleopSwitchCubes = $('#teleopSwitchCubes').val();
@@ -223,7 +215,6 @@
 					_rev: doc._rev,
 					"scoutName": scoutName,
 					"scoutName": scoutName,
-					"allianceColor": allianceColor,
 					"startingPosition": startingPosition,
 					"autoCrossedBaseline": autoCrossedBaseline,
 					"autoSwitchCube": autoSwitch,
