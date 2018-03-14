@@ -17,9 +17,8 @@ files: |
 			<div class="col-md">
 				<label class="mr-sm-2" for="matchType">Match Type</label>
 				<select class="custom-select mr-sm-2" id="matchType">
-					<option selected>Choose...</option>
 					<option value="p">Practice</option>
-					<option value="q">Qualification</option>
+					<option selected value="q">Qualification</option>
 				</select>
 			</div>
 			<div class="col-md">
