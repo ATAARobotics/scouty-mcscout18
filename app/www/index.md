@@ -42,6 +42,14 @@ files: |
 					</label>
 				</div>
 			</div>
+		</div>
+		<hr/>
+		<div class="row">
+			<div class="col-md">
+				<h2>Auto</h2>
+			</div>
+		</div>
+		<div class="row">
 			<div class="col">
 				<label class="mr-sm-2" style="display: block" for="startingPosition">Starting Position</label>
 				<div id="startingPosition" class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -56,14 +64,6 @@ files: |
 					</label>
 				</div>
 			</div>
-		</div>
-		<hr/>
-		<div class="row">
-			<div class="col-md">
-				<h2>Auto</h2>
-			</div>
-		</div>
-		<div class="row">
 			<div class="col">
 				<label class="mr-sm-2" style="display: block" for="autoCrossedBaseline">Crossed Baseline</label>
 				<div id="autoCrossedBaseline" class="btn-group btn-group-toggle" data-toggle="buttons">
