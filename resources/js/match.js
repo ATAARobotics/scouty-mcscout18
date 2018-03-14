@@ -26,8 +26,6 @@
 			$('#teleopExchangeCubes').val('0');
 			$('#teleopOppSwitchCubes').val('0');
 			$('#teleopDroppedCubes').val('0');
-			document.getElementById("cubeCycleSeconds").innerHTML = '00';
-			document.getElementById("cubeCycleTenths").innerHTML = '00';
 			$('#' + $('input[name=allianceColor]:checked').attr("id")).removeClass('active');
 			$('#' + $('input[name=startingPosition]:checked').attr("id")).removeClass('active');
 			$('#' + $('input[name=autoCrossedBaseline]:checked').attr("id")).removeClass('active');
@@ -50,7 +48,6 @@
 			var teleopDroppedCubes = doc.teleopDroppedCubes;
         	var climbingType = doc.climbingType;
         	var speedRating = doc.speedRating
-        	var cubeCycleTime = doc.cubeCycleTime.split(".");
         	var stabilityRating = doc.stabilityRating;
         	var skillRating = doc.skillRating;
         	var defenceRating = doc.defenceRating;
@@ -67,8 +64,6 @@
         	$('#teleopExchangeCubes').val(teleopExchangeCubes);
 			$('#teleopOppSwitchCubes').val(teleopOppSwitchCubes);
 			$('#teleopDroppedCubes').val(teleopDroppedCubes);
-        	document.getElementById("cubeCycleSeconds").innerHTML = cubeCycleTime[0];
-        	document.getElementById("cubeCycleTenths").innerHTML = cubeCycleTime[1];
         	$("input[name=allianceColor][value=" + allianceColor + "]").prop('checked', true);
         	$('#' + $('input[name=allianceColor]:checked').attr("id")).addClass('active');
         	$("input[name=startingPosition][value=" + startingPosition + "]").prop('checked', true);
@@ -101,8 +96,6 @@
                 $('#teleopExchangeCubes').val('0');
                 $('#teleopOppSwitchCubes').val('0');
 				$('#teleopDroppedCubes').val('0');
-				document.getElementById("cubeCycleSeconds").innerHTML = '00';
-                document.getElementById("cubeCycleTenths").innerHTML = '00';
                 $('#' + $('input[name=allianceColor]:checked').attr("id")).removeClass('active');
                 $('#' + $('input[name=startingPosition]:checked').attr("id")).removeClass('active');
                 $('#' + $('input[name=autoCrossedBaseline]:checked').attr("id")).removeClass('active');
@@ -140,7 +133,6 @@
 		var teleopDroppedCubes = $('#teleopDroppedCubes').val();
 		var climbingType = $('#climbingType').val();
 		var speedRating = $('input[name=speedRating]:checked').val();
-		var cubeCycleTime = cubeCycleSeconds.innerHTML + '.' + cubeCycleTenths.innerHTML
 		var stabilityRating = $('input[name=stabilityRating]:checked').val();
 		var skillRating = $('input[name=skillRating]:checked').val();
 		var defenceRating = $('input[name=defenceRating]:checked').val();
@@ -167,7 +159,6 @@
 			"teleopDroppedCubes": teleopDroppedCubes,
 			"climbingType": climbingType,
 			"speedRating": speedRating,
-			"cubeCycleTime": cubeCycleTime,
 			"stabilityRating": stabilityRating,
 			"skillRating": skillRating,
 			"defenceRating": defenceRating,
@@ -210,7 +201,6 @@
 		var teleopDroppedCubes = $('#teleopDroppedCubes').val();
 		var climbingType = $('#climbingType').val();
 		var speedRating = $('input[name=speedRating]:checked').val();
-		var cubeCycleTime = cubeCycleSeconds.innerHTML + '.' + cubeCycleTenths.innerHTML
 		var stabilityRating = $('input[name=stabilityRating]:checked').val();
 		var skillRating = $('input[name=skillRating]:checked').val();
 		var defenceRating = $('input[name=defenceRating]:checked').val();
@@ -245,7 +235,6 @@
 					"teleopDroppedCubes": teleopDroppedCubes,
 					"climbingType": climbingType,
 					"speedRating": speedRating,
-					"cubeCycleTime": cubeCycleTime,
 					"stabilityRating": stabilityRating,
 					"skillRating": skillRating,
 					"defenceRating": defenceRating,
@@ -325,65 +314,4 @@ function modifyDropped_qty(val) {
 
 	document.getElementById('teleopDroppedCubes').value = new_qty;
 	return new_qty;
-}
-
-window.onload = function () {
-
-	var seconds = 00;
-	var tenths = 00;
-	var cubeCycleTenths = document.getElementById("cubeCycleTenths");
-	var cubeCycleSeconds = document.getElementById("cubeCycleSeconds");
-	var cubeTimerStart = document.getElementById('cubeTimerStart');
-	var cubeTimerStop = document.getElementById('cubeTimerStop');
-	var cubeTimerReset = document.getElementById('cubeTimerReset');
-	var Interval;
-
-	cubeTimerStart.onclick = function () {
-		clearInterval(Interval);
-		Interval = setInterval(startTimer, 10);
-		tenths = cubeCycleTenths.innerHTML;
-		seconds = cubeCycleSeconds.innerHTML;
-	}
-
-	cubeTimerStop.onclick = function () {
-		clearInterval(Interval);
-	}
-
-
-	cubeTimerReset.onclick = function () {
-		clearInterval(Interval);
-		tenths = "00";
-		seconds = "00";
-		cubeCycleTenths.innerHTML = tenths;
-		cubeCycleSeconds.innerHTML = seconds;
-	}
-
-
-
-	function startTimer() {
-		tenths++;
-
-		if (tenths < 9) {
-			cubeCycleTenths.innerHTML = "0" + tenths;
-		}
-
-		if (tenths > 9) {
-			cubeCycleTenths.innerHTML = tenths;
-
-		}
-
-		if (tenths > 99) {
-			seconds++;
-			cubeCycleSeconds.innerHTML = "0" + seconds;
-			tenths = 0;
-			cubeCycleTenths.innerHTML = "0" + 0;
-		}
-
-		if (seconds > 9) {
-			cubeCycleSeconds.innerHTML = seconds;
-		}
-
-	}
-
-
 }
