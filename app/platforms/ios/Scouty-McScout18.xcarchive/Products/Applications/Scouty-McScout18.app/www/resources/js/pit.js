@@ -2,12 +2,15 @@ $(document).ready(function () {
     if (localStorage.getItem('settingsCheck') == 1){
         var databaseName = localStorage.getItem('databaseName');
         var scoutName = localStorage.getItem('scoutName');
-        var db = new PouchDB(databaseName);
+		var db;
+		if (window.cordova) {
+            db = new PouchDB(databaseName, {auto_compaction: true, adapter: 'cordova-sqlite'});
+		} else {
+			db = new PouchDB(databaseName, {auto_compaction: true});
+		}
     } else {
         window.alert("Check Settings!")
     }
-
-    var robotPhotoFront = '';
 
     function getPlaceCubes() {
         var chkArray = [];
@@ -18,49 +21,40 @@ $(document).ready(function () {
         return selected
     }
 
+    var robotPhotoFront = '';
 
     $('#robotPhotoFront').on('change', function (e) {
-        var reader = new FileReader();
-        reader.onload = (e) => (robotPhotoFront = e.target.result);
-        reader.readAsDataURL(e.target.files[0]);
+        robotPhotoFront = this.files[0];
     });
 
     var robotPhotoBack = '';
 
     $('#robotPhotoBack').on('change', function (e) {
-        var reader = new FileReader();
-        reader.onload = (e) => (robotPhotoBack = e.target.result);
-        reader.readAsDataURL(e.target.files[0]);
+        robotPhotoBack = this.files[0];
     });
 
     var robotPhotoLeft = '';
 
     $('#robotPhotoLeft').on('change', function (e) {
-        var reader = new FileReader();
-        reader.onload = (e) => (robotPhotoLeft = e.target.result);
-        reader.readAsDataURL(e.target.files[0]);
+        robotPhotoLeft = this.files[0];
     });
 
     var robotPhotoRight = '';
 
     $('#robotPhotoRight').on('change', function (e) {
-        var reader = new FileReader();
-        reader.onload = (e) => (robotPhotoRight = e.target.result);
-        reader.readAsDataURL(e.target.files[0]);
+        robotPhotoRight = this.files[0];
     });
 
     var robotPhotoTop = '';
 
     $('#robotPhotoTop').on('change', function (e) {
-        var reader = new FileReader();
-        reader.onload = (e) => (robotPhotoTop = e.target.result);
-        reader.readAsDataURL(e.target.files[0]);
+        robotPhotoTop = this.files[0];
     });
 
     $('#teamNumber').on('paste keyup', function (e) {
         var teamNumber = $('#teamNumber').val();
         var id = "pit_" + teamNumber;
-        db.get(id).then(function (doc) {
+        db.get(id, {attachments: true, binary: true}).then(function (doc) {
           console.log("found");
           var commentSection = doc.notesAndComments + " \n---EDIT---\n ";
           var manipulatorType = doc.manipulatorType;
@@ -71,6 +65,34 @@ $(document).ready(function () {
           var robotDone = doc.robotDone;
           var robotBroken = doc.robotBroken;
           var placeCubes = doc.placeCubes.split(',');
+          $('#commentSection').val('');
+          $('#' + $('input[name=manipulatorType]:checked').attr("id")).removeClass('active');
+          $('#' + $('input[name=robotSize]:checked').attr("id")).removeClass('active');
+          $('#' + $('input[name=robotAppearance]:checked').attr("id")).removeClass('active');
+          $('#' + $('input[name=pitSkill]:checked').attr("id")).removeClass('active');
+          $('#' + $('input[name=robotClimber]:checked').attr("id")).removeClass('active');
+          $('#' + $('input[name=robotDone]:checked').attr("id")).removeClass('active');
+          $('#' + $('input[name=robotBroken]:checked').attr("id")).removeClass('active');
+          $("#placeCubes input:checked").each(function () {
+              $('#' + $(this).attr("id")).removeClass('active');
+          });
+          $('input[type=checkbox]').attr('checked',false);
+          $('input[type=radio]').attr('checked',false);
+          document.getElementById("robotPhotoFrontPreview").style.display = "none";
+          document.getElementById("robotPhotoBackPreview").style.display = "none";
+          document.getElementById("robotPhotoLeftPreview").style.display = "none";
+          document.getElementById("robotPhotoRightPreview").style.display = "none";
+          document.getElementById("robotPhotoTopPreview").style.display = "none";  
+          var robotPhotoFrontPreview = document.getElementById("robotPhotoFrontPreview");
+          robotPhotoFrontPreview.src = "#";
+          var robotPhotoBackPreview = document.getElementById("robotPhotoBackPreview");
+          robotPhotoBackPreview.src = "#";
+          var robotPhotoLeftPreview = document.getElementById("robotPhotoLeftPreview");
+          robotPhotoLeftPreview.src = "#";
+          var robotPhotoRightPreview = document.getElementById("robotPhotoRightPreview");
+          robotPhotoRightPreview.src = "#";
+          var robotPhotoTopPreview = document.getElementById("robotPhotoTopPreview");
+          robotPhotoTopPreview.src = "#";
           $('#commentSection').val(commentSection);
           $("input[name=manipulatorType][value=" + manipulatorType + "]").prop('checked', true);
           $('#' + $('input[name=manipulatorType]:checked').attr("id")).addClass('active');
@@ -92,6 +114,26 @@ $(document).ready(function () {
                 $('#' + $(this).attr("id")).addClass('active');
             });
           }
+          var robotPhotoFrontUrl = URL.createObjectURL(doc._attachments['robotFront.jpg'].data);
+          var robotPhotoBackUrl = URL.createObjectURL(doc._attachments['robotBack.jpg'].data);
+          var robotPhotoLeftUrl = URL.createObjectURL(doc._attachments['robotLeft.jpg'].data);
+          var robotPhotoRightUrl = URL.createObjectURL(doc._attachments['robotRight.jpg'].data);
+          var robotPhotoTopUrl = URL.createObjectURL(doc._attachments['robotTop.jpg'].data);
+          var robotPhotoFrontPreview = document.getElementById("robotPhotoFrontPreview");
+          robotPhotoFrontPreview.src = robotPhotoFrontUrl;
+          var robotPhotoBackPreview = document.getElementById("robotPhotoBackPreview");
+          robotPhotoBackPreview.src = robotPhotoBackUrl;
+          var robotPhotoLeftPreview = document.getElementById("robotPhotoLeftPreview");
+          robotPhotoLeftPreview.src = robotPhotoLeftUrl;
+          var robotPhotoRightPreview = document.getElementById("robotPhotoRightPreview");
+          robotPhotoRightPreview.src = robotPhotoRightUrl;
+          var robotPhotoTopPreview = document.getElementById("robotPhotoTopPreview");
+          robotPhotoTopPreview.src = robotPhotoTopUrl;
+          document.getElementById("robotPhotoFrontPreview").style.display = "block";
+          document.getElementById("robotPhotoBackPreview").style.display = "block";
+          document.getElementById("robotPhotoLeftPreview").style.display = "block";
+          document.getElementById("robotPhotoRightPreview").style.display = "block";
+          document.getElementById("robotPhotoTopPreview").style.display = "block";  
         }).catch(function (err) {
             if (err.name === 'not_found') {
                 console.log("not found");
@@ -107,7 +149,22 @@ $(document).ready(function () {
                     $('#' + $(this).attr("id")).removeClass('active');
                 });
                 $('input[type=checkbox]').attr('checked',false);
-                $('input[type=radio]').attr('checked',false);      
+                $('input[type=radio]').attr('checked',false);
+                document.getElementById("robotPhotoFrontPreview").style.display = "none";
+                document.getElementById("robotPhotoBackPreview").style.display = "none";
+                document.getElementById("robotPhotoLeftPreview").style.display = "none";
+                document.getElementById("robotPhotoRightPreview").style.display = "none";
+                document.getElementById("robotPhotoTopPreview").style.display = "none";  
+                var robotPhotoFrontPreview = document.getElementById("robotPhotoFrontPreview");
+                robotPhotoFrontPreview.src = "#";
+                var robotPhotoBackPreview = document.getElementById("robotPhotoBackPreview");
+                robotPhotoBackPreview.src = "#";
+                var robotPhotoLeftPreview = document.getElementById("robotPhotoLeftPreview");
+                robotPhotoLeftPreview.src = "#";
+                var robotPhotoRightPreview = document.getElementById("robotPhotoRightPreview");
+                robotPhotoRightPreview.src = "#";
+                var robotPhotoTopPreview = document.getElementById("robotPhotoTopPreview");
+                robotPhotoTopPreview.src = "#";          
             } else {
                 console.log(err);
             }
@@ -126,29 +183,28 @@ $(document).ready(function () {
         var robotDone = $('input[name=robotDone]:checked').val();
         var robotBroken = $('input[name=robotBroken]:checked').val();
         var placeCubes = getPlaceCubes();
-
         var doc = {
             "_id": id,
             _attachments: {
                 'robotFront.jpg': {
-                    content_type: 'image/jpeg',
-                    data: robotPhotoFront.slice(23),
+                    content_type: robotPhotoFront.type,
+                    data: robotPhotoFront,
                 },
                 'robotBack.jpg': {
-                    content_type: 'image/jpeg',
-                    data: robotPhotoBack.slice(23),
+                    content_type: robotPhotoBack.type,
+                    data: robotPhotoBack,
                 },
                 'robotLeft.jpg': {
-                    content_type: 'image/jpeg',
-                    data: robotPhotoLeft.slice(23),
+                    content_type: robotPhotoLeft.type,
+                    data: robotPhotoLeft,
                 },
                 'robotRight.jpg': {
-                    content_type: 'image/jpeg',
-                    data: robotPhotoRight.slice(23),
+                    content_type: robotPhotoRight.type,
+                    data: robotPhotoRight,
                 },
                 'robotTop.jpg': {
-                    content_type: 'image/jpeg',
-                    data: robotPhotoTop.slice(23),
+                    content_type: robotPhotoTop.type,
+                    data: robotPhotoTop,
                 }
             },
             "scoutName": scoutName,
@@ -201,31 +257,21 @@ $(document).ready(function () {
             if (teamNumber == '') {
                 window.alert("Input a team number!");
             } else {
-                db.get(id, {attachments: true}).then(function(doc) {
+                db.get(id, {attachments: true, binary: true}).then(function(doc) {
                     if (robotPhotoFront == ''){
                         robotPhotoFront = doc._attachments['robotFront.jpg'].data;
-                    } else {
-                        robotPhotoFront = robotPhotoFront.slice(23);
                     }
-                    if (robotPhotoBack = ''){
+                    if (robotPhotoBack == ''){
                         robotPhotoBack = doc._attachments['robotBack.jpg'].data;
-                    } else {
-                        robotPhotoBack = robotPhotoBack.slice(23);
                     }
-                    if (robotPhotoLeft = ''){
+                    if (robotPhotoLeft == ''){
                         robotPhotoLeft = doc._attachments['robotLeft.jpg'].data;
-                    } else {
-                        robotPhotoLeft = robotPhotoLeft.slice(23);
                     }
-                    if (robotPhotoRight = ''){
+                    if (robotPhotoRight == ''){
                         robotPhotoRight = doc._attachments['robotRight.jpg'].data;
-                    } else {
-                        robotPhotoRight = robotPhotoRight.slice(23);
                     }
-                    if (robotPhotoTop = ''){
+                    if (robotPhotoTop == ''){
                         robotPhotoTop = doc._attachments['robotTop.jpg'].data;
-                    } else {
-                        robotPhotoTop = robotPhotoTop.slice(23);
                     }
                   return db.put({
                     _id: id,

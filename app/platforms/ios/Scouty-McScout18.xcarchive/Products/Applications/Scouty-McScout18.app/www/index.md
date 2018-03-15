@@ -5,6 +5,7 @@ files: |
  <script src="./resources/js/match.js"></script>
 ---
 <div id='spinner'></div>
+<div id='status'>0</div>
 <div id='page' class="container-fluid" style="background-color: #f0f0f0; margin-bottom: 15px">
 	<form>
 		<div class="row">
@@ -16,32 +17,28 @@ files: |
 			<div class="col-md">
 				<label class="mr-sm-2" for="matchType">Match Type</label>
 				<select class="custom-select mr-sm-2" id="matchType">
-					<option selected>Choose...</option>
 					<option value="p">Practice</option>
-					<option value="q">Qualification</option>
+					<option selected value="q">Qualification</option>
 				</select>
 			</div>
 			<div class="col-md">
 				<label class="mr-sm-2" for="matchNumber">Match Number</label>
-				<input id="matchNumber" maxlength="3" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off" type="tel" class="form-control" placeholder="Match Number">
+				<input id="matchNumber" maxlength="3" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off"
+				 type="tel" class="form-control" placeholder="Match Number">
 			</div>
 			<div class="col-md">
 				<label class="mr-sm-2" for="teamNumber">Team Number</label>
-				<input id="teamNumber" maxlength="4" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off" type="tel" class="form-control" placeholder="Team Number">
+				<input id="teamNumber" maxlength="4" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off"
+				 type="tel" class="form-control" placeholder="Team Number">
+			</div>
+		</div>
+		<hr/>
+		<div class="row">
+			<div class="col-md">
+				<h2>Auto</h2>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col">
-				<label class="mr-sm-2" style="display: block" for="allianceColor">Alliance Color</label>
-				<div id="allianceColor" class="btn-group btn-group-toggle" data-toggle="buttons">
-					<label id="allianceColorRed" class="btn btn-danger">
-						<input type="radio" value="red" name="allianceColor" id="allianceColorRed" autocomplete="off"> Red
-					</label>
-					<label id="allianceColorBlue" class="btn btn-primary">
-						<input type="radio" value="blue" name="allianceColor" id="allianceColorBlue" autocomplete="off"> Blue
-					</label>
-				</div>
-			</div>
 			<div class="col">
 				<label class="mr-sm-2" style="display: block" for="startingPosition">Starting Position</label>
 				<div id="startingPosition" class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -56,14 +53,6 @@ files: |
 					</label>
 				</div>
 			</div>
-		</div>
-		<hr/>
-		<div class="row">
-			<div class="col-md">
-				<h2>Auto</h2>
-			</div>
-		</div>
-		<div class="row">
 			<div class="col">
 				<label class="mr-sm-2" style="display: block" for="autoCrossedBaseline">Crossed Baseline</label>
 				<div id="autoCrossedBaseline" class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -105,54 +94,83 @@ files: |
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md">
-				<label style="margin-bottom: 0px" for="teleopScaleCubes">Cubes on Scale</label>
+			<div class="col-lg col-md-3 col-sm-4 col-6">
+				<div class="row">
+					<div class="col-md">
+						<label style="margin-bottom: 0px" for="teleopScaleCubes">Cubes on Scale</label>
+					</div>
+				</div>
+				<div class="row" style="margin-top:15px">
+					<div class="col-md input-group">
+						<a onclick="modifyScale_qty(-1)" class="btn btn-danger btn-lg" style="width: 50px; height: 50px; margin-right: 15px;" role="button">-</a>
+						<input id="teleopScaleCubes" maxlength="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off"
+						 type="tel" class="form-control" value="0">
+						<a onclick="modifyScale_qty(1)" class="btn btn-success btn-lg" style="width: 50px; height: 50px; margin-left: 15px;" role="button">+</a>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="row" style="margin-top:15px">
-			<div class="col-md input-group">
-				<a onclick="modifyScale_qty(-1)" class="btn btn-danger btn-lg" style="width: 50px; height: 50px; margin-right: 15px;" role="button">-</a>
-				<input id="teleopScaleCubes" maxlength="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off" type="tel" class="form-control" value="0">
-				<a onclick="modifyScale_qty(1)" class="btn btn-success btn-lg" style="width: 50px; height: 50px; margin-left: 15px;" role="button">+</a>
+			<div class="col-lg col-md-3 col-sm-4 col-6">
+				<div class="row">
+					<div class="col-md">
+						<label style="margin-bottom: 0px" for="teleopSwitchCubes">Cubes on Switch</label>
+					</div>
+				</div>
+				<div class="row" style="margin-top:15px">
+					<div class="col-md input-group">
+						<a onclick="modifySwitch_qty(-1)" class="btn btn-danger btn-lg" style="width: 50px; height: 50px; margin-right: 15px;" role="button">-</a>
+						<input id="teleopSwitchCubes" maxlength="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off"
+						 type="tel" class="form-control" value="0">
+						<a onclick="modifySwitch_qty(1)" class="btn btn-success btn-lg" style="width: 50px; height: 50px; margin-left: 15px;" role="button">+</a>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="row" style="margin-top:15px">
-			<div class="col-md">
-				<label style="margin-bottom: 0px" for="teleopSwitchCubes">Cubes on Switch</label>
+			<div class="col-lg col-md-3 col-sm-4 col-6">
+				<div class="row">
+					<div class="col-md">
+						<label style="margin-bottom: 0px" for="teleopOppSwitchCubes">Cubes on Opponent's Switch</label>
+					</div>
+				</div>
+				<div class="row" style="margin-top:15px">
+					<div class="col-md input-group">
+						<a onclick="modifyOppSwitch_qty(-1)" class="btn btn-danger btn-lg" style="width: 50px; height: 50px; margin-right: 15px;"
+						 role="button">-</a>
+						<input id="teleopOppSwitchCubes" maxlength="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off"
+						 type="tel" class="form-control" value="0">
+						<a onclick="modifyOppSwitch_qty(1)" class="btn btn-success btn-lg" style="width: 50px; height: 50px; margin-left: 15px;"
+						 role="button">+</a>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="row" style="margin-top:15px">
-			<div class="col-md input-group">
-				<a onclick="modifySwitch_qty(-1)" class="btn btn-danger btn-lg" style="width: 50px; height: 50px; margin-right: 15px;" role="button">-</a>
-				<input id="teleopSwitchCubes" maxlength="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off" type="tel" class="form-control" value="0">
-				<a onclick="modifySwitch_qty(1)" class="btn btn-success btn-lg" style="width: 50px; height: 50px; margin-left: 15px;" role="button">+</a>
+			<div class="col-lg col-md-3 col-sm-4 col-6">
+				<div class="row">
+					<div class="col-md">
+						<label style="margin-bottom: 0px" for="teleopExchangeCubes">Cubes in Exchange</label>
+					</div>
+				</div>
+				<div class="row" style="margin-top:15px">
+					<div class="col-md input-group">
+						<a onclick="modifyExchange_qty(-1)" class="btn btn-danger btn-lg" style="width: 50px; height: 50px; margin-right: 15px;"
+						 role="button">-</a>
+						<input id="teleopExchangeCubes" maxlength="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off"
+						 type="tel" class="form-control" value="0">
+						<a onclick="modifyExchange_qty(1)" class="btn btn-success btn-lg" style="width: 50px; height: 50px; margin-left: 15px;" role="button">+</a>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-md" style="margin-top:15px">
-				<label style="margin-bottom: 0px" for="teleopOppSwitchCubes">Cubes on Opponent's Switch</label>
-			</div>
-		</div>
-		<div class="row" style="margin-top:15px">
-			<div class="col-md input-group">
-				<a onclick="modifyOppSwitch_qty(-1)" class="btn btn-danger btn-lg" style="width: 50px; height: 50px; margin-right: 15px;"
-				 role="button">-</a>
-				<input id="teleopOppSwitchCubes" maxlength="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off" type="tel" class="form-control" value="0">
-				<a onclick="modifyOppSwitch_qty(1)" class="btn btn-success btn-lg" style="width: 50px; height: 50px; margin-left: 15px;"
-				 role="button">+</a>
-			</div>
-		</div>
-		<div class="row" style="margin-top:15px">
-			<div class="col-md">
-				<label style="margin-bottom: 0px" for="teleopExchangeCubes">Cubes in Exchange</label>
-			</div>
-		</div>
-		<div class="row" style="margin-top:15px">
-			<div class="col-md input-group">
-				<a onclick="modifyExchange_qty(-1)" class="btn btn-danger btn-lg" style="width: 50px; height: 50px; margin-right: 15px;"
-				 role="button">-</a>
-				<input id="teleopExchangeCubes" maxlength="4" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off" type="tel" class="form-control" value="0">
-				<a onclick="modifyExchange_qty(1)" class="btn btn-success btn-lg" style="width: 50px; height: 50px; margin-left: 15px;" role="button">+</a>
+			<div class="col-lg col-md-3 col-sm-4 col-6">
+				<div class="row">
+					<div class="col-md">
+						<label style="margin-bottom: 0px" for="teleopDroppedCubes">Cubes Dropped</label>
+					</div>
+				</div>
+				<div class="row" style="margin-top:15px">
+					<div class="col-md input-group">
+						<a onclick="modifyDropped_qty(-1)" class="btn btn-danger btn-lg" style="width: 50px; height: 50px; margin-right: 15px;" role="button">-</a>
+						<input id="teleopDroppedCubes" maxlength="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57' autocomplete="off"
+						 type="tel" class="form-control" value="0">
+						<a onclick="modifyDropped_qty(1)" class="btn btn-success btn-lg" style="width: 50px; height: 50px; margin-left: 15px;" role="button">+</a>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="row">
@@ -174,17 +192,6 @@ files: |
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-				<p style="margin-bottom: 5px">Cube Cycle Time, Pickup to Dropoff to Pickup</p>
-				<div style="display: inline-block; width:65px">
-					<p style="margin-bottom: 0px"><span style="font-size: 24px;" id="cubeCycleSeconds">00</span><span style="font-size: 24px;">:</span><span style="font-size: 24px;" id="cubeCycleTenths">00</span></p>
-				</div>
-				<div style="display: inline-block">
-					<a style="color:#fff" class="btn btn-secondary" id="cubeTimerStart">Start</a>
-					<a style="color:#fff" class="btn btn-secondary" id="cubeTimerStop">Stop</a>
-					<a style="color:#fff" class="btn btn-secondary" id="cubeTimerReset">Reset</a>
-				</div>
-			</div>
 			<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
 				<label class="mr-sm-2" style="display: block" for="speedRating">Speed</label>
 				<div id="speedRating" class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -325,14 +332,25 @@ files: |
 					</label>
 				</div>
 			</div>
-			<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-			<label class="mr-sm-2" style="display: block" for="anythingBreak">Did Anything Break?</label>
+			<div class="col">
+				<label class="mr-sm-2" style="display: block" for="anythingBreak">Did Anything Break?</label>
 				<div id="anythingBreak" class="btn-group btn-group-toggle" data-toggle="buttons">
 					<label id="anythingBreakNo" class="btn btn-secondary">
 						<input type="radio" value="0" name="anythingBreak" id="anythingBreakNo" autocomplete="off"> No
 					</label>
 					<label id="anythingBreakYes" class="btn btn-secondary">
 						<input type="radio" value="1" name="anythingBreak" id="anythingBreakYes" autocomplete="off"> Yes
+					</label>
+				</div>
+			</div>
+			<div class="col">
+				<label class="mr-sm-2" style="display: block" for="robotDead">Robot Dead, Disabled, Disconnected</label>
+				<div id="robotDead" class="btn-group btn-group-toggle" data-toggle="buttons">
+					<label id="robotDeadNo" class="btn btn-secondary">
+						<input type="radio" value="0" name="robotDead" id="robotDeadNo" autocomplete="off"> No
+					</label>
+					<label id="robotDeadYes" class="btn btn-secondary">
+						<input type="radio" value="1" name="robotDead" id="robotDeadYes" autocomplete="off"> Yes
 					</label>
 				</div>
 			</div>

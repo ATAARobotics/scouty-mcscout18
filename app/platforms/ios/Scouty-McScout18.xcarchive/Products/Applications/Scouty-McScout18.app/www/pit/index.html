@@ -10,9 +10,11 @@
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"
 	/>
 	<link href="../resources/css/bootstrap.min.css" rel="stylesheet">
+	<script src="../cordova.js"></script>
 	<script src="../resources/js/jquery.min.js"></script>
 	<script src="../resources/js/bootstrap.min.js"></script>
 	<script src="../resources/js/pouchdb-6.4.1.min.js"></script>
+	<script src="../resources/js/pouchdb-cordova-sqlite.js"></script>
 	<script src="../resources/js/sync.js"></script> <script src="../resources/js/pit.js"></script>
 
 	<meta name="description" content="Scouting App for Team 4334">
@@ -62,18 +64,15 @@
 			border-top: 16px solid #6c757d;
 			width: 120px;
 			height: 120px;
-			-webkit-animation: spin 2s linear infinite;
-			animation: spin 2s linear infinite;
+			animation: none;
 			display: none;
 		}
 
-		@-webkit-keyframes spin {
-			0% {
-				-webkit-transform: rotate(0deg);
-			}
-			100% {
-				-webkit-transform: rotate(360deg);
-			}
+		#status {
+			position: absolute;
+			left: 47%;
+			top: 46%;
+			display: none;
 		}
 
 		@keyframes spin {
@@ -118,6 +117,7 @@
 		</nav>
 	</div>
 <div id="spinner"></div>
+<div id="status">0</div>
 <div id="page" class="container-fluid" style="background-color: #f0f0f0; margin-bottom: 15px">
 	<form>
 		<div class="row">
@@ -288,23 +288,38 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-3 col-md-4 col-6">
-				<label class="mr-sm-2" style="display: block" for="robotPhoto">Robot Photo Front</label>
+				<div>
+					<img class="img-fluid" style="margin-top: 15px; display:none" alt="No Image" id="robotPhotoFrontPreview" />
+				</div>
+				<label class="mr-sm-2" style="display: block" for="robotPhotoFront">Robot Photo Front</label>
 				<input style="margin-bottom: 15px; width:100%" type="file" accept="image/*" id="robotPhotoFront" name="robotPhotoFront" />
 			</div>
 			<div class="col-lg-3 col-md-4 col-6">
-				<label class="mr-sm-2" style="display: block" for="robotPhoto">Robot Photo Back</label>
+				<div>
+					<img class="img-fluid" style="margin-top: 15px; display:none" alt="No Image" id="robotPhotoBackPreview" />
+				</div>
+				<label class="mr-sm-2" style="display: block" for="robotPhotoBack">Robot Photo Back</label>
 				<input style="margin-bottom: 15px; width:100%" type="file" accept="image/*" id="robotPhotoBack" name="robotPhotoBack" />
 			</div>
 			<div class="col-lg-3 col-md-4 col-6">
-				<label class="mr-sm-2" style="display: block" for="robotPhoto">Robot Photo Left</label>
+				<div>
+					<img class="img-fluid" style="margin-top: 15px; display:none" alt="No Image" id="robotPhotoLeftPreview" />
+				</div>
+				<label class="mr-sm-2" style="display: block" for="robotPhotoLeft">Robot Photo Left</label>
 				<input style="margin-bottom: 15px; width:100%" type="file" accept="image/*" id="robotPhotoLeft" name="robotPhotoLeft" />
 			</div>
 			<div class="col-lg-3 col-md-4 col-6">
-				<label class="mr-sm-2" style="display: block" for="robotPhoto">Robot Photo Right</label>
+				<div>
+					<img class="img-fluid" style="margin-top: 15px; display:none" alt="No Image" id="robotPhotoRightPreview" />
+				</div>
+				<label class="mr-sm-2" style="display: block" for="robotPhotoRight">Robot Photo Right</label>
 				<input style="margin-bottom: 15px; width:100%" type="file" accept="image/*" id="robotPhotoRight" name="robotPhotoRight" />
 			</div>
 			<div class="col-lg-3 col-md-4 col-6">
-				<label class="mr-sm-2" style="display: block" for="robotPhoto">Robot Photo Top</label>
+				<div>
+					<img class="img-fluid" style="margin-top: 15px; display:none" alt="No Image" id="robotPhotoTopPreview" />
+				</div>
+				<label class="mr-sm-2" style="display: block" for="robotPhotoTop">Robot Photo Top</label>
 				<input style="margin-bottom: 15px; width:100%" type="file" accept="image/*" id="robotPhotoTop" name="robotPhotoTop" />
 			</div>
 		</div>

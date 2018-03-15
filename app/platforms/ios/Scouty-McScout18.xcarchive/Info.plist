@@ -7,18 +7,18 @@
 		<key>ApplicationPath</key>
 		<string>Applications/Scouty-McScout18.app</string>
 		<key>CFBundleIdentifier</key>
-		<string>ca.fourthreethreefour.scoutymcscout18</string>
+		<string>ca.fourthreethreefourjoelgmail.scoutymcscout18joelgmail</string>
 		<key>CFBundleShortVersionString</key>
 		<string>1.0.0</string>
 		<key>CFBundleVersion</key>
 		<string>1.0.0</string>
 		<key>SigningIdentity</key>
-		<string>iPhone Developer: brandtc@shaw.ca (NRVG8Z48PB)</string>
+		<string>iPhone Developer: joelgallant236+apple1@gmail.com (Q5K468AB3Z)</string>
 	</dict>
 	<key>ArchiveVersion</key>
 	<integer>2</integer>
 	<key>CreationDate</key>
-	<date>2018-02-28T02:26:38Z</date>
+	<date>2018-03-15T17:39:25Z</date>
 	<key>Name</key>
 	<string>Scouty-McScout18</string>
 	<key>SchemeName</key>

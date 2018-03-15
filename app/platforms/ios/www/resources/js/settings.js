@@ -85,9 +85,9 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     var databaseNameSet = document.getElementById("databaseName");
-    databaseNameSet.value = localStorage.getItem('databaseName');
+    databaseNameSet.value = localStorage.getItem('databaseName') || "scouting-victoria";
     var serverIpSet = document.getElementById("serverIp");
-    serverIpSet.value = localStorage.getItem('serverIp');
+    serverIpSet.value = localStorage.getItem('serverIp') || "35.230.125.220";
     var scoutNameSet = document.getElementById("scoutName");
     scoutNameSet.value = localStorage.getItem('scoutName');
     var serverUsernameSet = document.getElementById("serverUsername");

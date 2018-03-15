@@ -98,7 +98,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		00GABwQN3t5KzHB3YJvuGpLGpCs=
+		SnVOG6BvXI7QqhBN4H9XTvqkNUU=
 		</data>
 		<key>CDVCapture.bundle/controls_bg.png</key>
 		<data>
@@ -222,7 +222,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		v49w53mvtfncI9lUNUfYk59tbog=
+		XRvtKa09yNpFH15AnluJGvStdoM=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -230,15 +230,15 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		uQB08lAu/soP7lNx35s6V5U9Zgs=
+		OUWp2xj5swqUDiDZL5y8+vrhDDg=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		/+QSFOZwKrbogMDezxk7+Z1GfD4=
+		y4aSZAx7N+W6xRRgVdr19gFnoe8=
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		LYNnItmge4lv5TkAqXBMSFVz2nE=
+		KWxFc1co1neUDQihM4h7SBhYN6E=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -250,11 +250,11 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		/EZ2I7Jh/gPDgLObj2Uba1Oli1E=
+		xUbOwlpaFeemGkSVIMjVwcvMWns=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		lGHnT+vH2xwqibv2ahQEYG+I2uY=
+		cdh0G2SkkJSRlsjM/dcqoXayp+Y=
 		</data>
 		<key>www/assets/css/style.css</key>
 		<data>
@@ -386,7 +386,7 @@
 		</data>
 		<key>www/cordova_plugins.js</key>
 		<data>
-		nZXfd5mYpWrpRh5NJ4wIorZWGMQ=
+		xetGbZKfTgwD2o5aSsAFIDWHgq0=
 		</data>
 		<key>www/favicon.ico</key>
 		<data>
@@ -394,15 +394,15 @@
 		</data>
 		<key>www/index.html</key>
 		<data>
-		Fhgej03mw1eGd4nmQ1bVIGEnC2U=
+		HwtUP8WNppJBxGotu9mUCuIDyiI=
 		</data>
 		<key>www/index.md</key>
 		<data>
-		R6hixYEF2B/11cUnOXlPHp+vsUw=
+		wWknB0izF28Y2DtuwCSBCsni888=
 		</data>
 		<key>www/pit/index.html</key>
 		<data>
-		2vpwbYDBmTgdEw8B6mWhY4DeUnA=
+		VedO6mqW6PyVyBQpjufJ/C34U9Y=
 		</data>
 		<key>www/plugins/cordova-plugin-camera/www/Camera.js</key>
 		<data>
@@ -556,6 +556,10 @@
 		<data>
 		n2E0W8B/grOxM2ORx/haAYOWIcA=
 		</data>
+		<key>www/plugins/cordova-plugin-sqlite-2/dist/sqlite-plugin.js</key>
+		<data>
+		o0e7Yq9sXgcqy6ub/8CcOga7BTw=
+		</data>
 		<key>www/plugins/cordova-plugin-wkwebview-engine/src/www/ios/ios-wkwebview-exec.js</key>
 		<data>
 		0IHjKGuPam4WmxLuwtLafx8nBh8=
@@ -586,23 +590,27 @@
 		</data>
 		<key>www/resources/js/match.js</key>
 		<data>
-		QTEIyGyy9SgFNV26eHRc2V16Shg=
+		5ydzsgUq+oPhzUcLC6w1ibzw1rM=
 		</data>
 		<key>www/resources/js/pit.js</key>
 		<data>
-		ixze6sPi+Rrl6d8wqZJx1vCAdwY=
+		wI11PbeVAV7X6/v7JvyQjpqoQug=
 		</data>
 		<key>www/resources/js/pouchdb-6.4.1.min.js</key>
 		<data>
 		jbWlZ0nEuVIlIQX8xfmcC44XCL4=
 		</data>
+		<key>www/resources/js/pouchdb-cordova-sqlite.js</key>
+		<data>
+		vILB/blQJ9SMexif5MsU/nlCpIU=
+		</data>
 		<key>www/resources/js/settings.js</key>
 		<data>
-		jnCg1mJzhtAqOCtw0YwX11F1AjY=
+		sfAVLzo+RctfLjctiZFdi1Z4ScI=
 		</data>
 		<key>www/resources/js/sync.js</key>
 		<data>
-		+f7onkFgYLJPRkt4oBv4xJTh5GQ=
+		loeBZ+sgorDPhKg9U5lsyOjRvfA=
 		</data>
 		<key>www/settings.md</key>
 		<data>
@@ -610,7 +618,7 @@
 		</data>
 		<key>www/settings/index.html</key>
 		<data>
-		hiXLI7JApR9i77cG07W2I/sy84g=
+		RKUj5ewAQM6XBDs17FjJIRLK1vs=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -872,11 +880,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			00GABwQN3t5KzHB3YJvuGpLGpCs=
+			SnVOG6BvXI7QqhBN4H9XTvqkNUU=
 			</data>
 			<key>hash2</key>
 			<data>
-			Rk+CuPCqJ+4D2U5o1xnqRsN6jgTSY1nRCUqU69efpAM=
+			Z6EmJ4kt/aAlA9MhWRQaTGDNvTCC4+vACJQRZlUHuTU=
 			</data>
 		</dict>
 		<key>CDVCapture.bundle/controls_bg.png</key>
@@ -1166,11 +1174,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			v49w53mvtfncI9lUNUfYk59tbog=
+			XRvtKa09yNpFH15AnluJGvStdoM=
 			</data>
 			<key>hash2</key>
 			<data>
-			xRHpU1N7dZ0l2W1ycdW/Poa0jcY0sB5iSAc2gQrwuE8=
+			niAOCFrfj/uuPL00et5ESWt6fYJA/HMDiBpxrKNV03A=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -1188,22 +1196,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uQB08lAu/soP7lNx35s6V5U9Zgs=
+			OUWp2xj5swqUDiDZL5y8+vrhDDg=
 			</data>
 			<key>hash2</key>
 			<data>
-			DZRnjfqqlwf+OeSxWzEIB0Xwp1OgAdZN3vbT1lcFbEo=
+			oG3Ao3F32FOKyffqTpiTEtL7OI19MIt66l43/UsIRuE=
 			</data>
 		</dict>
 		<key>MainViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LYNnItmge4lv5TkAqXBMSFVz2nE=
+			KWxFc1co1neUDQihM4h7SBhYN6E=
 			</data>
 			<key>hash2</key>
 			<data>
-			uMTMlfvZ4Ph/7TbRP3+768b/rd/a58t+s4/igU7IOEo=
+			6Euq9+0al8Amo41eTOB55n1d81WcKITDgZXfikWqMPg=
 			</data>
 		</dict>
 		<key>archived-expanded-entitlements.xcent</key>
@@ -1221,22 +1229,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/EZ2I7Jh/gPDgLObj2Uba1Oli1E=
+			xUbOwlpaFeemGkSVIMjVwcvMWns=
 			</data>
 			<key>hash2</key>
 			<data>
-			kkzCFJe/jokmjIj0/knsAp13H83rOd3QwLlMdUCtT70=
+			xU6BI2i+Ts6vbWGoqKW1BDLYYUEwue0qIlBq6u1Ji6g=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lGHnT+vH2xwqibv2ahQEYG+I2uY=
+			cdh0G2SkkJSRlsjM/dcqoXayp+Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			EKcjNVUchZllGDRseFqYMB50sljStoAJjGLQKWIcwxM=
+			QXLGKGCS+VgJoqV6cVG/h4y5NG79c0QD+o4Lj2GWiPo=
 			</data>
 		</dict>
 		<key>www/assets/css/style.css</key>
@@ -1595,11 +1603,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nZXfd5mYpWrpRh5NJ4wIorZWGMQ=
+			xetGbZKfTgwD2o5aSsAFIDWHgq0=
 			</data>
 			<key>hash2</key>
 			<data>
-			np3RNjkg8wkf4TzudIonfzlnfUUTFGVWOyWFWgEJdJY=
+			BFv66eqcE+B76FMC0smjrmD2gvVcReklegrjvq/jHes=
 			</data>
 		</dict>
 		<key>www/favicon.ico</key>
@@ -1617,33 +1625,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Fhgej03mw1eGd4nmQ1bVIGEnC2U=
+			HwtUP8WNppJBxGotu9mUCuIDyiI=
 			</data>
 			<key>hash2</key>
 			<data>
-			RJ2LicYUK1uBeR16GmS4L/Yr/mKY1Jm5mmjpYPoenRE=
+			5fTlNLa9d2UKIse15XiTHbPDiMaohvL8Uw4pYMKap+I=
 			</data>
 		</dict>
 		<key>www/index.md</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			R6hixYEF2B/11cUnOXlPHp+vsUw=
+			wWknB0izF28Y2DtuwCSBCsni888=
 			</data>
 			<key>hash2</key>
 			<data>
-			U51vLAm4faJ9TQDZFrpmBHL5o+yFRHmmUliWxEL5KMs=
+			GTpEtKVHjs793aMwwh8/kpD93zQwFPe+AmmYv8CKJ/Y=
 			</data>
 		</dict>
 		<key>www/pit/index.html</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2vpwbYDBmTgdEw8B6mWhY4DeUnA=
+			VedO6mqW6PyVyBQpjufJ/C34U9Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			OkooqfT1o6OQI5PTLiioqZt5LFB73pgdiRbHJOqigSo=
+			A30Fe7/vtDAk2Jfqm/eHaiHE9JXHp9YHIj+trFUY+k0=
 			</data>
 		</dict>
 		<key>www/plugins/cordova-plugin-camera/www/Camera.js</key>
@@ -2064,6 +2072,17 @@
 			YSn19P0zRIG9MxdesT37iqYB1WqXVOFIXyjmnTn6foU=
 			</data>
 		</dict>
+		<key>www/plugins/cordova-plugin-sqlite-2/dist/sqlite-plugin.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			o0e7Yq9sXgcqy6ub/8CcOga7BTw=
+			</data>
+			<key>hash2</key>
+			<data>
+			bzrirIJ39jNyk9LoJ49xXMkadPtm4deOTBJDIes3G+Y=
+			</data>
+		</dict>
 		<key>www/plugins/cordova-plugin-wkwebview-engine/src/www/ios/ios-wkwebview-exec.js</key>
 		<dict>
 			<key>hash</key>
@@ -2145,22 +2164,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QTEIyGyy9SgFNV26eHRc2V16Shg=
+			5ydzsgUq+oPhzUcLC6w1ibzw1rM=
 			</data>
 			<key>hash2</key>
 			<data>
-			mTLh7SsoIZ5CYriReT3E7cbd4Z0y8kd9yXAhVtAE4m4=
+			Apz6ofxflOXkJSJNWwycVxgWCYiuHrBMkcx1BSaSOqY=
 			</data>
 		</dict>
 		<key>www/resources/js/pit.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ixze6sPi+Rrl6d8wqZJx1vCAdwY=
+			wI11PbeVAV7X6/v7JvyQjpqoQug=
 			</data>
 			<key>hash2</key>
 			<data>
-			so0rG0++9Q3rQG3QhG6x5pRT2kjKAIMEoYNE4Lhb1rA=
+			KvhRS/WxLYSQ0ZHw6hxfYJdsQobA7IWRtGRNvI1Y4n4=
 			</data>
 		</dict>
 		<key>www/resources/js/pouchdb-6.4.1.min.js</key>
@@ -2174,26 +2193,37 @@
 			/kIvesalgFwGX8Tx+zC4BoGbzRDNm/7c1bX573Y/9Io=
 			</data>
 		</dict>
+		<key>www/resources/js/pouchdb-cordova-sqlite.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			vILB/blQJ9SMexif5MsU/nlCpIU=
+			</data>
+			<key>hash2</key>
+			<data>
+			kuhTXspNzY3rdkRdVSXcyzpvrcjVHqPLxffrAPDDn4s=
+			</data>
+		</dict>
 		<key>www/resources/js/settings.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jnCg1mJzhtAqOCtw0YwX11F1AjY=
+			sfAVLzo+RctfLjctiZFdi1Z4ScI=
 			</data>
 			<key>hash2</key>
 			<data>
-			mAfbDt5kcSHyQ/BVtEYvIQPDnmdZ6GgpRTlMZKR5SAo=
+			1sCYW8MNcr6flwlbeu0S6ld7nOD+yU9fHAu/9Wk9vwo=
 			</data>
 		</dict>
 		<key>www/resources/js/sync.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+f7onkFgYLJPRkt4oBv4xJTh5GQ=
+			loeBZ+sgorDPhKg9U5lsyOjRvfA=
 			</data>
 			<key>hash2</key>
 			<data>
-			wtfoLLINwUJdR6pDB4SkPEIYHbHykC5d7kVt1VXLJpE=
+			PZ0Kua/20lazGXimFc3oUMv2gr2L0+CQ8nrb3kziZP0=
 			</data>
 		</dict>
 		<key>www/settings.md</key>
@@ -2211,11 +2241,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hiXLI7JApR9i77cG07W2I/sy84g=
+			RKUj5ewAQM6XBDs17FjJIRLK1vs=
 			</data>
 			<key>hash2</key>
 			<data>
-			TGMvs6gFLsk4ub4BQPQG1X40CMjJnYW9MFiTkkz/oV8=
+			Ux+uYfw3zp9qhX2aiz09Ep/6b2HJ343dJnIfJRzCebQ=
 			</data>
 		</dict>
 	</dict>

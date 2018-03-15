@@ -4,8 +4,13 @@ $(document).ready(function () {
         var scoutName = localStorage.getItem('scoutName');
 		var db;
 		if (window.cordova) {
-            db = new PouchDB(databaseName, {auto_compaction: true, adapter: 'cordova-sqlite'});
-		} else {
+            document.addEventListener('deviceready', function () {
+				console.log('SQLite plugin is installed?: ' + (!!window.sqlitePlugin));
+				db = new PouchDB(databaseName, {auto_compaction: true, adapter: 'cordova-sqlite'});
+				console.log(db.adapter);
+				console.log('SQLite plugin is installed?: ' + (!!window.sqlitePlugin));
+            });
+        } else {
 			db = new PouchDB(databaseName, {auto_compaction: true});
 		}
     } else {
