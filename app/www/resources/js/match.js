@@ -124,21 +124,22 @@
 		var matchNumber = $('#matchNumber').val();
 		var matchType = $('#matchType').val();
 		var startingPosition = $('input[name=startingPosition]:checked').val();
-		var teleopScaleCubes = $('#teleopScaleCubes').val();
-		var teleopSwitchCubes = $('#teleopSwitchCubes').val();
-		var teleopExchangeCubes = $('#teleopExchangeCubes').val();
-		var teleopOppSwitchCubes = $('#teleopOppSwitchCubes').val();
-		var teleopDroppedCubes = $('#teleopDroppedCubes').val();
+		var teleopScaleCubes = parseInt($('#teleopScaleCubes').val());
+		var teleopSwitchCubes = parseInt($('#teleopSwitchCubes').val());
+		var teleopExchangeCubes = parseInt($('#teleopExchangeCubes').val());
+		var teleopOppSwitchCubes = parseInt($('#teleopOppSwitchCubes').val());
+		var teleopDroppedCubes = parseInt($('#teleopDroppedCubes').val());
+		var successPercent = (teleopScaleCubes + teleopSwitchCubes + teleopOppSwitchCubes + teleopExchangeCubes) / (teleopScaleCubes + teleopSwitchCubes + teleopOppSwitchCubes + teleopExchangeCubes + teleopDroppedCubes) * 100;
 		var climbingType = $('#climbingType').val();
-		var speedRating = $('input[name=speedRating]:checked').val();
-		var stabilityRating = $('input[name=stabilityRating]:checked').val();
-		var skillRating = $('input[name=skillRating]:checked').val();
-		var defenceRating = $('input[name=defenceRating]:checked').val();
-		var autoCrossedBaseline = $('input[name=autoCrossedBaseline]:checked').val();
-		var autoSwitch = $('input[name=autoSwitch]:checked').val();
-		var autoScale = $('input[name=autoScale]:checked').val();
-		var anythingBreak = $('input[name=anythingBreak]:checked').val();
-		var robotDead = $('input[name=robotDead]:checked').val();
+		var speedRating = parseInt($('input[name=speedRating]:checked').val());
+		var stabilityRating = parseInt($('input[name=stabilityRating]:checked').val());
+		var skillRating = parseInt($('input[name=skillRating]:checked').val());
+		var defenceRating = parseInt($('input[name=defenceRating]:checked').val());
+		var autoCrossedBaseline = parseInt($('input[name=autoCrossedBaseline]:checked').val());
+		var autoSwitch = parseInt($('input[name=autoSwitch]:checked').val());
+		var autoScale = parseInt($('input[name=autoScale]:checked').val());
+		var anythingBreak = parseInt($('input[name=anythingBreak]:checked').val());
+		var robotDead = parseInt($('input[name=robotDead]:checked').val());
 		var commentSection = $('#commentSection').val();
 
 		var id = matchType + matchNumber + "_" + teamNumber
@@ -154,6 +155,7 @@
 			"teleopOpponentSwitchCubes": teleopOppSwitchCubes,
 			"teleopExchangeCubes": teleopExchangeCubes,
 			"teleopDroppedCubes": teleopDroppedCubes,
+			"successPercent": successPercent,
 			"climbingType": climbingType,
 			"speedRating": speedRating || "0",
 			"stabilityRating": stabilityRating || "0",
@@ -188,6 +190,7 @@
 							  "teleopOpponentSwitchCubes": teleopOppSwitchCubes,
 							  "teleopExchangeCubes": teleopExchangeCubes,
 							  "teleopDroppedCubes": teleopDroppedCubes,
+							  "successPercent": successPercent,
 							  "climbingType": climbingType,
 							  "speedRating": speedRating || "0",
 							  "stabilityRating": stabilityRating || "0",
