@@ -146,10 +146,10 @@
 		var doc = {
 			"_id": id,
 			"scoutName": scoutName,
-			"startingPosition": startingPosition,
-			"autoCrossedBaseline": autoCrossedBaseline,
-			"autoSwitchCube": autoSwitch,
-			"autoScaleCube": autoScale,
+			"startingPosition": startingPosition || "",
+			"autoCrossedBaseline": autoCrossedBaseline || "",
+			"autoSwitchCube": autoSwitch || "",
+			"autoScaleCube": autoScale || "",
 			"teleopScaleCubes": teleopScaleCubes,
 			"teleopSwitchCubes": teleopSwitchCubes,
 			"teleopOpponentSwitchCubes": teleopOppSwitchCubes,
@@ -161,9 +161,9 @@
 			"stabilityRating": stabilityRating || "0",
 			"skillRating": skillRating || "0",
 			"defenceRating": defenceRating || "0",
-			"anythingBreak": anythingBreak,
-			"robotDead": robotDead,
-			"notesAndComments": commentSection,
+			"anythingBreak": anythingBreak || "",
+			"robotDead": robotDead || "",
+			"notesAndComments": commentSection || "",
 		};
 		if (localStorage.getItem('settingsCheck') == 1) {
 			if (matchType == 'Choose...' | matchNumber == '' | teamNumber == '') {
@@ -181,10 +181,10 @@
 							  _id: id,
 							  _rev: doc._rev,
 							  "scoutName": scoutName,
-							  "startingPosition": startingPosition,
-							  "autoCrossedBaseline": autoCrossedBaseline,
-							  "autoSwitchCube": autoSwitch,
-							  "autoScaleCube": autoScale,
+							  "startingPosition": startingPosition || "",
+							  "autoCrossedBaseline": autoCrossedBaseline || "",
+							  "autoSwitchCube": autoSwitch || "",
+							  "autoScaleCube": autoScale || "",
 							  "teleopScaleCubes": teleopScaleCubes,
 							  "teleopSwitchCubes": teleopSwitchCubes,
 							  "teleopOpponentSwitchCubes": teleopOppSwitchCubes,
@@ -196,9 +196,9 @@
 							  "stabilityRating": stabilityRating || "0",
 							  "skillRating": skillRating || "0",
 							  "defenceRating": defenceRating || "0",
-							  "anythingBreak": anythingBreak,
-							  "robotDead": robotDead,
-							  "notesAndComments": commentSection,
+							  "anythingBreak": anythingBreak || "",
+							  "robotDead": robotDead || "",
+							  "notesAndComments": commentSection || "",
 							  });
 						  }).then(function() {
 							  window.alert("Edited!");

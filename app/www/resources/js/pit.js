@@ -213,15 +213,15 @@ $(document).ready(function () {
                 }
             },
             "scoutName": scoutName,
-            "manipulatorType": manipulatorType,
-            "placeCubes": placeCubes,
-            "robotSize": robotSize,
+            "manipulatorType": manipulatorType || "",
+            "placeCubes": placeCubes || "",
+            "robotSize": robotSize || "",
             "robotAppearance": robotAppearance || "0",
             "pitSkill": pitSkill || "0",
-            "climberType": robotClimber,
-            "robotDone": robotDone,
-            "robotBroken": robotBroken,
-            "notesAndComments": commentSection,
+            "climberType": robotClimber || "",
+            "robotDone": robotDone || "",
+            "robotBroken": robotBroken || "",
+            "notesAndComments": commentSection || "",
         };
         if (localStorage.getItem('settingsCheck') == 1) {
             if (teamNumber == '') {
@@ -276,15 +276,15 @@ $(document).ready(function () {
                                     }
                                 },
                                 "scoutName": scoutName,
-                                "manipulatorType": manipulatorType,
-                                "placeCubes": placeCubes,
-                                "robotSize": robotSize,
+                                "manipulatorType": manipulatorType || "",
+                                "placeCubes": placeCubes || "",
+                                "robotSize": robotSize || "",
                                 "robotAppearance": robotAppearance || "0",
                                 "pitSkill": pitSkill || "0",
-                                "climberType": robotClimber,
-                                "robotDone": robotDone,
-                                "robotBroken": robotBroken,
-                                "notesAndComments": commentSection,
+                                "climberType": robotClimber || "",
+                                "robotDone": robotDone || "",
+                                "robotBroken": robotBroken || "",
+                                "notesAndComments": commentSection || "",
                             });
                         }).then(function () {
                             window.alert("Edited!");
