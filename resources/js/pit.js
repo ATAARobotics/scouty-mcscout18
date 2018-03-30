@@ -179,14 +179,14 @@ $(document).ready(function () {
     $('#Submit').on('click', function (e) {
         var teamNumber = $('#teamNumber').val();
         var id = "pit_" + teamNumber
-        var commentSection = $('#commentSection').val();
-        var manipulatorType = $('input[name=manipulatorType]:checked').val();
-        var robotSize = $('input[name=robotSize]:checked').val();
-        var robotAppearance = $('input[name=robotAppearance]:checked').val();
-        var pitSkill = $('input[name=pitSkill]:checked').val();
-        var robotClimber = $('input[name=robotClimber]:checked').val();
-        var robotDone = $('input[name=robotDone]:checked').val();
-        var robotBroken = $('input[name=robotBroken]:checked').val();
+        var commentSection = $('#commentSection').val() || "";
+        var manipulatorType = $('input[name=manipulatorType]:checked').val() || "";
+        var robotSize = $('input[name=robotSize]:checked').val() || "";
+        var robotAppearance = parseInt($('input[name=robotAppearance]:checked').val() || null);
+        var pitSkill = parseInt($('input[name=pitSkill]:checked').val() || null);
+        var robotClimber = $('input[name=robotClimber]:checked').val() || "";
+        var robotDone = parseInt($('input[name=robotDone]:checked').val() || "");
+        var robotBroken = parseInt($('input[name=robotBroken]:checked').val() || "");
         var placeCubes = getPlaceCubes();
         var doc = {
             "_id": id,
@@ -213,15 +213,15 @@ $(document).ready(function () {
                 }
             },
             "scoutName": scoutName,
-            "manipulatorType": manipulatorType || "",
-            "placeCubes": placeCubes || "",
-            "robotSize": robotSize || "",
-            "robotAppearance": robotAppearance || "0",
-            "pitSkill": pitSkill || "0",
-            "climberType": robotClimber || "",
-            "robotDone": robotDone || "",
-            "robotBroken": robotBroken || "",
-            "notesAndComments": commentSection || "",
+            "manipulatorType": manipulatorType,
+            "placeCubes": placeCubes,
+            "robotSize": robotSize,
+            "robotAppearance": robotAppearance,
+            "pitSkill": pitSkill,
+            "climberType": robotClimber,
+            "robotDone": robotDone,
+            "robotBroken": robotBroken,
+            "notesAndComments": commentSection,
         };
         if (localStorage.getItem('settingsCheck') == 1) {
             if (teamNumber == '') {
@@ -276,15 +276,15 @@ $(document).ready(function () {
                                     }
                                 },
                                 "scoutName": scoutName,
-                                "manipulatorType": manipulatorType || "",
-                                "placeCubes": placeCubes || "",
-                                "robotSize": robotSize || "",
-                                "robotAppearance": robotAppearance || "0",
-                                "pitSkill": pitSkill || "0",
-                                "climberType": robotClimber || "",
-                                "robotDone": robotDone || "",
-                                "robotBroken": robotBroken || "",
-                                "notesAndComments": commentSection || "",
+                                "manipulatorType": manipulatorType,
+                                "placeCubes": placeCubes,
+                                "robotSize": robotSize,
+                                "robotAppearance": robotAppearance,
+                                "pitSkill": pitSkill,
+                                "climberType": robotClimber,
+                                "robotDone": robotDone,
+                                "robotBroken": robotBroken,
+                                "notesAndComments": commentSection,
                             });
                         }).then(function () {
                             window.alert("Edited!");

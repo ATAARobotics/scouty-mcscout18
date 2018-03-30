@@ -123,7 +123,7 @@
 		var teamNumber = $('#teamNumber').val();
 		var matchNumber = $('#matchNumber').val();
 		var matchType = $('#matchType').val();
-		var startingPosition = $('input[name=startingPosition]:checked').val();
+		var startingPosition = $('input[name=startingPosition]:checked').val() || "";
 		var teleopScaleCubes = parseInt($('#teleopScaleCubes').val());
 		var teleopSwitchCubes = parseInt($('#teleopSwitchCubes').val());
 		var teleopExchangeCubes = parseInt($('#teleopExchangeCubes').val());
@@ -131,25 +131,25 @@
 		var teleopDroppedCubes = parseInt($('#teleopDroppedCubes').val());
 		var successPercent = (teleopScaleCubes + teleopSwitchCubes + teleopOppSwitchCubes + teleopExchangeCubes) / (teleopScaleCubes + teleopSwitchCubes + teleopOppSwitchCubes + teleopExchangeCubes + teleopDroppedCubes) * 100;
 		var climbingType = $('#climbingType').val();
-		var speedRating = parseInt($('input[name=speedRating]:checked').val());
-		var stabilityRating = parseInt($('input[name=stabilityRating]:checked').val());
-		var skillRating = parseInt($('input[name=skillRating]:checked').val());
-		var defenceRating = parseInt($('input[name=defenceRating]:checked').val());
-		var autoCrossedBaseline = parseInt($('input[name=autoCrossedBaseline]:checked').val());
-		var autoSwitch = parseInt($('input[name=autoSwitch]:checked').val());
-		var autoScale = parseInt($('input[name=autoScale]:checked').val());
-		var anythingBreak = parseInt($('input[name=anythingBreak]:checked').val());
-		var robotDead = parseInt($('input[name=robotDead]:checked').val());
-		var commentSection = $('#commentSection').val();
+		var speedRating = parseInt($('input[name=speedRating]:checked').val() || "0");
+		var stabilityRating = parseInt($('input[name=stabilityRating]:checked').val() || "0");
+		var skillRating = parseInt($('input[name=skillRating]:checked').val() || "0");
+		var defenceRating = parseInt($('input[name=defenceRating]:checked').val() || "0");
+		var autoCrossedBaseline = parseInt($('input[name=autoCrossedBaseline]:checked').val() || null);
+		var autoSwitch = parseInt($('input[name=autoSwitch]:checked').val() || null);
+		var autoScale = parseInt($('input[name=autoScale]:checked').val() || null);
+		var anythingBreak = parseInt($('input[name=anythingBreak]:checked').val() || null);
+		var robotDead = parseInt($('input[name=robotDead]:checked').val() || null);
+		var commentSection = $('#commentSection').val() || "";
 
 		var id = matchType + matchNumber + "_" + teamNumber
 		var doc = {
 			"_id": id,
 			"scoutName": scoutName,
-			"startingPosition": startingPosition || "",
-			"autoCrossedBaseline": autoCrossedBaseline || "",
-			"autoSwitchCube": autoSwitch || "",
-			"autoScaleCube": autoScale || "",
+			"startingPosition": startingPosition,
+			"autoCrossedBaseline": autoCrossedBaseline,
+			"autoSwitchCube": autoSwitch,
+			"autoScaleCube": autoScale,
 			"teleopScaleCubes": teleopScaleCubes,
 			"teleopSwitchCubes": teleopSwitchCubes,
 			"teleopOpponentSwitchCubes": teleopOppSwitchCubes,
@@ -157,13 +157,13 @@
 			"teleopDroppedCubes": teleopDroppedCubes,
 			"successPercent": successPercent,
 			"climbingType": climbingType,
-			"speedRating": speedRating || "0",
-			"stabilityRating": stabilityRating || "0",
-			"skillRating": skillRating || "0",
-			"defenceRating": defenceRating || "0",
-			"anythingBreak": anythingBreak || "",
-			"robotDead": robotDead || "",
-			"notesAndComments": commentSection || "",
+			"speedRating": speedRating,
+			"stabilityRating": stabilityRating,
+			"skillRating": skillRating,
+			"defenceRating": defenceRating,
+			"anythingBreak": anythingBreak,
+			"robotDead": robotDead,
+			"notesAndComments": commentSection,
 		};
 		if (localStorage.getItem('settingsCheck') == 1) {
 			if (matchType == 'Choose...' | matchNumber == '' | teamNumber == '') {
@@ -181,10 +181,10 @@
 							  _id: id,
 							  _rev: doc._rev,
 							  "scoutName": scoutName,
-							  "startingPosition": startingPosition || "",
-							  "autoCrossedBaseline": autoCrossedBaseline || "",
-							  "autoSwitchCube": autoSwitch || "",
-							  "autoScaleCube": autoScale || "",
+							  "startingPosition": startingPosition,
+							  "autoCrossedBaseline": autoCrossedBaseline,
+							  "autoSwitchCube": autoSwitch,
+							  "autoScaleCube": autoScale,
 							  "teleopScaleCubes": teleopScaleCubes,
 							  "teleopSwitchCubes": teleopSwitchCubes,
 							  "teleopOpponentSwitchCubes": teleopOppSwitchCubes,
@@ -192,13 +192,13 @@
 							  "teleopDroppedCubes": teleopDroppedCubes,
 							  "successPercent": successPercent,
 							  "climbingType": climbingType,
-							  "speedRating": speedRating || "0",
-							  "stabilityRating": stabilityRating || "0",
-							  "skillRating": skillRating || "0",
-							  "defenceRating": defenceRating || "0",
-							  "anythingBreak": anythingBreak || "",
-							  "robotDead": robotDead || "",
-							  "notesAndComments": commentSection || "",
+							  "speedRating": speedRating,
+							  "stabilityRating": stabilityRating,
+							  "skillRating": skillRating,
+							  "defenceRating": defenceRating,
+							  "anythingBreak": anythingBreak,
+							  "robotDead": robotDead,
+							  "notesAndComments": commentSection,
 							  });
 						  }).then(function() {
 							  window.alert("Edited!");
