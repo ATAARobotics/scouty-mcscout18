@@ -1,4 +1,4 @@
-ca.fourthreethreefour.scoutymcscout18
+ca.fourthreethreefourjoelgmail.scoutymcscout18joelgmail
 int array xwalk_resources_list 0x7f010000
 int attr buttonColor 0x7f020000
 int attr buttonRaised 0x7f020001

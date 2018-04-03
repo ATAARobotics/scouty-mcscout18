@@ -4,10 +4,14 @@
 		var scoutName = localStorage.getItem('scoutName');
 		var db;
 		if (window.cordova) {
-			db = new PouchDB(databaseName, {auto_compaction: true, adapter: 'cordova-sqlite'});
-			console.log("cordova")
+			document.addEventListener('deviceready', function () {
+				console.log('SQLite plugin is installed?: ' + (!!window.sqlitePlugin));
+				db = new PouchDB(databaseName, {adapter: 'cordova-sqlite'});
+				console.log(db.adapter);
+				console.log('SQLite plugin is installed?: ' + (!!window.sqlitePlugin));
+			});
 		} else {
-			db = new PouchDB(databaseName, {auto_compaction: true});
+			db = new PouchDB(databaseName);
 		}
 	} else {
         window.alert("Check Settings!")
@@ -26,9 +30,6 @@
 			$('#teleopExchangeCubes').val('0');
 			$('#teleopOppSwitchCubes').val('0');
 			$('#teleopDroppedCubes').val('0');
-			document.getElementById("cubeCycleSeconds").innerHTML = '00';
-			document.getElementById("cubeCycleTenths").innerHTML = '00';
-			$('#' + $('input[name=allianceColor]:checked').attr("id")).removeClass('active');
 			$('#' + $('input[name=startingPosition]:checked').attr("id")).removeClass('active');
 			$('#' + $('input[name=autoCrossedBaseline]:checked').attr("id")).removeClass('active');
 			$('#' + $('input[name=autoSwitch]:checked').attr("id")).removeClass('active');
@@ -41,7 +42,6 @@
 			$('#' + $('input[name=robotDead]:checked').attr("id")).removeClass('active');  
 			$('input[type=checkbox]').attr('checked',false);
 			$('input[type=radio]').attr('checked',false);
-        	var allianceColor = doc.allianceColor;
         	var startingPosition = doc.startingPosition;
         	var teleopScaleCubes = doc.teleopScaleCubes;
         	var teleopSwitchCubes = doc.teleopSwitchCubes;
@@ -50,7 +50,6 @@
 			var teleopDroppedCubes = doc.teleopDroppedCubes;
         	var climbingType = doc.climbingType;
         	var speedRating = doc.speedRating
-        	var cubeCycleTime = doc.cubeCycleTime.split(".");
         	var stabilityRating = doc.stabilityRating;
         	var skillRating = doc.skillRating;
         	var defenceRating = doc.defenceRating;
@@ -67,10 +66,6 @@
         	$('#teleopExchangeCubes').val(teleopExchangeCubes);
 			$('#teleopOppSwitchCubes').val(teleopOppSwitchCubes);
 			$('#teleopDroppedCubes').val(teleopDroppedCubes);
-        	document.getElementById("cubeCycleSeconds").innerHTML = cubeCycleTime[0];
-        	document.getElementById("cubeCycleTenths").innerHTML = cubeCycleTime[1];
-        	$("input[name=allianceColor][value=" + allianceColor + "]").prop('checked', true);
-        	$('#' + $('input[name=allianceColor]:checked').attr("id")).addClass('active');
         	$("input[name=startingPosition][value=" + startingPosition + "]").prop('checked', true);
         	$('#' + $('input[name=startingPosition]:checked').attr("id")).addClass('active');
         	$("input[name=autoCrossedBaseline][value=" + autoCrossedBaseline + "]").prop('checked', true);
@@ -101,9 +96,6 @@
                 $('#teleopExchangeCubes').val('0');
                 $('#teleopOppSwitchCubes').val('0');
 				$('#teleopDroppedCubes').val('0');
-				document.getElementById("cubeCycleSeconds").innerHTML = '00';
-                document.getElementById("cubeCycleTenths").innerHTML = '00';
-                $('#' + $('input[name=allianceColor]:checked').attr("id")).removeClass('active');
                 $('#' + $('input[name=startingPosition]:checked').attr("id")).removeClass('active');
                 $('#' + $('input[name=autoCrossedBaseline]:checked').attr("id")).removeClass('active');
                 $('#' + $('input[name=autoSwitch]:checked').attr("id")).removeClass('active');
@@ -131,31 +123,29 @@
 		var teamNumber = $('#teamNumber').val();
 		var matchNumber = $('#matchNumber').val();
 		var matchType = $('#matchType').val();
-		var allianceColor = $('input[name=allianceColor]:checked').val();
-		var startingPosition = $('input[name=startingPosition]:checked').val();
-		var teleopScaleCubes = $('#teleopScaleCubes').val();
-		var teleopSwitchCubes = $('#teleopSwitchCubes').val();
-		var teleopExchangeCubes = $('#teleopExchangeCubes').val();
-		var teleopOppSwitchCubes = $('#teleopOppSwitchCubes').val();
-		var teleopDroppedCubes = $('#teleopDroppedCubes').val();
+		var startingPosition = $('input[name=startingPosition]:checked').val() || "";
+		var teleopScaleCubes = parseInt($('#teleopScaleCubes').val());
+		var teleopSwitchCubes = parseInt($('#teleopSwitchCubes').val());
+		var teleopExchangeCubes = parseInt($('#teleopExchangeCubes').val());
+		var teleopOppSwitchCubes = parseInt($('#teleopOppSwitchCubes').val());
+		var teleopDroppedCubes = parseInt($('#teleopDroppedCubes').val());
+		var successPercent = (teleopScaleCubes + teleopSwitchCubes + teleopOppSwitchCubes + teleopExchangeCubes) / (teleopScaleCubes + teleopSwitchCubes + teleopOppSwitchCubes + teleopExchangeCubes + teleopDroppedCubes) * 100;
 		var climbingType = $('#climbingType').val();
-		var speedRating = $('input[name=speedRating]:checked').val();
-		var cubeCycleTime = cubeCycleSeconds.innerHTML + '.' + cubeCycleTenths.innerHTML
-		var stabilityRating = $('input[name=stabilityRating]:checked').val();
-		var skillRating = $('input[name=skillRating]:checked').val();
-		var defenceRating = $('input[name=defenceRating]:checked').val();
-		var autoCrossedBaseline = $('input[name=autoCrossedBaseline]:checked').val();
-		var autoSwitch = $('input[name=autoSwitch]:checked').val();
-		var autoScale = $('input[name=autoScale]:checked').val();
-		var anythingBreak = $('input[name=anythingBreak]:checked').val();
-		var robotDead = $('input[name=robotDead]:checked').val();
-		var commentSection = $('#commentSection').val();
+		var speedRating = parseInt($('input[name=speedRating]:checked').val() || "0");
+		var stabilityRating = parseInt($('input[name=stabilityRating]:checked').val() || "0");
+		var skillRating = parseInt($('input[name=skillRating]:checked').val() || "0");
+		var defenceRating = parseInt($('input[name=defenceRating]:checked').val() || "0");
+		var autoCrossedBaseline = parseInt($('input[name=autoCrossedBaseline]:checked').val() || null);
+		var autoSwitch = parseInt($('input[name=autoSwitch]:checked').val() || null);
+		var autoScale = parseInt($('input[name=autoScale]:checked').val() || null);
+		var anythingBreak = parseInt($('input[name=anythingBreak]:checked').val() || null);
+		var robotDead = parseInt($('input[name=robotDead]:checked').val() || null);
+		var commentSection = $('#commentSection').val() || "";
 
 		var id = matchType + matchNumber + "_" + teamNumber
 		var doc = {
 			"_id": id,
 			"scoutName": scoutName,
-			"allianceColor": allianceColor,
 			"startingPosition": startingPosition,
 			"autoCrossedBaseline": autoCrossedBaseline,
 			"autoSwitchCube": autoSwitch,
@@ -165,9 +155,9 @@
 			"teleopOpponentSwitchCubes": teleopOppSwitchCubes,
 			"teleopExchangeCubes": teleopExchangeCubes,
 			"teleopDroppedCubes": teleopDroppedCubes,
+			"successPercent": successPercent,
 			"climbingType": climbingType,
 			"speedRating": speedRating,
-			"cubeCycleTime": cubeCycleTime,
 			"stabilityRating": stabilityRating,
 			"skillRating": skillRating,
 			"defenceRating": defenceRating,
@@ -186,9 +176,40 @@
 				}).catch(function (err) {
 					if (err.name === 'conflict') {
 						// conflict!
-						window.alert("Match already submitted! Use the edit button.");
+						db.get(id).then(function(doc) {
+							return db.put({
+							  _id: id,
+							  _rev: doc._rev,
+							  "scoutName": scoutName,
+							  "startingPosition": startingPosition,
+							  "autoCrossedBaseline": autoCrossedBaseline,
+							  "autoSwitchCube": autoSwitch,
+							  "autoScaleCube": autoScale,
+							  "teleopScaleCubes": teleopScaleCubes,
+							  "teleopSwitchCubes": teleopSwitchCubes,
+							  "teleopOpponentSwitchCubes": teleopOppSwitchCubes,
+							  "teleopExchangeCubes": teleopExchangeCubes,
+							  "teleopDroppedCubes": teleopDroppedCubes,
+							  "successPercent": successPercent,
+							  "climbingType": climbingType,
+							  "speedRating": speedRating,
+							  "stabilityRating": stabilityRating,
+							  "skillRating": skillRating,
+							  "defenceRating": defenceRating,
+							  "anythingBreak": anythingBreak,
+							  "robotDead": robotDead,
+							  "notesAndComments": commentSection,
+							  });
+						  }).then(function() {
+							  window.alert("Edited!");
+							  window.location.href = './index.html';
+						  }).catch(function (err) {
+								console.log(err);
+								window.alert("Error!");
+						  });        
 					} else {
 						// some other error
+						console.log(err);
 						window.alert("Error!");
 					}
 				});
@@ -197,78 +218,6 @@
 			window.alert("Settings are incorrect!");
 		}
 	});
-	$('#Edit').on('click', function (e) {
-		var teamNumber = $('#teamNumber').val();
-		var matchNumber = $('#matchNumber').val();
-		var matchType = $('#matchType').val();
-		var allianceColor = $('input[name=allianceColor]:checked').val();
-		var startingPosition = $('input[name=startingPosition]:checked').val();
-		var teleopScaleCubes = $('#teleopScaleCubes').val();
-		var teleopSwitchCubes = $('#teleopSwitchCubes').val();
-		var teleopExchangeCubes = $('#teleopExchangeCubes').val();
-		var teleopOppSwitchCubes = $('#teleopOppSwitchCubes').val();
-		var teleopDroppedCubes = $('#teleopDroppedCubes').val();
-		var climbingType = $('#climbingType').val();
-		var speedRating = $('input[name=speedRating]:checked').val();
-		var cubeCycleTime = cubeCycleSeconds.innerHTML + '.' + cubeCycleTenths.innerHTML
-		var stabilityRating = $('input[name=stabilityRating]:checked').val();
-		var skillRating = $('input[name=skillRating]:checked').val();
-		var defenceRating = $('input[name=defenceRating]:checked').val();
-		var autoCrossedBaseline = $('input[name=autoCrossedBaseline]:checked').val();
-		var autoSwitch = $('input[name=autoSwitch]:checked').val();
-		var autoScale = $('input[name=autoScale]:checked').val();
-		var anythingBreak = $('input[name=anythingBreak]:checked').val();
-		var robotDead = $('input[name=robotDead]:checked').val();
-		var commentSection = $('#commentSection').val();
-	
-		var id = matchType + matchNumber + "_" + teamNumber
-	
-		if (localStorage.getItem('settingsCheck') == 1) {
-			if (teamNumber == '') {
-				window.alert("Input a team number!");
-			} else {
-				db.get(id).then(function(doc) {
-				  return db.put({
-					_id: id,
-					_rev: doc._rev,
-					"scoutName": scoutName,
-					"scoutName": scoutName,
-					"allianceColor": allianceColor,
-					"startingPosition": startingPosition,
-					"autoCrossedBaseline": autoCrossedBaseline,
-					"autoSwitchCube": autoSwitch,
-					"autoScaleCube": autoScale,
-					"teleopScaleCubes": teleopScaleCubes,
-					"teleopSwitchCubes": teleopSwitchCubes,
-					"teleopOpponentSwitchCubes": teleopOppSwitchCubes,
-					"teleopExchangeCubes": teleopExchangeCubes,
-					"teleopDroppedCubes": teleopDroppedCubes,
-					"climbingType": climbingType,
-					"speedRating": speedRating,
-					"cubeCycleTime": cubeCycleTime,
-					"stabilityRating": stabilityRating,
-					"skillRating": skillRating,
-					"defenceRating": defenceRating,
-					"anythingBreak": anythingBreak,
-					"robotDead": robotDead,
-					"notesAndComments": commentSection,
-					});
-				}).then(function() {
-					window.alert("Edited!");
-					window.location.href = './index.html';
-				}).catch(function (err) {
-					if (err.name == 'not_found'){
-						window.alert("Match data not submitted yet, nothing to edit. Use the submit button.");
-					} else {
-						console.log(err);
-						window.alert("Error!");
-					}
-				});        
-			}
-		} else {
-			window.alert("Settings are incorrect!");
-		}
-	});	
 });
 
 function modifyScale_qty(val) {
@@ -325,65 +274,4 @@ function modifyDropped_qty(val) {
 
 	document.getElementById('teleopDroppedCubes').value = new_qty;
 	return new_qty;
-}
-
-window.onload = function () {
-
-	var seconds = 00;
-	var tenths = 00;
-	var cubeCycleTenths = document.getElementById("cubeCycleTenths");
-	var cubeCycleSeconds = document.getElementById("cubeCycleSeconds");
-	var cubeTimerStart = document.getElementById('cubeTimerStart');
-	var cubeTimerStop = document.getElementById('cubeTimerStop');
-	var cubeTimerReset = document.getElementById('cubeTimerReset');
-	var Interval;
-
-	cubeTimerStart.onclick = function () {
-		clearInterval(Interval);
-		Interval = setInterval(startTimer, 10);
-		tenths = cubeCycleTenths.innerHTML;
-		seconds = cubeCycleSeconds.innerHTML;
-	}
-
-	cubeTimerStop.onclick = function () {
-		clearInterval(Interval);
-	}
-
-
-	cubeTimerReset.onclick = function () {
-		clearInterval(Interval);
-		tenths = "00";
-		seconds = "00";
-		cubeCycleTenths.innerHTML = tenths;
-		cubeCycleSeconds.innerHTML = seconds;
-	}
-
-
-
-	function startTimer() {
-		tenths++;
-
-		if (tenths < 9) {
-			cubeCycleTenths.innerHTML = "0" + tenths;
-		}
-
-		if (tenths > 9) {
-			cubeCycleTenths.innerHTML = tenths;
-
-		}
-
-		if (tenths > 99) {
-			seconds++;
-			cubeCycleSeconds.innerHTML = "0" + seconds;
-			tenths = 0;
-			cubeCycleTenths.innerHTML = "0" + 0;
-		}
-
-		if (seconds > 9) {
-			cubeCycleSeconds.innerHTML = seconds;
-		}
-
-	}
-
-
 }

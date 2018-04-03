@@ -32,5 +32,6 @@ files: |
 		</div>
 		<button id="Save" class="btn btn-success" style="margin-right:15px; margin-top:15px; margin-bottom: 15px" type="button">Save</button>
 		<button id="Delete" class="btn btn-danger" type="button" style="margin-top:15px; margin-bottom: 15px">Delete Local Database</button>
+		<p>Calgary v1</p>
 	</form>
 </div>

@@ -6,12 +6,12 @@ $(document).ready(function () {
         if (window.cordova) {
             document.addEventListener('deviceready', function () {
                 console.log('SQLite plugin is installed?: ' + (!!window.sqlitePlugin));
-                db = new PouchDB(databaseName, { auto_compaction: true, adapter: 'cordova-sqlite' });
+                db = new PouchDB(databaseName, { adapter: 'cordova-sqlite' });
                 console.log(db.adapter);
                 console.log('SQLite plugin is installed?: ' + (!!window.sqlitePlugin));
             });
         } else {
-            db = new PouchDB(databaseName, { auto_compaction: true });
+            db = new PouchDB(databaseName);
         }
     } else {
         window.alert("Check Settings!")

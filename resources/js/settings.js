@@ -90,9 +90,9 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     var databaseNameSet = document.getElementById("databaseName");
-    databaseNameSet.value = localStorage.getItem('databaseName') || "scouting-victoria";
+    databaseNameSet.value = localStorage.getItem('databaseName') || "abca2018";
     var serverIpSet = document.getElementById("serverIp");
-    serverIpSet.value = localStorage.getItem('serverIp') || "35.230.125.220";
+    serverIpSet.value = localStorage.getItem('serverIp');
     var scoutNameSet = document.getElementById("scoutName");
     scoutNameSet.value = localStorage.getItem('scoutName');
     var serverUsernameSet = document.getElementById("serverUsername");

@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $('#Delete').on('click', function (e) {
         var databaseName = localStorage.getItem('databaseName');
-        var localdb =  new PouchDB(databaseName);
+        var localdb = new PouchDB(databaseName);
         localdb.destroy();
         window.alert("Local database deleted!");
     });
@@ -14,30 +14,19 @@ $(document).ready(function () {
         var scoutName = $('#scoutName').val();
         var serverUsername = $('#serverUsername').val();
         var serverPassword = $('#serverPassword').val();
-
-        $.ajax({
-            xhrFields: {
-                withCredentials: true
-            },
-            headers: {
-                'Authorization': 'Basic ' + btoa(serverUsername + ":" + serverPassword)
-            },
-            url: "http://" + serverIp + ":5984/" + databaseName,
-            type: "HEAD",
-            timeout: 5000,
-            statusCode: {
-                200: function (response) {
-                    localStorage.setItem('databaseName', databaseName);
-                    localStorage.setItem('serverIp', serverIp);
-                    localStorage.setItem('settingsCheck', '1');
-                    localStorage.setItem('scoutName', scoutName);
-                    localStorage.setItem('serverUsername', serverUsername);
-                    localStorage.setItem('serverPassword', serverPassword);
-                    window.alert("Settings Saved!");
-                    window.location.href = '../index.html';
+        if (scoutName != "" && databaseName != "") {
+            $.ajax({
+                xhrFields: {
+                    withCredentials: true
                 },
-                404: function (response) {
-                    if (confirm("Server ip or database name is incorrect! Check server ip and database name! Press OK to save these settings anyway. Make sure they are correct!")) {
+                headers: {
+                    'Authorization': 'Basic ' + btoa(serverUsername + ":" + serverPassword)
+                },
+                url: "http://" + serverIp + ":5984/" + databaseName,
+                type: "HEAD",
+                timeout: 5000,
+                statusCode: {
+                    200: function (response) {
                         localStorage.setItem('databaseName', databaseName);
                         localStorage.setItem('serverIp', serverIp);
                         localStorage.setItem('settingsCheck', '1');
@@ -46,46 +35,62 @@ $(document).ready(function () {
                         localStorage.setItem('serverPassword', serverPassword);
                         window.alert("Settings Saved!");
                         window.location.href = '../index.html';
-                    } else {
-                        localStorage.setItem('serverIp', 'incorrect');
-                        localStorage.setItem('databaseName', 'incorrect');
-                        localStorage.setItem('scoutName', scoutName);
-                        localStorage.setItem('serverUsername', '');
-                        localStorage.setItem('serverPassword', '');
-                        localStorage.setItem('settingsCheck', '0');
-                    }
-                },
-                401: function (response) {
-                    window.alert("Incorrect username or password!");
-                },
-                0: function (response) {
-                    if (confirm("Server ip or database name is incorrect! Check internet connection, server ip and database name! Press OK to save these settings anyway. Make sure they are correct!")) {
-                        localStorage.setItem('databaseName', databaseName);
-                        localStorage.setItem('serverIp', serverIp);
-                        localStorage.setItem('settingsCheck', '1');
-                        localStorage.setItem('scoutName', scoutName);
-                        localStorage.setItem('serverUsername', serverUsername);
-                        localStorage.setItem('serverPassword', serverPassword);
-                        window.alert("Settings Saved!");
-                        window.location.href = '../index.html';
-                    } else {
-                        localStorage.setItem('serverIp', 'incorrect');
-                        localStorage.setItem('databaseName', 'incorrect');
-                        localStorage.setItem('scoutName', scoutName);
-                        localStorage.setItem('serverUsername', '');
-                        localStorage.setItem('serverPassword', '');
-                        localStorage.setItem('settingsCheck', '0');
+                    },
+                    404: function (response) {
+                        if (confirm("Server ip or database name is incorrect! Check server ip and database name! Press OK to save these settings anyway. Make sure they are correct!")) {
+                            localStorage.setItem('databaseName', databaseName);
+                            localStorage.setItem('serverIp', serverIp);
+                            localStorage.setItem('settingsCheck', '1');
+                            localStorage.setItem('scoutName', scoutName);
+                            localStorage.setItem('serverUsername', serverUsername);
+                            localStorage.setItem('serverPassword', serverPassword);
+                            window.alert("Settings Saved!");
+                            window.location.href = '../index.html';
+                        } else {
+                            localStorage.setItem('serverIp', 'incorrect');
+                            localStorage.setItem('databaseName', 'incorrect');
+                            localStorage.setItem('scoutName', scoutName);
+                            localStorage.setItem('serverUsername', '');
+                            localStorage.setItem('serverPassword', '');
+                            localStorage.setItem('settingsCheck', '0');
+                        }
+                    },
+                    401: function (response) {
+                        window.alert("Incorrect username or password!");
+                    },
+                    0: function (response) {
+                        if (confirm("Server ip or database name is incorrect! Check internet connection, server ip and database name! Press OK to save these settings anyway. Make sure they are correct!")) {
+                            localStorage.setItem('databaseName', databaseName);
+                            localStorage.setItem('serverIp', serverIp);
+                            localStorage.setItem('settingsCheck', '1');
+                            localStorage.setItem('scoutName', scoutName);
+                            localStorage.setItem('serverUsername', serverUsername);
+                            localStorage.setItem('serverPassword', serverPassword);
+                            window.alert("Settings Saved!");
+                            window.location.href = '../index.html';
+                        } else {
+                            localStorage.setItem('serverIp', 'incorrect');
+                            localStorage.setItem('databaseName', 'incorrect');
+                            localStorage.setItem('scoutName', scoutName);
+                            localStorage.setItem('serverUsername', '');
+                            localStorage.setItem('serverPassword', '');
+                            localStorage.setItem('settingsCheck', '0');
+                        }
                     }
                 }
-            }
-        });
+            });
+
+
+        } else {
+            window.alert("Make sure all fields are filled");
+        }
     });
 
 });
 
 $(document).ready(function () {
     var databaseNameSet = document.getElementById("databaseName");
-    databaseNameSet.value = localStorage.getItem('databaseName');
+    databaseNameSet.value = localStorage.getItem('databaseName') || "abca2018";
     var serverIpSet = document.getElementById("serverIp");
     serverIpSet.value = localStorage.getItem('serverIp');
     var scoutNameSet = document.getElementById("scoutName");

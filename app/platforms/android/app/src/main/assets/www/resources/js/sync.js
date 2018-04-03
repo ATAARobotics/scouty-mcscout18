@@ -12,7 +12,7 @@ $(document).ready(function () {
         if (localStorage.getItem('settingsCheck') == 1) {
             var syncdb;
             if (window.cordova) {
-                syncdb = new PouchDB(databaseName, {auto_compaction: true, adapter: 'cordova-sqlite'});
+                syncdb = new PouchDB(databaseName, {adapter: 'cordova-sqlite'});
             } else {
                 syncdb = databaseName;
             }    

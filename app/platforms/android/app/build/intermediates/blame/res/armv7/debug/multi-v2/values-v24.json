@@ -1,10 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\John\\Documents\\scouty-mcscout18\\app\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeArmv7DebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "/Volumes/MacintoshHD/scouty-mcscout18/app/platforms/android/app/build/intermediates/incremental/mergeArmv7DebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\John\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\bc0807b1843600cb4aa3c9c84f078a6c\\res\\values-v24\\values-v24.xml",
+                    "source": "/Users/John/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/4ece74255c8539da12de4a798193c8e3/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,121,182,248",
+                        "endColumns": "65,60,65,66",
+                        "endOffsets": "116,177,243,310"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Volumes/MacintoshHD/scouty-mcscout18/app/C:\\Users\\John\\Documents\\scouty-mcscout18\\app\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeArmv7DebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "map": [
+                {
+                    "source": "/Volumes/MacintoshHD/scouty-mcscout18/app/C:\\Users\\John\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\bc0807b1843600cb4aa3c9c84f078a6c\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ca.fourthreethreefour.scoutymcscout18"
+    package="ca.fourthreethreefourjoelgmail.scoutymcscout18joelgmail"
     android:hardwareAccelerated="true"
     android:versionCode="100005"
     android:versionName="1.0.0" >
@@ -39,7 +39,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true" >
         <activity
-            android:name="ca.fourthreethreefour.scoutymcscout18.MainActivity"
+            android:name="ca.fourthreethreefourjoelgmail.scoutymcscout18joelgmail.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
             android:label="@string/activity_name"
             android:launchMode="singleTop"
@@ -55,7 +55,7 @@
 
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="ca.fourthreethreefour.scoutymcscout18.provider"
+            android:authorities="ca.fourthreethreefourjoelgmail.scoutymcscout18joelgmail.provider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
