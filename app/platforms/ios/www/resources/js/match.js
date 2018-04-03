@@ -123,23 +123,24 @@
 		var teamNumber = $('#teamNumber').val();
 		var matchNumber = $('#matchNumber').val();
 		var matchType = $('#matchType').val();
-		var startingPosition = $('input[name=startingPosition]:checked').val();
-		var teleopScaleCubes = $('#teleopScaleCubes').val();
-		var teleopSwitchCubes = $('#teleopSwitchCubes').val();
-		var teleopExchangeCubes = $('#teleopExchangeCubes').val();
-		var teleopOppSwitchCubes = $('#teleopOppSwitchCubes').val();
-		var teleopDroppedCubes = $('#teleopDroppedCubes').val();
+		var startingPosition = $('input[name=startingPosition]:checked').val() || "";
+		var teleopScaleCubes = parseInt($('#teleopScaleCubes').val());
+		var teleopSwitchCubes = parseInt($('#teleopSwitchCubes').val());
+		var teleopExchangeCubes = parseInt($('#teleopExchangeCubes').val());
+		var teleopOppSwitchCubes = parseInt($('#teleopOppSwitchCubes').val());
+		var teleopDroppedCubes = parseInt($('#teleopDroppedCubes').val());
+		var successPercent = (teleopScaleCubes + teleopSwitchCubes + teleopOppSwitchCubes + teleopExchangeCubes) / (teleopScaleCubes + teleopSwitchCubes + teleopOppSwitchCubes + teleopExchangeCubes + teleopDroppedCubes) * 100;
 		var climbingType = $('#climbingType').val();
-		var speedRating = $('input[name=speedRating]:checked').val();
-		var stabilityRating = $('input[name=stabilityRating]:checked').val();
-		var skillRating = $('input[name=skillRating]:checked').val();
-		var defenceRating = $('input[name=defenceRating]:checked').val();
-		var autoCrossedBaseline = $('input[name=autoCrossedBaseline]:checked').val();
-		var autoSwitch = $('input[name=autoSwitch]:checked').val();
-		var autoScale = $('input[name=autoScale]:checked').val();
-		var anythingBreak = $('input[name=anythingBreak]:checked').val();
-		var robotDead = $('input[name=robotDead]:checked').val();
-		var commentSection = $('#commentSection').val();
+		var speedRating = parseInt($('input[name=speedRating]:checked').val() || "0");
+		var stabilityRating = parseInt($('input[name=stabilityRating]:checked').val() || "0");
+		var skillRating = parseInt($('input[name=skillRating]:checked').val() || "0");
+		var defenceRating = parseInt($('input[name=defenceRating]:checked').val() || "0");
+		var autoCrossedBaseline = parseInt($('input[name=autoCrossedBaseline]:checked').val() || null);
+		var autoSwitch = parseInt($('input[name=autoSwitch]:checked').val() || null);
+		var autoScale = parseInt($('input[name=autoScale]:checked').val() || null);
+		var anythingBreak = parseInt($('input[name=anythingBreak]:checked').val() || null);
+		var robotDead = parseInt($('input[name=robotDead]:checked').val() || null);
+		var commentSection = $('#commentSection').val() || "";
 
 		var id = matchType + matchNumber + "_" + teamNumber
 		var doc = {
@@ -154,6 +155,7 @@
 			"teleopOpponentSwitchCubes": teleopOppSwitchCubes,
 			"teleopExchangeCubes": teleopExchangeCubes,
 			"teleopDroppedCubes": teleopDroppedCubes,
+			"successPercent": successPercent,
 			"climbingType": climbingType,
 			"speedRating": speedRating,
 			"stabilityRating": stabilityRating,
@@ -174,9 +176,40 @@
 				}).catch(function (err) {
 					if (err.name === 'conflict') {
 						// conflict!
-						window.alert("Match already submitted! Use the edit button.");
+						db.get(id).then(function(doc) {
+							return db.put({
+							  _id: id,
+							  _rev: doc._rev,
+							  "scoutName": scoutName,
+							  "startingPosition": startingPosition,
+							  "autoCrossedBaseline": autoCrossedBaseline,
+							  "autoSwitchCube": autoSwitch,
+							  "autoScaleCube": autoScale,
+							  "teleopScaleCubes": teleopScaleCubes,
+							  "teleopSwitchCubes": teleopSwitchCubes,
+							  "teleopOpponentSwitchCubes": teleopOppSwitchCubes,
+							  "teleopExchangeCubes": teleopExchangeCubes,
+							  "teleopDroppedCubes": teleopDroppedCubes,
+							  "successPercent": successPercent,
+							  "climbingType": climbingType,
+							  "speedRating": speedRating,
+							  "stabilityRating": stabilityRating,
+							  "skillRating": skillRating,
+							  "defenceRating": defenceRating,
+							  "anythingBreak": anythingBreak,
+							  "robotDead": robotDead,
+							  "notesAndComments": commentSection,
+							  });
+						  }).then(function() {
+							  window.alert("Edited!");
+							  window.location.href = './index.html';
+						  }).catch(function (err) {
+								console.log(err);
+								window.alert("Error!");
+						  });        
 					} else {
 						// some other error
+						console.log(err);
 						window.alert("Error!");
 					}
 				});
@@ -185,74 +218,6 @@
 			window.alert("Settings are incorrect!");
 		}
 	});
-	$('#Edit').on('click', function (e) {
-		var teamNumber = $('#teamNumber').val();
-		var matchNumber = $('#matchNumber').val();
-		var matchType = $('#matchType').val();
-		var startingPosition = $('input[name=startingPosition]:checked').val();
-		var teleopScaleCubes = $('#teleopScaleCubes').val();
-		var teleopSwitchCubes = $('#teleopSwitchCubes').val();
-		var teleopExchangeCubes = $('#teleopExchangeCubes').val();
-		var teleopOppSwitchCubes = $('#teleopOppSwitchCubes').val();
-		var teleopDroppedCubes = $('#teleopDroppedCubes').val();
-		var climbingType = $('#climbingType').val();
-		var speedRating = $('input[name=speedRating]:checked').val();
-		var stabilityRating = $('input[name=stabilityRating]:checked').val();
-		var skillRating = $('input[name=skillRating]:checked').val();
-		var defenceRating = $('input[name=defenceRating]:checked').val();
-		var autoCrossedBaseline = $('input[name=autoCrossedBaseline]:checked').val();
-		var autoSwitch = $('input[name=autoSwitch]:checked').val();
-		var autoScale = $('input[name=autoScale]:checked').val();
-		var anythingBreak = $('input[name=anythingBreak]:checked').val();
-		var robotDead = $('input[name=robotDead]:checked').val();
-		var commentSection = $('#commentSection').val();
-	
-		var id = matchType + matchNumber + "_" + teamNumber
-	
-		if (localStorage.getItem('settingsCheck') == 1) {
-			if (teamNumber == '') {
-				window.alert("Input a team number!");
-			} else {
-				db.get(id).then(function(doc) {
-				  return db.put({
-					_id: id,
-					_rev: doc._rev,
-					"scoutName": scoutName,
-					"scoutName": scoutName,
-					"startingPosition": startingPosition,
-					"autoCrossedBaseline": autoCrossedBaseline,
-					"autoSwitchCube": autoSwitch,
-					"autoScaleCube": autoScale,
-					"teleopScaleCubes": teleopScaleCubes,
-					"teleopSwitchCubes": teleopSwitchCubes,
-					"teleopOpponentSwitchCubes": teleopOppSwitchCubes,
-					"teleopExchangeCubes": teleopExchangeCubes,
-					"teleopDroppedCubes": teleopDroppedCubes,
-					"climbingType": climbingType,
-					"speedRating": speedRating,
-					"stabilityRating": stabilityRating,
-					"skillRating": skillRating,
-					"defenceRating": defenceRating,
-					"anythingBreak": anythingBreak,
-					"robotDead": robotDead,
-					"notesAndComments": commentSection,
-					});
-				}).then(function() {
-					window.alert("Edited!");
-					window.location.href = './index.html';
-				}).catch(function (err) {
-					if (err.name == 'not_found'){
-						window.alert("Match data not submitted yet, nothing to edit. Use the submit button.");
-					} else {
-						console.log(err);
-						window.alert("Error!");
-					}
-				});        
-			}
-		} else {
-			window.alert("Settings are incorrect!");
-		}
-	});	
 });
 
 function modifyScale_qty(val) {

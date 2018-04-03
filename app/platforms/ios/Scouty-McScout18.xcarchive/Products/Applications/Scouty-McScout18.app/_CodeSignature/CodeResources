@@ -98,7 +98,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		SnVOG6BvXI7QqhBN4H9XTvqkNUU=
+		uAWjUYgdLH8/Fl2TPDEa10WQGO8=
 		</data>
 		<key>CDVCapture.bundle/controls_bg.png</key>
 		<data>
@@ -222,7 +222,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		XRvtKa09yNpFH15AnluJGvStdoM=
+		/HQcvE46p02Gjf95mn55xr/bxL4=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -230,7 +230,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		OUWp2xj5swqUDiDZL5y8+vrhDDg=
+		LiSFAGti2H/7qiE2O8Xvc7dVo4g=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -238,7 +238,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		KWxFc1co1neUDQihM4h7SBhYN6E=
+		OkeuVAKSldMh3Eu7Ge7SOPz6l/8=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -254,7 +254,7 @@
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		cdh0G2SkkJSRlsjM/dcqoXayp+Y=
+		yQ9aJRU135FJtpZIpovjRHHgFTg=
 		</data>
 		<key>www/assets/css/style.css</key>
 		<data>
@@ -394,15 +394,15 @@
 		</data>
 		<key>www/index.html</key>
 		<data>
-		HwtUP8WNppJBxGotu9mUCuIDyiI=
+		T06camFhJMkQEIxtUNcQFOjL/7I=
 		</data>
 		<key>www/index.md</key>
 		<data>
-		wWknB0izF28Y2DtuwCSBCsni888=
+		+MWloNeYCEo89ESC6aMSbQOjLjM=
 		</data>
 		<key>www/pit/index.html</key>
 		<data>
-		VedO6mqW6PyVyBQpjufJ/C34U9Y=
+		1eITFhOOlwum71We/oZyclEVXpU=
 		</data>
 		<key>www/plugins/cordova-plugin-camera/www/Camera.js</key>
 		<data>
@@ -590,11 +590,11 @@
 		</data>
 		<key>www/resources/js/match.js</key>
 		<data>
-		5ydzsgUq+oPhzUcLC6w1ibzw1rM=
+		ODS0XPUV6aoiNScs219iHGsmAIs=
 		</data>
 		<key>www/resources/js/pit.js</key>
 		<data>
-		wI11PbeVAV7X6/v7JvyQjpqoQug=
+		wNAQ90XqjGqFuBDbBlBqtMQLWjg=
 		</data>
 		<key>www/resources/js/pouchdb-6.4.1.min.js</key>
 		<data>
@@ -606,7 +606,7 @@
 		</data>
 		<key>www/resources/js/settings.js</key>
 		<data>
-		sfAVLzo+RctfLjctiZFdi1Z4ScI=
+		r2CkeXnWxyXOH5vvw3l1Jmh1Pe0=
 		</data>
 		<key>www/resources/js/sync.js</key>
 		<data>
@@ -880,11 +880,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SnVOG6BvXI7QqhBN4H9XTvqkNUU=
+			uAWjUYgdLH8/Fl2TPDEa10WQGO8=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z6EmJ4kt/aAlA9MhWRQaTGDNvTCC4+vACJQRZlUHuTU=
+			Ef739UJre2Fl0s0VfbdJP0okyRYUMVHnPYgz4p1qWIw=
 			</data>
 		</dict>
 		<key>CDVCapture.bundle/controls_bg.png</key>
@@ -1174,11 +1174,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XRvtKa09yNpFH15AnluJGvStdoM=
+			/HQcvE46p02Gjf95mn55xr/bxL4=
 			</data>
 			<key>hash2</key>
 			<data>
-			niAOCFrfj/uuPL00et5ESWt6fYJA/HMDiBpxrKNV03A=
+			Q3ZZFMs69OzD5aKGk+QK0jdDtKLSTZ6rOThLPgZhQ7g=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -1196,22 +1196,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OUWp2xj5swqUDiDZL5y8+vrhDDg=
+			LiSFAGti2H/7qiE2O8Xvc7dVo4g=
 			</data>
 			<key>hash2</key>
 			<data>
-			oG3Ao3F32FOKyffqTpiTEtL7OI19MIt66l43/UsIRuE=
+			MYIxIJI1z6gi8OoeNkhqX/KRSIppuQGCj0xo88TnGDY=
 			</data>
 		</dict>
 		<key>MainViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			KWxFc1co1neUDQihM4h7SBhYN6E=
+			OkeuVAKSldMh3Eu7Ge7SOPz6l/8=
 			</data>
 			<key>hash2</key>
 			<data>
-			6Euq9+0al8Amo41eTOB55n1d81WcKITDgZXfikWqMPg=
+			nxaBLF5czrlRbLlE/SXZyillz/0kNsAKUhInpiV0FsM=
 			</data>
 		</dict>
 		<key>archived-expanded-entitlements.xcent</key>
@@ -1240,11 +1240,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cdh0G2SkkJSRlsjM/dcqoXayp+Y=
+			yQ9aJRU135FJtpZIpovjRHHgFTg=
 			</data>
 			<key>hash2</key>
 			<data>
-			QXLGKGCS+VgJoqV6cVG/h4y5NG79c0QD+o4Lj2GWiPo=
+			hJTUwk7b1z2EthWvCrGzPuXWpEKidmduXfHUmhOObyw=
 			</data>
 		</dict>
 		<key>www/assets/css/style.css</key>
@@ -1625,33 +1625,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HwtUP8WNppJBxGotu9mUCuIDyiI=
+			T06camFhJMkQEIxtUNcQFOjL/7I=
 			</data>
 			<key>hash2</key>
 			<data>
-			5fTlNLa9d2UKIse15XiTHbPDiMaohvL8Uw4pYMKap+I=
+			w67ifyqchRkk4ek176Z/vx0HYSZ6E7JmPWIClF/kllg=
 			</data>
 		</dict>
 		<key>www/index.md</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wWknB0izF28Y2DtuwCSBCsni888=
+			+MWloNeYCEo89ESC6aMSbQOjLjM=
 			</data>
 			<key>hash2</key>
 			<data>
-			GTpEtKVHjs793aMwwh8/kpD93zQwFPe+AmmYv8CKJ/Y=
+			aFWpnbGYUoTWEAkH835HcR3hXgSb2waLGI22+kaJyGQ=
 			</data>
 		</dict>
 		<key>www/pit/index.html</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VedO6mqW6PyVyBQpjufJ/C34U9Y=
+			1eITFhOOlwum71We/oZyclEVXpU=
 			</data>
 			<key>hash2</key>
 			<data>
-			A30Fe7/vtDAk2Jfqm/eHaiHE9JXHp9YHIj+trFUY+k0=
+			eB+A1BgvNNTfZ8FnqWd9FO7Ua1Vvc3aW77qbR00Jiro=
 			</data>
 		</dict>
 		<key>www/plugins/cordova-plugin-camera/www/Camera.js</key>
@@ -2164,22 +2164,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5ydzsgUq+oPhzUcLC6w1ibzw1rM=
+			ODS0XPUV6aoiNScs219iHGsmAIs=
 			</data>
 			<key>hash2</key>
 			<data>
-			Apz6ofxflOXkJSJNWwycVxgWCYiuHrBMkcx1BSaSOqY=
+			kFVS3P4oATRc5IZ56pdfg4i7atORsyZ0EObB0M7o/Z4=
 			</data>
 		</dict>
 		<key>www/resources/js/pit.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wI11PbeVAV7X6/v7JvyQjpqoQug=
+			wNAQ90XqjGqFuBDbBlBqtMQLWjg=
 			</data>
 			<key>hash2</key>
 			<data>
-			KvhRS/WxLYSQ0ZHw6hxfYJdsQobA7IWRtGRNvI1Y4n4=
+			37XHLFrSjbMYbkof9+9G0uEblBj63jkW7KmbaBxeQPU=
 			</data>
 		</dict>
 		<key>www/resources/js/pouchdb-6.4.1.min.js</key>
@@ -2208,11 +2208,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sfAVLzo+RctfLjctiZFdi1Z4ScI=
+			r2CkeXnWxyXOH5vvw3l1Jmh1Pe0=
 			</data>
 			<key>hash2</key>
 			<data>
-			1sCYW8MNcr6flwlbeu0S6ld7nOD+yU9fHAu/9Wk9vwo=
+			zzEYkWtRFZrIV2dth8tStb/srLc6tsqb7AC5ZnFZ6Ac=
 			</data>
 		</dict>
 		<key>www/resources/js/sync.js</key>
